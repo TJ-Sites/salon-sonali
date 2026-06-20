@@ -43,10 +43,10 @@ export default function CTABanner() {
         </div>
 
         {/* Decorative asterisks */}
-        <div className="flex justify-center gap-4 mt-16 text-[#B89A7A]/30 text-xs tracking-widest">
-          <span>✦</span>
-          <span>✦</span>
-          <span>✦</span>
+        <div className="flex justify-center gap-6 mt-16">
+          <div className="w-8 h-px bg-[#B89A7A]/30" />
+          <div className="w-8 h-px bg-[#B89A7A]/30" />
+          <div className="w-8 h-px bg-[#B89A7A]/30" />
         </div>
       </div>
     </section>

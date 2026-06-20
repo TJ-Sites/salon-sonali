@@ -74,7 +74,7 @@ export default function Hero() {
           className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-8"
           style={{ opacity: 0, animation: "fadeIn 0.8s ease 0.2s forwards" }}
         >
-          ✦ Luxury Hair &amp; Beauty Studio ✦
+          Luxury Hair &amp; Beauty Studio
         </p>
 
         {/* Main heading */}

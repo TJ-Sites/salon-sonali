@@ -122,7 +122,7 @@ export default function Footer() {
             © {year} Salon Sonali. All rights reserved.
           </p>
           <p className="font-montserrat text-xs text-[#6B665F]">
-            Designed with <span className="text-[#B89A7A]">♥</span> for beauty
+            Crafted with care for beauty
           </p>
         </div>
       </div>

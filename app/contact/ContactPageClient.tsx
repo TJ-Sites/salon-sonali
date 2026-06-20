@@ -147,7 +147,7 @@ export default function ContactPageClient() {
                 animate={{ opacity: 1, y: 0 }}
                 className="py-12 text-center border border-[#E7E2D8] px-8"
               >
-                <span className="block text-4xl mb-6">✦</span>
+                <div className="w-6 h-px bg-[#B89A7A] mx-auto mb-6" />
                 <h3 className="font-playfair text-2xl text-[#0E0E10] mb-4">Message Received</h3>
                 <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed">
                   Thank you for reaching out! We&apos;ll be in touch within 24 hours.
@@ -165,8 +165,7 @@ export default function ContactPageClient() {
             >
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <span className="text-3xl block mb-2">📍</span>
-                  <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A]">Our Location</p>
+                <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A]">Our Location</p>
                   <p className="font-montserrat text-sm text-[#F7F6F2]/70 mt-1">123 Beauty Lane, Your City</p>
                 </div>
               </div>
@@ -176,14 +175,14 @@ export default function ContactPageClient() {
             {/* Contact details */}
             <div className="space-y-6 mb-10">
               <div className="flex gap-5 items-start">
-                <span className="text-[#B89A7A] text-lg mt-0.5">📍</span>
+                <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Address</p>
                   <p className="font-montserrat text-sm text-[#0E0E10]">123 Beauty Lane<br />Your City, State 00000</p>
                 </div>
               </div>
               <div className="flex gap-5 items-start">
-                <span className="text-[#B89A7A] text-lg mt-0.5">📞</span>
+                <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Phone</p>
                   <a href="tel:+10000000000" className="font-montserrat text-sm text-[#0E0E10] hover:text-[#B89A7A] transition-colors">
@@ -192,7 +191,7 @@ export default function ContactPageClient() {
                 </div>
               </div>
               <div className="flex gap-5 items-start">
-                <span className="text-[#B89A7A] text-lg mt-0.5">✉</span>
+                <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Email</p>
                   <a href="mailto:hello@salonsonali.com" className="font-montserrat text-sm text-[#0E0E10] hover:text-[#B89A7A] transition-colors">
@@ -234,7 +233,7 @@ export default function ContactPageClient() {
             exit={{ opacity: 0, y: 20, x: "-50%" }}
             className="fixed bottom-8 left-1/2 z-50 bg-[#0E0E10] text-[#F7F6F2] px-8 py-4 flex items-center gap-4 shadow-2xl"
           >
-            <span className="text-[#B89A7A]">✦</span>
+            <span className="text-[#B89A7A]">—</span>
             <span className="font-montserrat text-sm">Your message has been sent!</span>
             <button onClick={() => setToast(false)} className="text-[#6B665F] hover:text-[#F7F6F2] text-lg ml-2">×</button>
           </motion.div>

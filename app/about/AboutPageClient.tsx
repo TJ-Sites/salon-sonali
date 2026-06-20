@@ -5,10 +5,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const values = [
-  { icon: "✦", title: "Craftsmanship", description: "Every technique we perform is practised to perfection. We invest in continuous education so our team always brings the very best to your appointment." },
-  { icon: "◈", title: "Personalisation", description: "No two clients are alike. We take time to listen, understand, and create a service that's tailored entirely to you — your face, your lifestyle, your vision." },
-  { icon: "❋", title: "Premium Products", description: "We partner exclusively with brands that share our commitment to quality, sustainability, and hair and skin health." },
-  { icon: "⊹", title: "Lasting Relationships", description: "Many of our clients have been with us for years. We build trust through consistency, honesty, and genuinely caring about your results." },
+  { icon: "01", title: "Craftsmanship", description: "Every technique we perform is practised to perfection. We invest in continuous education so our team always brings the very best to your appointment." },
+  { icon: "02", title: "Personalisation", description: "No two clients are alike. We take time to listen, understand, and create a service that's tailored entirely to you — your face, your lifestyle, your vision." },
+  { icon: "03", title: "Premium Products", description: "We partner exclusively with brands that share our commitment to quality, sustainability, and hair and skin health." },
+  { icon: "04", title: "Lasting Relationships", description: "Many of our clients have been with us for years. We build trust through consistency, honesty, and genuinely caring about your results." },
 ];
 
 const milestones = [
@@ -51,7 +51,7 @@ export default function AboutPageClient() {
             </div>
             <div className="absolute bottom-10 left-10">
               <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A]">Years of Excellence</p>
-              <div className="w-12 h-px bg-[#B89A7A] mt-3" />
+              <div className="w-8 h-px bg-[#B89A7A]/40 mx-auto mb-4" />
             </div>
           </SectionReveal>
 
@@ -91,7 +91,7 @@ export default function AboutPageClient() {
                 transition={{ duration: 0.6, delay: i * 0.12 }}
                 className="bg-[#F7F6F2] p-8"
               >
-                <span className="block text-3xl text-[#B89A7A] mb-5">{v.icon}</span>
+                <span className="block w-8 h-px bg-[#B89A7A] mb-5" />
                 <h3 className="font-playfair text-xl text-[#0E0E10] mb-4">{v.title}</h3>
                 <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed">{v.description}</p>
               </motion.div>

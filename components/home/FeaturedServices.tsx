@@ -5,21 +5,21 @@ import Link from "next/link";
 
 const services = [
   {
-    icon: "✂️",
+    icon: "01",
     title: "Hair Services",
     description:
       "From precision cuts to full-colour transformations, our stylists craft looks that express your unique personality.",
     href: "/services#hair",
   },
   {
-    icon: "✨",
+    icon: "02",
     title: "Skin Treatments",
     description:
       "Revitalising facials, microdermabrasion, and advanced skin therapies tailored to your skin type.",
     href: "/services#skin",
   },
   {
-    icon: "💅",
+    icon: "03",
     title: "Nail Artistry",
     description:
       "Luxury manicures, pedicures, and nail art created with premium products for lasting elegance.",
@@ -92,7 +92,7 @@ export default function FeaturedServices() {
                 (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
               }}
             >
-              <span className="text-4xl">{service.icon}</span>
+              <span className="font-playfair text-3xl font-bold text-[#B89A7A] opacity-60">{service.icon}</span>
               <div>
                 <h3 className="font-playfair text-2xl text-[#0E0E10] mb-3">
                   {service.title}
