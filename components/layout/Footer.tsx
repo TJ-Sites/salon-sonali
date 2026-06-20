@@ -6,7 +6,6 @@ const navLinks = [
   { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
-  { href: "/contact", label: "Contact" },
 ];
 
 const socialLinks = [
