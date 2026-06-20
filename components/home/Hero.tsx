@@ -17,13 +17,13 @@ export default function Hero() {
 
     // Wrap each word in a span for stagger animation
     const text = heading.textContent || "";
-    const words = text.split(" ");
+    const words = text.trim().split(/\s+/);
     heading.innerHTML = words
       .map(
         (word, i) =>
-          `<span class="word-wrap" style="overflow:hidden;display:inline-block;margin-right:0.3em"><span class="word" style="display:inline-block;opacity:0;transform:translateY(100%);transition:opacity 0.7s ease ${i * 120}ms, transform 0.7s ease ${i * 120}ms">${word}</span></span>`
+          `<span class="word-wrap" style="overflow:hidden;display:inline-block;"><span class="word" style="display:inline-block;opacity:0;transform:translateY(100%);transition:opacity 0.7s ease ${i * 120}ms, transform 0.7s ease ${i * 120}ms">${word}</span></span>`
       )
-      .join("");
+      .join(" ");
 
     // Trigger animation after small delay
     const timer = setTimeout(() => {
