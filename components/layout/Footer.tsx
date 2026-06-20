@@ -96,20 +96,19 @@ export default function Footer() {
             Visit Us
           </h4>
           <address className="font-montserrat text-sm text-[#6B665F] not-italic space-y-3 leading-relaxed">
-            <p>123 Beauty Lane<br />Your City, State 00000</p>
+            <p>5/1/2 Siriwardhana Rd<br />Minuwangoda, Sri Lanka</p>
             <p>
-              <a href="tel:+10000000000" className="hover:text-[#F7F6F2] transition-colors duration-300">
-                (000) 000-0000
+              <a href="tel:+94774090444" className="hover:text-[#F7F6F2] transition-colors duration-300">
+                077 409 0444
               </a>
             </p>
             <p>
-              <a href="mailto:hello@salonsonali.com" className="hover:text-[#F7F6F2] transition-colors duration-300">
-                hello@salonsonali.com
+              <a href="mailto:info@salonsonali.com" className="hover:text-[#F7F6F2] transition-colors duration-300">
+                info@salonsonali.com
               </a>
             </p>
             <div className="pt-2 border-t border-[#6B665F]/30">
-              <p className="text-xs">Mon – Sat: 9am – 7pm</p>
-              <p className="text-xs">Sunday: Closed</p>
+              <p className="text-xs">Mon – Sun: 9:00 AM – 6:30 PM</p>
             </div>
           </address>
         </div>

@@ -5,13 +5,13 @@ import SectionReveal from "@/components/ui/SectionReveal";
 import { motion, AnimatePresence } from "framer-motion";
 
 const hours = [
-  { day: "Monday", time: "9:00am – 7:00pm" },
-  { day: "Tuesday", time: "9:00am – 7:00pm" },
-  { day: "Wednesday", time: "9:00am – 7:00pm" },
-  { day: "Thursday", time: "9:00am – 8:00pm" },
-  { day: "Friday", time: "9:00am – 8:00pm" },
-  { day: "Saturday", time: "8:00am – 6:00pm" },
-  { day: "Sunday", time: "Closed" },
+  { day: "Monday", time: "9:00am – 6:30pm" },
+  { day: "Tuesday", time: "9:00am – 6:30pm" },
+  { day: "Wednesday", time: "9:00am – 6:30pm" },
+  { day: "Thursday", time: "9:00am – 6:30pm" },
+  { day: "Friday", time: "9:00am – 6:30pm" },
+  { day: "Saturday", time: "9:00am – 6:30pm" },
+  { day: "Sunday", time: "9:00am – 6:30pm" },
 ];
 
 type FormState = {
@@ -158,18 +158,16 @@ export default function ContactPageClient() {
 
           {/* Info Column */}
           <SectionReveal direction="right" delay={0.15}>
-            {/* Map placeholder */}
-            <div
-              className="w-full h-56 mb-10 relative overflow-hidden"
-              style={{ background: "linear-gradient(135deg, #0E0E10 0%, #2a1f14 60%, #B89A7A 100%)" }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A]">Our Location</p>
-                  <p className="font-montserrat text-sm text-[#F7F6F2]/70 mt-1">123 Beauty Lane, Your City</p>
-                </div>
-              </div>
-              {/* Replace with real Google Maps iframe in production */}
+            {/* Map iframe */}
+            <div className="w-full h-56 mb-10 relative overflow-hidden rounded border border-[#E7E2D8]">
+              <iframe
+                src="https://maps.google.com/maps?q=Salon%20Sonali%20Siriwardhana%20Rd%20Minuwangoda&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "grayscale(0.3) contrast(1.1)" }}
+                allowFullScreen={true}
+                loading="lazy"
+              />
             </div>
 
             {/* Contact details */}
@@ -178,15 +176,15 @@ export default function ContactPageClient() {
                 <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Address</p>
-                  <p className="font-montserrat text-sm text-[#0E0E10]">123 Beauty Lane<br />Your City, State 00000</p>
+                  <p className="font-montserrat text-sm text-[#0E0E10]">5/1/2 Siriwardhana Rd<br />Minuwangoda, Sri Lanka</p>
                 </div>
               </div>
               <div className="flex gap-5 items-start">
                 <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Phone</p>
-                  <a href="tel:+10000000000" className="font-montserrat text-sm text-[#0E0E10] hover:text-[#B89A7A] transition-colors">
-                    (000) 000-0000
+                  <a href="tel:+94774090444" className="font-montserrat text-sm text-[#0E0E10] hover:text-[#B89A7A] transition-colors">
+                    077 409 0444
                   </a>
                 </div>
               </div>
@@ -194,8 +192,8 @@ export default function ContactPageClient() {
                 <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Email</p>
-                  <a href="mailto:hello@salonsonali.com" className="font-montserrat text-sm text-[#0E0E10] hover:text-[#B89A7A] transition-colors">
-                    hello@salonsonali.com
+                  <a href="mailto:info@salonsonali.com" className="font-montserrat text-sm text-[#0E0E10] hover:text-[#B89A7A] transition-colors">
+                    info@salonsonali.com
                   </a>
                 </div>
               </div>
