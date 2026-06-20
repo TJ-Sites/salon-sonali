@@ -4,30 +4,30 @@ import { useState, useEffect, useCallback } from "react";
 
 const testimonials = [
   {
-    name: "Priya M.",
-    service: "Hair Colour & Cut",
+    name: "Visuri Perera",
+    service: "Balayage, Blow dry, Hairstyling",
     rating: 5,
     quote:
-      "Salon Sonali completely transformed my look. The attention to detail and the care they took to understand exactly what I wanted was exceptional. I've never felt more confident!",
-    initials: "PM",
+      "My sister and I came to this salon to get our damaged hair fixed. My sister had gone to a salon previously to get her long curly hair cut into layers and it turned out to be a disaster, thankfully the staff not only fixed her hair but also made it look gorgeous! They also completely transformed my hair with an outstanding haircut and colour treatment...",
+    initials: "VP",
     color: "#B89A7A",
   },
   {
-    name: "Aisha K.",
-    service: "Bridal Package",
+    name: "Niranjala Nishadini",
+    service: "Herbal Cosmetics",
     rating: 5,
     quote:
-      "I trusted Salon Sonali with my bridal look and they exceeded every expectation. The whole team was professional, warm, and made my wedding day absolutely perfect.",
-    initials: "AK",
+      "Yes it's good place to be pretty .... Highly professional team and lovely service.",
+    initials: "NN",
     color: "#6B665F",
   },
   {
-    name: "Sofia R.",
-    service: "Skin Treatment",
+    name: "Shehara Malshani",
+    service: "Regular Customer",
     rating: 5,
     quote:
-      "The facial I received here was unlike anything I've experienced before. My skin has never looked better. I'm now a regular and I wouldn't go anywhere else.",
-    initials: "SR",
+      "I am a regular customer at Salon Sonali. They are professionals and know the art. Highly recommended!",
+    initials: "SM",
     color: "#0E0E10",
   },
 ];
@@ -59,39 +59,60 @@ export default function Testimonials() {
           What Our Clients Say
         </h2>
 
-        {/* Testimonial card */}
-        <div
-          key={current}
-          style={{ animation: "fadeIn 0.6s ease forwards" }}
+        {/* Testimonial card link to Google Reviews */}
+        <a
+          href="https://www.google.com/search?q=salon+sonali+minuwangoda+reviews&sca_esv=9bf49f2108269850&biw=1536&bih=791&sxsrf=APpeQnviL3GM81qEFF16UCXffbKK0XZCQA%3A1781938773923&ei=VTo2asPSN5q1wcsP09ybsQY&oq=salon+sonali+minuwangoda+&gs_lp=Egxnd3Mtd2l6LXNlcnAiGXNhbG9uIHNvbmFsaSBtaW51d2FuZ29kYSAqAggAMgQQIxgnMgYQABgWGB4yBhAAGBYYHjICECYyCBAAGIkFGKIEMgUQABjvBUjeElAAWABwAHgAkAEAmAGOEKABxBiqAQc3LTEuMC4xuAEByAEA-AEBmAICoALXGJgDAJIHBTYtMS4xoAfsB7IHBTYtMS4xuAfXGMIHAzItMsgHDIAIAQ&sclient=gws-wiz-serp"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block group"
         >
-          {/* Stars */}
-          <div className="flex justify-center gap-1 mb-8">
-            {Array.from({ length: t.rating }).map((_, i) => (
-              <span key={i} className="text-[#B89A7A] text-xl">★</span>
-            ))}
-          </div>
-
-          {/* Quote */}
-          <blockquote className="font-playfair text-xl lg:text-2xl text-[#0E0E10] leading-relaxed italic mb-10 max-w-3xl mx-auto">
-            &ldquo;{t.quote}&rdquo;
-          </blockquote>
-
-          {/* Client info */}
-          <div className="flex items-center justify-center gap-4">
-            <div
-              className="w-12 h-12 rounded-full flex items-center justify-center font-playfair text-[#F7F6F2] text-sm font-bold"
-              style={{ backgroundColor: t.color }}
-            >
-              {t.initials}
+          <div
+            key={current}
+            style={{ animation: "fadeIn 0.6s ease forwards" }}
+            className="hover:scale-[1.01] transition-transform duration-300 cursor-pointer"
+          >
+            {/* Stars */}
+            <div className="flex justify-center gap-1 mb-8">
+              {Array.from({ length: t.rating }).map((_, i) => (
+                <span key={i} className="text-[#B89A7A] text-xl">★</span>
+              ))}
             </div>
-            <div className="text-left">
-              <p className="font-montserrat font-semibold text-sm text-[#0E0E10]">
-                {t.name}
-              </p>
-              <p className="font-montserrat text-xs text-[#6B665F]">{t.service}</p>
+
+            {/* Quote */}
+            <blockquote className="font-playfair text-xl lg:text-2xl text-[#0E0E10] leading-relaxed italic mb-10 max-w-3xl mx-auto group-hover:text-[#B89A7A] transition-colors duration-300">
+              &ldquo;{t.quote}&rdquo;
+            </blockquote>
+
+            {/* Client info */}
+            <div className="flex items-center justify-center gap-4">
+              <div
+                className="w-12 h-12 rounded-full flex items-center justify-center font-playfair text-[#F7F6F2] text-sm font-bold"
+                style={{ backgroundColor: t.color }}
+              >
+                {t.initials}
+              </div>
+              <div className="text-left">
+                <p className="font-montserrat font-semibold text-sm text-[#0E0E10]">
+                  {t.name}
+                </p>
+                <p className="font-montserrat text-xs text-[#6B665F]">{t.service}</p>
+              </div>
+            </div>
+
+            {/* View on Google Badge */}
+            <div className="inline-flex items-center gap-2 mt-8 text-xs font-montserrat tracking-widest text-[#B89A7A] uppercase group-hover:underline">
+              <span>View on Google Reviews</span>
+              <svg
+                className="w-3 h-3 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </div>
           </div>
-        </div>
+        </a>
 
         {/* Controls */}
         <div className="flex items-center justify-center gap-6 mt-12">
