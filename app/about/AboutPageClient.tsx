@@ -144,7 +144,7 @@ export default function AboutPageClient() {
         <SectionReveal className="relative z-10">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">Join Our Story</p>
           <h2 className="font-playfair text-4xl lg:text-5xl text-[#F7F6F2] mb-8">Become Part of the Sonali Family</h2>
-          <Link href="/book" className="btn-primary">Book an Appointment</Link>
+          <Link href="/contact" className="btn-primary">Get in Touch</Link>
         </SectionReveal>
       </section>
     </>

@@ -114,7 +114,7 @@ export default function Hero() {
             transition: "opacity 0.8s ease 1.4s, transform 0.8s ease 1.4s",
           }}
         >
-          <Link href="/book" className="btn-primary">
+          <Link href="/contact" className="btn-primary">
             Book Appointment
           </Link>
           <Link href="/services" className="btn-outline">

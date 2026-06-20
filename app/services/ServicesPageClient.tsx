@@ -144,7 +144,7 @@ export default function ServicesPageClient() {
                               <span className="font-montserrat text-xs text-[#6B665F]">{service.duration}</span>
                               <span className="font-playfair text-lg text-[#B89A7A]">{service.price}</span>
                             </div>
-                            <Link href="/book" className="btn-primary text-xs inline-flex">
+                            <Link href="/contact" className="btn-primary text-xs inline-flex">
                               Book This Service
                             </Link>
                           </div>
@@ -164,7 +164,7 @@ export default function ServicesPageClient() {
         <SectionReveal>
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">Ready?</p>
           <h2 className="font-playfair text-4xl text-[#0E0E10] mb-8">Book Your Treatment</h2>
-          <Link href="/book" className="btn-outline-dark">Book Now</Link>
+          <Link href="/contact" className="btn-outline-dark">Get in Touch</Link>
         </SectionReveal>
       </section>
     </>

@@ -209,7 +209,7 @@ export default function TeamPageClient() {
                 </p>
 
                 <Link
-                  href="/book"
+                  href="/contact"
                   className="btn-primary text-xs"
                   onClick={() => setSelectedMember(null)}
                 >
@@ -226,7 +226,7 @@ export default function TeamPageClient() {
         <SectionReveal>
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">Work With Us</p>
           <h2 className="font-playfair text-4xl text-[#0E0E10] mb-8">Find Your Perfect Match</h2>
-          <Link href="/book" className="btn-outline-dark">Book an Appointment</Link>
+          <Link href="/contact" className="btn-outline-dark">Get in Touch</Link>
         </SectionReveal>
       </section>
     </>

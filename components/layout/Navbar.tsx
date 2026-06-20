@@ -57,8 +57,8 @@ export default function Navbar() {
           </ul>
 
           {/* Book Now CTA */}
-          <Link href="/book" className="hidden lg:inline-flex btn-primary text-xs">
-            Book Now
+          <Link href="/contact" className="hidden lg:inline-flex btn-primary text-xs">
+            Contact Us
           </Link>
 
           {/* Mobile hamburger */}
@@ -109,11 +109,11 @@ export default function Navbar() {
           </Link>
         ))}
         <Link
-          href="/book"
+          href="/contact"
           onClick={() => setMenuOpen(false)}
           className="btn-primary mt-4"
         >
-          Book Now
+          Contact Us
         </Link>
       </div>
     </>

@@ -34,7 +34,7 @@ export default function CTABanner() {
           you&apos;ve always dreamed of.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/book" className="btn-primary text-sm">
+          <Link href="/contact" className="btn-primary text-sm">
             Book Your Appointment
           </Link>
           <Link href="/contact" className="btn-outline text-sm">
