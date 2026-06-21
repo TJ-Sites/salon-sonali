@@ -12,6 +12,7 @@
   --aurora-cream: #F7F6F2;
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-montserrat: 'Montserrat', 'Helvetica Neue', sans-serif;
+  --font-yeseva: 'Yeseva One', 'Playfair Display', Georgia, serif;
 }
 
 * {
@@ -37,6 +38,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair);
   line-height: 1.15;
+}
+
+/* Custom display font for all page header sections with dark background */
+section.bg-\[\#0E0E10\] h1,
+section.relative.min-h-screen h1 {
+  font-family: var(--font-yeseva), var(--font-playfair), serif !important;
+  font-weight: 400 !important;
 }
 
 /* ── Scroll Progress Bar ── */

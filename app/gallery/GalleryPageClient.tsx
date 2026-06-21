@@ -37,7 +37,7 @@ export default function GalleryPageClient() {
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 30%, rgba(184,154,122,0.1) 0%, transparent 60%)" }} />
         <SectionReveal className="relative z-10 max-w-2xl mx-auto">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-5">Our Portfolio</p>
-          <h1 className="font-playfair text-5xl lg:text-7xl text-[#F7F6F2] mb-6" style={{ lineHeight: 1.1 }}>
+          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#F7F6F2] mb-6" style={{ lineHeight: 1.1 }}>
             Beauty in Every Frame
           </h1>
           <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />

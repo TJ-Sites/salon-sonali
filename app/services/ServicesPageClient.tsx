@@ -47,7 +47,7 @@ export default function ServicesPageClient() {
         <div className="relative z-10 max-w-3xl mx-auto">
           <SectionReveal>
             <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-5">Our Services</p>
-            <h1 className="font-playfair text-5xl lg:text-7xl text-[#F7F6F2] mb-6" style={{ lineHeight: 1.1 }}>
+            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#F7F6F2] mb-6" style={{ lineHeight: 1.1 }}>
               Treatments for Every You
             </h1>
             <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />

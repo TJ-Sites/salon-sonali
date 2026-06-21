@@ -27,7 +27,7 @@ export default function AboutPageClient() {
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(184,154,122,0.12) 0%, transparent 60%)" }} />
         <SectionReveal className="relative z-10 max-w-3xl mx-auto">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-6">Our Story</p>
-          <h1 className="font-playfair italic text-5xl lg:text-7xl text-[#F7F6F2] mb-8 leading-tight">
+          <h1 className="font-playfair italic text-4xl sm:text-5xl lg:text-7xl text-[#F7F6F2] mb-8 leading-tight">
             Beauty is not a luxury —<br />it is a language.
           </h1>
           <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />

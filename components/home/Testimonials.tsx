@@ -79,7 +79,7 @@ export default function Testimonials() {
             </div>
 
             {/* Quote */}
-            <blockquote className="font-playfair text-xl lg:text-2xl text-[#0E0E10] leading-relaxed italic mb-10 max-w-3xl mx-auto group-hover:text-[#B89A7A] transition-colors duration-300">
+            <blockquote className="font-playfair text-base sm:text-lg md:text-xl lg:text-2xl text-[#0E0E10] leading-relaxed italic mb-10 max-w-3xl mx-auto group-hover:text-[#B89A7A] transition-colors duration-300">
               &ldquo;{t.quote}&rdquo;
             </blockquote>
 

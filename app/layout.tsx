@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Montserrat } from "next/font/google";
+import { Playfair_Display, Montserrat, Yeseva_One } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -11,6 +11,13 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   variable: "--font-playfair",
+  display: "swap",
+});
+
+const yeseva = Yeseva_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-yeseva",
   display: "swap",
 });
 
@@ -50,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${montserrat.variable} ${yeseva.variable}`}>
       <body>
         <LenisProvider>
           <ScrollProgress />
