@@ -8,22 +8,22 @@ const services = [
     icon: "01",
     title: "Hair Services",
     description:
-      "From precision cuts to full-colour transformations, our stylists craft looks that express your unique personality.",
-    href: "/services#hair",
+      "Precision cuts, rich colouring, keratin treatments, relaxing, and hair straightening tailored for you.",
+    href: "/services",
   },
   {
     icon: "02",
-    title: "Skin Treatments",
+    title: "Hair & Skin Treatments",
     description:
-      "Revitalising facials, microdermabrasion, and advanced skin therapies tailored to your skin type.",
-    href: "/services#skin",
+      "Anti-acne, pigmentation and anti-aging therapies alongside deep conditioning, oil, and bond fusion care.",
+    href: "/services",
   },
   {
     icon: "03",
-    title: "Nail Artistry",
+    title: "Bridal Dressings & Makeup",
     description:
-      "Luxury manicures, pedicures, and nail art created with premium products for lasting elegance.",
-    href: "/services#nails",
+      "Luxury bridal dressings, professional makeup, elegant hair styles, and saree draping for your special days.",
+    href: "/services",
   },
 ];
 

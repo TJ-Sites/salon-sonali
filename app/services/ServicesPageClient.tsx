@@ -5,29 +5,38 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 import Link from "next/link";
 
-const categories = ["All", "Hair", "Skin", "Nails", "Wellness"];
+const categories = ["All", "Hair Services", "Hair Treatments", "Skin Treatments", "Dressings"];
 
 const services = [
-  // HAIR
-  { category: "Hair", name: "Signature Cut & Blowout", duration: "60 min", price: "$85", description: "A precision cut tailored to your face shape and lifestyle, finished with a luxurious blowout." },
-  { category: "Hair", name: "Full Colour", duration: "120 min", price: "$160+", description: "Root-to-tip colour transformation using ammonia-free, premium pigments for vibrant, lasting results." },
-  { category: "Hair", name: "Balayage / Highlights", duration: "150 min", price: "$200+", description: "Hand-painted freehand colour for a natural, sun-kissed gradient with effortless grow-out." },
-  { category: "Hair", name: "Keratin Treatment", duration: "180 min", price: "$250", description: "Smooth, frizz-free hair for up to 5 months. Safe, formaldehyde-free formula." },
-  { category: "Hair", name: "Deep Conditioning Ritual", duration: "45 min", price: "$60", description: "Intensive moisture and protein treatment to restore shine, strength, and softness." },
-  // SKIN
-  { category: "Skin", name: "Signature Facial", duration: "60 min", price: "$95", description: "Personalised deep-cleanse, exfoliation, mask, and massage for radiant, balanced skin." },
-  { category: "Skin", name: "Microdermabrasion", duration: "45 min", price: "$120", description: "Crystal-free exfoliation that resurfaces the skin, reducing fine lines and uneven tone." },
-  { category: "Skin", name: "LED Light Therapy", duration: "30 min", price: "$75", description: "Targeted red and blue light wavelengths to stimulate collagen production and combat acne." },
-  { category: "Skin", name: "Chemical Peel", duration: "45 min", price: "$110", description: "Lactic or glycolic peel to accelerate cell turnover and reveal visibly smoother skin." },
-  // NAILS
-  { category: "Nails", name: "Classic Manicure", duration: "45 min", price: "$40", description: "Shape, cuticle care, hand massage, and flawless polish application." },
-  { category: "Nails", name: "Gel Manicure", duration: "60 min", price: "$60", description: "Long-lasting, chip-resistant gel colour cured to a high-gloss finish." },
-  { category: "Nails", name: "Luxury Pedicure", duration: "75 min", price: "$70", description: "Soak, exfoliation, callus removal, massage, and polish — total foot revival." },
-  { category: "Nails", name: "Nail Art", duration: "30 min+", price: "$20+", description: "Custom designs from minimalist linework to intricate hand-painted art." },
-  // WELLNESS
-  { category: "Wellness", name: "Scalp Massage & Treatment", duration: "30 min", price: "$50", description: "Tension-releasing scalp massage combined with a nourishing oil or serum treatment." },
-  { category: "Wellness", name: "Eyebrow Sculpting", duration: "30 min", price: "$45", description: "Precision threading or waxing shaped to your unique brow bone and aesthetic." },
-  { category: "Wellness", name: "Lash Lift & Tint", duration: "60 min", price: "$90", description: "Semi-permanent curl and colour that makes your natural lashes look longer and defined — no mascara needed." },
+  // HAIR SERVICES
+  { category: "Hair Services", name: "Hair Cutting", duration: "45 min", price: "Rs. 3,000+", description: "Precision hair cutting and shaping tailored to your features, completed with a signature style." },
+  { category: "Hair Services", name: "Hair Colouring", duration: "120 min", price: "Rs. 8,500+", description: "Custom hair coloring using high-grade, low-ammonia products for rich, long-lasting tones and dimension." },
+  { category: "Hair Services", name: "Keratin Treatments", duration: "180 min", price: "Rs. 18,000+", description: "Premium smoothing treatment to eliminate frizz, restore keratin protein, and add glossy shine." },
+  { category: "Hair Services", name: "Hair Extensions", duration: "120 min+", price: "Price on Request", description: "Premium quality natural hair extensions custom-matched and applied for volume and length." },
+  { category: "Hair Services", name: "Hair Straightening", duration: "180 min", price: "Rs. 15,000+", description: "Permanent chemical straightening for sleek, straight, and manageable hair with a gloss finish." },
+  { category: "Hair Services", name: "Hair Relaxing", duration: "120 min", price: "Rs. 10,000+", description: "Texturizing and relaxing treatment to soften tight curls and waves safely." },
+  { category: "Hair Services", name: "Baby Hair Cuts", duration: "30 min", price: "Rs. 1,500", description: "Gentle and friendly hair cutting service designed specifically for toddlers and young children." },
+
+  // HAIR TREATMENTS
+  { category: "Hair Treatments", name: "Hair Growth Treatments", duration: "60 min", price: "Rs. 5,000+", description: "Nourishing scalp and follicle stimulation therapy to encourage healthy, thick hair growth and reduce hair loss." },
+  { category: "Hair Treatments", name: "Anti-Dandruff Treatments", duration: "45 min", price: "Rs. 3,500+", description: "Specialized clarifying treatment to soothe dry, flaky scalp and eliminate dandruff-causing agents." },
+  { category: "Hair Treatments", name: "Scalp Analysis", duration: "20 min", price: "Rs. 1,500", description: "Professional digital microscopic analysis of your scalp and hair health to tailor the perfect care routine." },
+  { category: "Hair Treatments", name: "Bond Fusion Treatments", duration: "60 min", price: "Rs. 7,000+", description: "Advanced bond-rebuilding treatment to restore damaged hair fibers from the inside out." },
+  { category: "Hair Treatments", name: "Conditioner Treatments", duration: "45 min", price: "Rs. 3,000+", description: "Deep conditioning mask to replenish essential moisture, locking in softness and shine." },
+  { category: "Hair Treatments", name: "Oil Treatments", duration: "40 min", price: "Rs. 2,500", description: "Traditional hot oil massage to stimulate blood circulation and deeply nourish hair roots." },
+
+  // SKIN TREATMENTS
+  { category: "Skin Treatments", name: "Pimple/Acne Treatments", duration: "60 min", price: "Rs. 4,500+", description: "Targeted treatment using specialized formulations to soothe inflammation, clear pores, and promote healthy skin regeneration." },
+  { category: "Skin Treatments", name: "Anti-Pigmentation Treatments", duration: "75 min", price: "Rs. 6,000+", description: "Advanced therapy focused on reducing hyperpigmentation, dark spots, and evening out skin tone." },
+  { category: "Skin Treatments", name: "Skin Lightening Treatments", duration: "90 min", price: "Rs. 7,500+", description: "Radiance-boosting facial treatment using safe, premium herbal and active ingredients to enhance natural glow." },
+  { category: "Skin Treatments", name: "Anti-Aging Treatments", duration: "90 min", price: "Rs. 8,000+", description: "Deep rejuvenating therapy designed to boost collagen production, improve skin elasticity, and smooth fine lines." },
+
+  // DRESSINGS
+  { category: "Dressings", name: "Bridal Dressings", duration: "240 min", price: "Price on Request", description: "Full, bespoke bridal styling package including hair, makeup, draping, and styling for your special day." },
+  { category: "Dressings", name: "Makeup", duration: "90 min", price: "Rs. 7,500+", description: "Professional makeup application for social events, high-fashion shoots, or special occasions." },
+  { category: "Dressings", name: "Hair Styles", duration: "60 min", price: "Rs. 4,500+", description: "Elegant blow-drys, curls, waves, or creative up-dos tailored for any event theme." },
+  { category: "Dressings", name: "Hair Settings", duration: "45 min", price: "Rs. 3,000+", description: "Long-lasting hair setting and volume blow-outs for everyday elegance or business meetings." },
+  { category: "Dressings", name: "Saree Draping", duration: "30 min", price: "Rs. 2,000+", description: "Perfect and secure traditional or modern saree draping services for any occasion." },
 ];
 
 export default function ServicesPageClient() {
