@@ -121,20 +121,6 @@ export default function Hero() {
             Our Services
           </Link>
         </div>
-
-        {/* Scroll indicator */}
-        <div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-          style={{ opacity: 0, animation: "fadeIn 1s ease 2s forwards" }}
-        >
-          <span className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F]">
-            Scroll
-          </span>
-          <div
-            className="w-px h-12 bg-[#B89A7A]"
-            style={{ animation: "pulse 2s ease infinite" }}
-          />
-        </div>
       </div>
 
       <style jsx>{`
