@@ -42,7 +42,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0E0E10] text-[#F7F6F2]">
+    <footer className="bg-[#000000] text-[#FFFFFF]">
       {/* Gold top border */}
       <div className="h-px bg-[#B89A7A]/40" />
 
@@ -86,7 +86,7 @@ export default function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="font-montserrat text-sm text-[#6B665F] hover:text-[#F7F6F2] transition-colors duration-300"
+                  className="font-montserrat text-sm text-[#6B665F] hover:text-[#FFFFFF] transition-colors duration-300"
                 >
                   {link.label}
                 </Link>
@@ -103,12 +103,12 @@ export default function Footer() {
           <address className="font-montserrat text-sm text-[#6B665F] not-italic space-y-3 leading-relaxed">
             <p>5/1/2 Siriwardhana Rd<br />Minuwangoda, Sri Lanka</p>
             <p>
-              <a href="tel:+94774090444" className="hover:text-[#F7F6F2] transition-colors duration-300">
+              <a href="tel:+94774090444" className="hover:text-[#FFFFFF] transition-colors duration-300">
                 077 409 0444
               </a>
             </p>
             <p>
-              <a href="mailto:info@salonsonali.com" className="hover:text-[#F7F6F2] transition-colors duration-300">
+              <a href="mailto:info@salonsonali.com" className="hover:text-[#FFFFFF] transition-colors duration-300">
                 info@salonsonali.com
               </a>
             </p>
