@@ -23,11 +23,11 @@ export default function AboutPageClient() {
   return (
     <>
       {/* Hero statement */}
-      <section className="bg-[#0E0E10] pt-36 pb-24 px-6 text-center relative overflow-hidden">
+      <section className="bg-[#000000] pt-36 pb-24 px-6 text-center relative overflow-hidden">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(184,154,122,0.12) 0%, transparent 60%)" }} />
         <SectionReveal className="relative z-10 max-w-3xl mx-auto">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-6">Our Story</p>
-          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#F7F6F2] mb-8 leading-tight">
+          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#FFFFFF] mb-8 leading-tight">
             Beauty is not a luxury —<br />it is a language.
           </h1>
           <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />
@@ -38,16 +38,16 @@ export default function AboutPageClient() {
       </section>
 
       {/* Story — split screen */}
-      <section className="bg-[#F7F6F2] overflow-hidden">
+      <section className="bg-[#FFFFFF] overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
           {/* Image */}
           <SectionReveal direction="left" className="relative min-h-[500px] lg:min-h-0">
             <div
               className="absolute inset-0"
-              style={{ background: "linear-gradient(135deg, #0E0E10 0%, #3d2c1e 50%, #B89A7A 100%)" }}
+              style={{ background: "linear-gradient(135deg, #000000 0%, #3d2c1e 50%, #B89A7A 100%)" }}
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <p className="font-playfair text-8xl italic text-[#F7F6F2]/10">12+</p>
+              <p className="font-playfair text-8xl italic text-[#FFFFFF]/10">12+</p>
             </div>
             <div className="absolute bottom-10 left-10">
               <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A]">Years of Excellence</p>
@@ -58,7 +58,7 @@ export default function AboutPageClient() {
           {/* Text */}
           <SectionReveal direction="right" delay={0.15} className="flex flex-col justify-center px-10 lg:px-16 py-20">
             <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-6">How It Began</p>
-            <h2 className="font-playfair text-4xl text-[#0E0E10] mb-8 leading-tight">
+            <h2 className="font-playfair text-4xl text-[#000000] mb-8 leading-tight">
               From a Single Chair to a Full Sanctuary
             </h2>
             <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed mb-5">
@@ -77,7 +77,7 @@ export default function AboutPageClient() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <SectionReveal className="text-center mb-16">
             <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">What We Stand For</p>
-            <h2 className="font-playfair text-4xl lg:text-5xl text-[#0E0E10]">Our Values</h2>
+            <h2 className="font-playfair text-4xl lg:text-5xl text-[#000000]">Our Values</h2>
             <div className="w-16 h-px bg-[#B89A7A] mx-auto mt-6" />
           </SectionReveal>
 
@@ -89,10 +89,10 @@ export default function AboutPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.12 }}
-                className="bg-[#F7F6F2] p-8"
+                className="bg-[#FFFFFF] p-8"
               >
                 <span className="block w-8 h-px bg-[#B89A7A] mb-5" />
-                <h3 className="font-playfair text-xl text-[#0E0E10] mb-4">{v.title}</h3>
+                <h3 className="font-playfair text-xl text-[#000000] mb-4">{v.title}</h3>
                 <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed">{v.description}</p>
               </motion.div>
             ))}
@@ -101,11 +101,11 @@ export default function AboutPageClient() {
       </section>
 
       {/* Timeline */}
-      <section className="bg-[#F7F6F2] section-padding">
+      <section className="bg-[#FFFFFF] section-padding">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
           <SectionReveal className="text-center mb-16">
             <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">A Decade of Growth</p>
-            <h2 className="font-playfair text-4xl text-[#0E0E10]">Our Journey</h2>
+            <h2 className="font-playfair text-4xl text-[#000000]">Our Journey</h2>
             <div className="w-16 h-px bg-[#B89A7A] mx-auto mt-6" />
           </SectionReveal>
 
@@ -127,7 +127,7 @@ export default function AboutPageClient() {
                   <div className="w-14 flex-shrink-0 text-right relative">
                     <span className="font-playfair text-sm text-[#B89A7A] font-bold">{m.year}</span>
                     {/* Dot */}
-                    <div className="absolute -right-6 top-1.5 w-3 h-3 rounded-full bg-[#B89A7A] border-2 border-[#F7F6F2]" />
+                    <div className="absolute -right-6 top-1.5 w-3 h-3 rounded-full bg-[#B89A7A] border-2 border-[#FFFFFF]" />
                   </div>
                   {/* Event */}
                   <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed pt-0.5">{m.event}</p>
@@ -139,11 +139,11 @@ export default function AboutPageClient() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0E0E10] py-24 px-6 text-center relative overflow-hidden">
+      <section className="bg-[#000000] py-24 px-6 text-center relative overflow-hidden">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(184,154,122,0.08) 0%, transparent 70%)" }} />
         <SectionReveal className="relative z-10">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">Join Our Story</p>
-          <h2 className="font-playfair text-4xl lg:text-5xl text-[#F7F6F2] mb-8">Become Part of the Sonali Family</h2>
+          <h2 className="font-playfair text-4xl lg:text-5xl text-[#FFFFFF] mb-8">Become Part of the Sonali Family</h2>
           <Link href="/contact" className="btn-primary">Get in Touch</Link>
         </SectionReveal>
       </section>
