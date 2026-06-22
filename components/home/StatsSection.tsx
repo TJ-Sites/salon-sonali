@@ -43,7 +43,7 @@ function StatItem({ stat }: { stat: (typeof stats)[0] }) {
 
   return (
     <div ref={ref} className="text-center px-6 py-4">
-      <div className="font-playfair font-bold text-[#0E0E10]" style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}>
+      <div className="font-playfair font-bold text-[#000000]" style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}>
         {decimals > 0 ? count.toFixed(1) : Math.round(count)}
         <span className="text-[#B89A7A]">{stat.suffix}</span>
       </div>
@@ -56,7 +56,7 @@ function StatItem({ stat }: { stat: (typeof stats)[0] }) {
 
 export default function StatsSection() {
   return (
-    <section className="bg-[#F7F6F2] section-padding">
+    <section className="bg-[#FFFFFF] section-padding">
       <div className="max-w-5xl mx-auto">
         {/* Section label */}
         <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] text-center mb-4">

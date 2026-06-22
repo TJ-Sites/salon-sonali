@@ -28,7 +28,7 @@ const testimonials = [
     quote:
       "I am a regular customer at Salon Sonali. They are professionals and know the art. Highly recommended!",
     initials: "SM",
-    color: "#0E0E10",
+    color: "#000000",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Testimonials() {
         <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">
           Client Love
         </p>
-        <h2 className="font-playfair text-4xl lg:text-5xl text-[#0E0E10] mb-16">
+        <h2 className="font-playfair text-4xl lg:text-5xl text-[#000000] mb-16">
           What Our Clients Say
         </h2>
 
@@ -79,20 +79,20 @@ export default function Testimonials() {
             </div>
 
             {/* Quote */}
-            <blockquote className="font-playfair text-base sm:text-lg md:text-xl lg:text-2xl text-[#0E0E10] leading-relaxed italic mb-10 max-w-3xl mx-auto group-hover:text-[#B89A7A] transition-colors duration-300">
+            <blockquote className="font-playfair text-base sm:text-lg md:text-xl lg:text-2xl text-[#000000] leading-relaxed italic mb-10 max-w-3xl mx-auto group-hover:text-[#B89A7A] transition-colors duration-300">
               &ldquo;{t.quote}&rdquo;
             </blockquote>
 
             {/* Client info */}
             <div className="flex items-center justify-center gap-4">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center font-playfair text-[#F7F6F2] text-sm font-bold"
+                className="w-12 h-12 rounded-full flex items-center justify-center font-playfair text-[#FFFFFF] text-sm font-bold"
                 style={{ backgroundColor: t.color }}
               >
                 {t.initials}
               </div>
               <div className="text-left">
-                <p className="font-montserrat font-semibold text-sm text-[#0E0E10]">
+                <p className="font-montserrat font-semibold text-sm text-[#000000]">
                   {t.name}
                 </p>
                 <p className="font-montserrat text-xs text-[#6B665F]">{t.service}</p>

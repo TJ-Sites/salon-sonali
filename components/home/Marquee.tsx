@@ -31,7 +31,7 @@ export default function Marquee() {
             className={`font-montserrat text-sm tracking-[0.3em] uppercase mx-6 ${
               word === "·"
                 ? "text-[#B89A7A]"
-                : "text-[#F7F6F2]/80"
+                : "text-[#FFFFFF]/80"
             }`}
           >
             {word}

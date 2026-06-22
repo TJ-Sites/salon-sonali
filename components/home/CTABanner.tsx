@@ -4,7 +4,7 @@ export default function CTABanner() {
   return (
     <section
       className="relative grain overflow-hidden"
-      style={{ backgroundColor: "#0E0E10" }}
+      style={{ backgroundColor: "#000000" }}
     >
       {/* Gold accent lines */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B89A7A]/50 to-transparent" />
@@ -24,7 +24,7 @@ export default function CTABanner() {
           Your Transformation Awaits
         </p>
         <h2
-          className="font-playfair font-bold text-[#F7F6F2] mb-6"
+          className="font-playfair font-bold text-[#FFFFFF] mb-6"
           style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.1 }}
         >
           Ready to Transform?
