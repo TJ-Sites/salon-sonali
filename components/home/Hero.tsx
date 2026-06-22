@@ -12,49 +12,13 @@ export default function Hero() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
-
-    const heading = headingRef.current;
-    const sub = subRef.current;
-    const cta = ctaRef.current;
-
-    if (!heading) return () => window.removeEventListener("scroll", onScroll);
-
-    // Wrap each word in a span for stagger animation
-    const text = heading.textContent || "";
-    const words = text.trim().split(/\s+/);
-    heading.innerHTML = words
-      .map(
-        (word, i) =>
-          `<span class="word-wrap" style="overflow:hidden;display:inline-block;"><span class="word" style="display:inline-block;opacity:0;transform:translateY(100%);transition:opacity 0.7s ease ${i * 120}ms, transform 0.7s ease ${i * 120}ms">${word}</span></span>`
-      )
-      .join(" ");
-
-    // Trigger animation after small delay
-    const timer = setTimeout(() => {
-      heading.querySelectorAll<HTMLElement>(".word").forEach((el) => {
-        el.style.opacity = "1";
-        el.style.transform = "translateY(0)";
-      });
-      if (sub) {
-        sub.style.opacity = "1";
-        sub.style.transform = "translateY(0)";
-      }
-      if (cta) {
-        cta.style.opacity = "1";
-        cta.style.transform = "translateY(0)";
-      }
-    }, 300);
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("scroll", onScroll);
-    };
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden transition-colors duration-700"
-      style={{ backgroundColor: scrolled ? "#F7F6F2" : "#0E0E10" }}
+      style={{ backgroundColor: scrolled ? "#FFFFFF" : "#000000" }}
     >
       {/* Background gradient */}
       <div
@@ -89,12 +53,15 @@ export default function Hero() {
         {/* Main heading */}
         <h1
           ref={headingRef}
-          className={`font-playfair font-bold leading-tight mb-8 transition-colors duration-500 ${
-            scrolled ? "text-[#0E0E10]" : "text-[#F7F6F2]"
+          className={`font-playfair font-bold leading-tight mb-8 ${
+            scrolled ? "text-[#000000]" : "text-[#FFFFFF]"
           }`}
           style={{
             fontSize: "clamp(3rem, 8vw, 7rem)",
             letterSpacing: "-0.02em",
+            opacity: 0,
+            animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards",
+            transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)",
           }}
         >
           Where Beauty Meets Artistry
@@ -103,13 +70,13 @@ export default function Hero() {
         {/* Subheading */}
         <p
           ref={subRef}
-          className={`font-montserrat text-lg max-w-xl mx-auto leading-relaxed mb-12 transition-colors duration-500 ${
+          className={`font-montserrat text-lg max-w-xl mx-auto leading-relaxed mb-12 ${
             scrolled ? "text-[#3D3A35]" : "text-[#A39F99]"
           }`}
           style={{
             opacity: 0,
-            transform: "translateY(20px)",
-            transition: "opacity 0.8s ease 1.1s, transform 0.8s ease 1.1s",
+            animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards",
+            transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)",
           }}
         >
           Experience transformative hair, skin, dressings, and beauty treatments
@@ -119,17 +86,16 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div
           ref={ctaRef}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className={`flex flex-col sm:flex-row gap-4 justify-center items-center ${scrolled ? "hero-scrolled" : ""}`}
           style={{
             opacity: 0,
-            transform: "translateY(20px)",
-            transition: "opacity 0.8s ease 1.4s, transform 0.8s ease 1.4s",
+            animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards",
           }}
         >
-          <Link href="/contact" className={scrolled ? "btn-outline-dark" : "btn-primary"}>
+          <Link href="/contact" className="btn-hero-solid">
             Book Appointment
           </Link>
-          <Link href="/services" className={scrolled ? "btn-outline-dark" : "btn-outline"}>
+          <Link href="/services" className="btn-hero-outline">
             Our Services
           </Link>
         </div>
