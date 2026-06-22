@@ -55,18 +55,18 @@ export default function ContactPageClient() {
   };
 
   const inputClass = (field: keyof FormState) =>
-    `w-full font-montserrat text-sm text-[#0E0E10] bg-transparent border-b px-0 py-3 outline-none transition-colors duration-300 placeholder:text-[#6B665F]/60 focus:border-[#B89A7A] ${
+    `w-full font-montserrat text-sm text-[#000000] bg-transparent border-b px-0 py-3 outline-none transition-colors duration-300 placeholder:text-[#6B665F]/60 focus:border-[#B89A7A] ${
       errors[field] ? "border-red-400" : "border-[#E7E2D8]"
     }`;
 
   return (
     <>
       {/* Page Hero */}
-      <section className="bg-[#0E0E10] pt-36 pb-24 px-6 text-center relative overflow-hidden">
+      <section className="bg-[#000000] pt-36 pb-24 px-6 text-center relative overflow-hidden">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 30% 60%, rgba(184,154,122,0.1) 0%, transparent 70%)" }} />
         <SectionReveal className="relative z-10 max-w-2xl mx-auto">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-5">Get in Touch</p>
-          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#F7F6F2] mb-6" style={{ lineHeight: 1.1 }}>
+          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#FFFFFF] mb-6" style={{ lineHeight: 1.1 }}>
             We&apos;d Love to Hear From You
           </h1>
           <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />
@@ -77,11 +77,11 @@ export default function ContactPageClient() {
       </section>
 
       {/* Main content */}
-      <section className="bg-[#F7F6F2] section-padding">
+      <section className="bg-[#FFFFFF] section-padding">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Contact Form */}
           <SectionReveal direction="left">
-            <h2 className="font-playfair text-3xl text-[#0E0E10] mb-10">Send Us a Message</h2>
+            <h2 className="font-playfair text-3xl text-[#000000] mb-10">Send Us a Message</h2>
 
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-8" noValidate>
@@ -135,7 +135,7 @@ export default function ContactPageClient() {
                 <button type="submit" className="btn-primary" disabled={loading} id="contact-submit">
                   {loading ? (
                     <span className="flex items-center gap-3">
-                      <span className="w-4 h-4 border-2 border-[#F7F6F2]/30 border-t-[#F7F6F2] rounded-full animate-spin" />
+                      <span className="w-4 h-4 border-2 border-[#FFFFFF]/30 border-t-[#FFFFFF] rounded-full animate-spin" />
                       Sending…
                     </span>
                   ) : "Send Message"}
@@ -148,7 +148,7 @@ export default function ContactPageClient() {
                 className="py-12 text-center border border-[#E7E2D8] px-8"
               >
                 <div className="w-6 h-px bg-[#B89A7A] mx-auto mb-6" />
-                <h3 className="font-playfair text-2xl text-[#0E0E10] mb-4">Message Received</h3>
+                <h3 className="font-playfair text-2xl text-[#000000] mb-4">Message Received</h3>
                 <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed">
                   Thank you for reaching out! We&apos;ll be in touch within 24 hours.
                 </p>
@@ -176,14 +176,14 @@ export default function ContactPageClient() {
                 <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Address</p>
-                  <p className="font-montserrat text-sm text-[#0E0E10]">5/1/2 Siriwardhana Rd<br />Minuwangoda, Sri Lanka</p>
+                  <p className="font-montserrat text-sm text-[#000000]">5/1/2 Siriwardhana Rd<br />Minuwangoda, Sri Lanka</p>
                 </div>
               </div>
               <div className="flex gap-5 items-start">
                 <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Phone</p>
-                  <a href="tel:+94774090444" className="font-montserrat text-sm text-[#0E0E10] hover:text-[#B89A7A] transition-colors">
+                  <a href="tel:+94774090444" className="font-montserrat text-sm text-[#000000] hover:text-[#B89A7A] transition-colors">
                     077 409 0444
                   </a>
                 </div>
@@ -192,7 +192,7 @@ export default function ContactPageClient() {
                 <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Email</p>
-                  <a href="mailto:info@salonsonali.com" className="font-montserrat text-sm text-[#0E0E10] hover:text-[#B89A7A] transition-colors">
+                  <a href="mailto:info@salonsonali.com" className="font-montserrat text-sm text-[#000000] hover:text-[#B89A7A] transition-colors">
                     info@salonsonali.com
                   </a>
                 </div>
@@ -229,11 +229,11 @@ export default function ContactPageClient() {
             initial={{ opacity: 0, y: 20, x: "-50%" }}
             animate={{ opacity: 1, y: 0, x: "-50%" }}
             exit={{ opacity: 0, y: 20, x: "-50%" }}
-            className="fixed bottom-8 left-1/2 z-50 bg-[#0E0E10] text-[#F7F6F2] px-8 py-4 flex items-center gap-4 shadow-2xl"
+            className="fixed bottom-8 left-1/2 z-50 bg-[#000000] text-[#FFFFFF] px-8 py-4 flex items-center gap-4 shadow-2xl"
           >
             <span className="text-[#B89A7A]">—</span>
             <span className="font-montserrat text-sm">Your message has been sent!</span>
-            <button onClick={() => setToast(false)} className="text-[#6B665F] hover:text-[#F7F6F2] text-lg ml-2">×</button>
+            <button onClick={() => setToast(false)} className="text-[#6B665F] hover:text-[#FFFFFF] text-lg ml-2">×</button>
           </motion.div>
         )}
       </AnimatePresence>
