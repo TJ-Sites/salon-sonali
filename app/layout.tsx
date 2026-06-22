@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Montserrat, Yeseva_One, Alex_Brush } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -35,6 +36,12 @@ const alexBrush = Alex_Brush({
   display: "swap",
 });
 
+const acheria = localFont({
+  src: "./fonts/Acheria.woff",
+  variable: "--font-acheria",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Salon Sonali | Luxury Hair & Beauty Studio",
@@ -64,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${montserrat.variable} ${yeseva.variable} ${alexBrush.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${montserrat.variable} ${yeseva.variable} ${alexBrush.variable} ${acheria.variable}`}>
       <body>
         <LenisProvider>
           <ScrollProgress />
