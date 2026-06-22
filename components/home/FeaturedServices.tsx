@@ -62,7 +62,7 @@ export default function FeaturedServices() {
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">
             What We Offer
           </p>
-          <h2 className="font-playfair text-4xl lg:text-5xl text-[#0E0E10]">
+          <h2 className="font-playfair text-4xl lg:text-5xl text-[#000000]">
             Our Signature Services
           </h2>
           <div className="w-16 h-px bg-[#B89A7A] mx-auto mt-6" />
@@ -73,7 +73,7 @@ export default function FeaturedServices() {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className="service-card group bg-[#F7F6F2] p-10 flex flex-col gap-6 cursor-pointer"
+              className="service-card group bg-[#FFFFFF] p-10 flex flex-col gap-6 cursor-pointer"
               data-delay={i * 150}
               style={{
                 opacity: 0,
@@ -94,7 +94,7 @@ export default function FeaturedServices() {
             >
               <span className="font-playfair text-3xl font-bold text-[#B89A7A] opacity-60">{service.icon}</span>
               <div>
-                <h3 className="font-playfair text-2xl text-[#0E0E10] mb-3">
+                <h3 className="font-playfair text-2xl text-[#000000] mb-3">
                   {service.title}
                 </h3>
                 <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed">
@@ -103,7 +103,7 @@ export default function FeaturedServices() {
               </div>
               <Link
                 href={service.href}
-                className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A] hover:text-[#0E0E10] transition-colors duration-300 flex items-center gap-2 mt-auto"
+                className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A] hover:text-[#000000] transition-colors duration-300 flex items-center gap-2 mt-auto"
               >
                 Learn More
                 <span className="transition-transform duration-300 group-hover:translate-x-2">→</span>

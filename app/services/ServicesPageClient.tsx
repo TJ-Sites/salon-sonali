@@ -59,12 +59,12 @@ export default function ServicesPageClient() {
   return (
     <>
       {/* Page Hero */}
-      <section className="bg-[#0E0E10] pt-36 pb-24 px-6 lg:px-12 text-center relative overflow-hidden">
+      <section className="bg-[#000000] pt-36 pb-24 px-6 lg:px-12 text-center relative overflow-hidden">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 80%, rgba(184,154,122,0.1) 0%, transparent 70%)" }} />
         <div className="relative z-10 max-w-3xl mx-auto">
           <SectionReveal>
             <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-5">Our Services</p>
-            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#F7F6F2] mb-6" style={{ lineHeight: 1.1 }}>
+            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#FFFFFF] mb-6" style={{ lineHeight: 1.1 }}>
               Treatments for Every You
             </h1>
             <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />
@@ -76,14 +76,14 @@ export default function ServicesPageClient() {
       </section>
 
       {/* Category Tabs */}
-      <section className="bg-[#F7F6F2] sticky top-20 z-30 border-b border-[#E7E2D8] shadow-sm">
+      <section className="bg-[#FFFFFF] sticky top-20 z-30 border-b border-[#E7E2D8] shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex gap-1 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`relative font-montserrat text-xs tracking-widest uppercase px-6 py-5 whitespace-nowrap transition-colors duration-300 ${
-                activeCategory === cat ? "text-[#0E0E10]" : "text-[#6B665F] hover:text-[#0E0E10]"
+                activeCategory === cat ? "text-[#000000]" : "text-[#6B665F] hover:text-[#000000]"
               }`}
             >
               {cat}
@@ -100,7 +100,7 @@ export default function ServicesPageClient() {
       </section>
 
       {/* Services Grid */}
-      <section className="bg-[#F7F6F2] section-padding">
+      <section className="bg-[#FFFFFF] section-padding">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <AnimatePresence mode="wait">
             <motion.div
@@ -123,7 +123,7 @@ export default function ServicesPageClient() {
                   >
                     <button
                       onClick={() => setOpenAccordion(isOpen ? null : service.name)}
-                      className="w-full flex items-center justify-between p-7 text-left hover:bg-[#F7F6F2] transition-colors duration-300"
+                      className="w-full flex items-center justify-between p-7 text-left hover:bg-[#FFFFFF] transition-colors duration-300"
                     >
                       <div className="flex-1 pr-4">
                         <div className="flex items-center gap-3 mb-1">
@@ -131,7 +131,7 @@ export default function ServicesPageClient() {
                             {service.category}
                           </span>
                         </div>
-                        <h3 className="font-playfair text-xl text-[#0E0E10]">{service.name}</h3>
+                        <h3 className="font-playfair text-xl text-[#000000]">{service.name}</h3>
                       </div>
                       <div className="flex items-center gap-6 flex-shrink-0">
                         <div className="text-right hidden sm:block">
@@ -180,7 +180,7 @@ export default function ServicesPageClient() {
       <section className="bg-[#E7E2D8] py-20 px-6 text-center">
         <SectionReveal>
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">Ready?</p>
-          <h2 className="font-playfair text-4xl text-[#0E0E10] mb-8">Book Your Treatment</h2>
+          <h2 className="font-playfair text-4xl text-[#000000] mb-8">Book Your Treatment</h2>
           <Link href="/contact" className="btn-outline-dark">Get in Touch</Link>
         </SectionReveal>
       </section>
