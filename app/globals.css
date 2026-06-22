@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 :root {
-  --aurora-black: #0E0E10;
+  --aurora-black: #000000;
   --aurora-gray: #6B665F;
   --aurora-gold: #B89A7A;
   --aurora-linen: #E7E2D8;
-  --aurora-cream: #F7F6F2;
+  --aurora-cream: #FFFFFF;
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-montserrat: 'Montserrat', 'Helvetica Neue', sans-serif;
   --font-yeseva: 'Yeseva One', 'Playfair Display', Georgia, serif;
@@ -36,14 +36,14 @@ body {
 
 /* ── Typography ── */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair);
+  font-family: var(--font-acheria), var(--font-playfair), serif;
   line-height: 1.15;
 }
 
 /* Custom display font for all page header sections with dark background */
-section.bg-\[\#0E0E10\] h1,
+section.bg-\[\#000000\] h1,
 section.relative.min-h-screen h1 {
-  font-family: var(--font-yeseva), var(--font-playfair), serif !important;
+  font-family: var(--font-acheria), var(--font-yeseva), var(--font-playfair), serif !important;
   font-weight: 400 !important;
 }
 
@@ -109,9 +109,8 @@ section.relative.min-h-screen h1 {
   }
 }
 
-/* ── Button Styles (Colorless 3D Liquid Glass) ── */
+/* ── Button Styles (Minimalist Box Type) ── */
 .btn-primary {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -121,62 +120,22 @@ section.relative.min-h-screen h1 {
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #FFFFFF;
-  border-radius: 9999px;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
-  overflow: hidden;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  
-  /* Primary Translucent Glass (Slightly more defined) */
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.4),
-    inset 0 4px 6px rgba(255, 255, 255, 0.2),
-    inset 0 -5px 12px rgba(0, 0, 0, 0.4),
-    0 10px 25px -5px rgba(0, 0, 0, 0.3),
-    0 8px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 8%;
-  right: 8%;
-  height: 38%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border-radius: 9999px;
-  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px) scale(1.03);
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.5),
-    inset 0 5px 8px rgba(255, 255, 255, 0.3),
-    inset 0 -6px 14px rgba(0, 0, 0, 0.45),
-    0 15px 30px -5px rgba(0, 0, 0, 0.4),
-    0 10px 15px -5px rgba(0, 0, 0, 0.3);
-}
-
-.btn-primary:active {
-  transform: translateY(-1px) scale(0.98);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 0.3),
-    inset 0 2px 4px rgba(255, 255, 255, 0.1),
-    inset 0 -3px 8px rgba(0, 0, 0, 0.5),
-    0 5px 12px -5px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .btn-outline {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -186,60 +145,21 @@ section.relative.min-h-screen h1 {
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #F7F6F2;
-  border-radius: 9999px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
-  overflow: hidden;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  
-  /* Secondary Translucent Sheer Glass */
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.25),
-    inset 0 3px 5px rgba(255, 255, 255, 0.15),
-    inset 0 -5px 10px rgba(0, 0, 0, 0.35),
-    0 10px 20px rgba(0, 0, 0, 0.25);
-}
-
-.btn-outline::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 8%;
-  right: 8%;
-  height: 38%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.02) 100%);
-  border-radius: 9999px;
-  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .btn-outline:hover {
-  transform: translateY(-3px) scale(1.03);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.3),
-    inset 0 4px 6px rgba(255, 255, 255, 0.2),
-    inset 0 -6px 12px rgba(0, 0, 0, 0.4),
-    0 15px 25px rgba(0, 0, 0, 0.35);
-}
-
-.btn-outline:active {
-  transform: translateY(-1px) scale(0.98);
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 0.2),
-    inset 0 2px 3px rgba(255, 255, 255, 0.1),
-    inset 0 -3px 8px rgba(0, 0, 0, 0.45),
-    0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .btn-outline-dark {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -249,57 +169,102 @@ section.relative.min-h-screen h1 {
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #0E0E10;
-  border-radius: 9999px;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
-  overflow: hidden;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  
-  /* Sheer Light Glass with Dark Text for readability on light backgrounds */
-  background: rgba(14, 14, 16, 0.05);
-  border: 1px solid rgba(14, 14, 16, 0.15);
-  border-top: 1.5px solid rgba(14, 14, 16, 0.3);
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.5),
-    inset 0 3px 5px rgba(255, 255, 255, 0.2),
-    inset 0 -5px 10px rgba(14, 14, 16, 0.1),
-    0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-.btn-outline-dark::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 8%;
-  right: 8%;
-  height: 38%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.01) 100%);
-  border-radius: 9999px;
-  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .btn-outline-dark:hover {
-  transform: translateY(-3px) scale(1.03);
-  background: rgba(14, 14, 16, 0.09);
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.6),
-    inset 0 4px 6px rgba(255, 255, 255, 0.25),
-    inset 0 -6px 12px rgba(14, 14, 16, 0.15),
-    0 15px 25px rgba(0, 0, 0, 0.08);
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
-.btn-outline-dark:active {
-  transform: translateY(-1px) scale(0.98);
-  background: rgba(14, 14, 16, 0.03);
-  box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 0.4),
-    inset 0 2px 3px rgba(255, 255, 255, 0.15),
-    inset 0 -3px 8px rgba(14, 14, 16, 0.2),
-    0 5px 10px rgba(0, 0, 0, 0.03);
+/* ── Hero Scroll-Transition Buttons ── */
+.btn-hero-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 1.2s cubic-bezier(0.25, 1, 0.3, 1), 
+              color 1.2s cubic-bezier(0.25, 1, 0.3, 1), 
+              border-color 1.2s cubic-bezier(0.25, 1, 0.3, 1);
 }
+
+.hero-scrolled .btn-hero-solid {
+  background-color: transparent;
+  color: #000000;
+  border-color: #000000;
+}
+
+.btn-hero-solid:hover {
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.hero-scrolled .btn-hero-solid:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #000000 !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.btn-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 1.2s cubic-bezier(0.25, 1, 0.3, 1), 
+              color 1.2s cubic-bezier(0.25, 1, 0.3, 1), 
+              border-color 1.2s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.hero-scrolled .btn-hero-outline {
+  color: #000000;
+  border-color: #000000;
+}
+
+.btn-hero-outline:hover {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: #FFFFFF !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.hero-scrolled .btn-hero-outline:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #000000 !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
 
 /* ── Marquee ── */
 .marquee-wrapper {
