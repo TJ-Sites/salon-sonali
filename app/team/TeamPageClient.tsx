@@ -6,20 +6,20 @@ import Link from "next/link";
 
 const team = [
   {
-    name: "Sonali Mehta",
-    title: "Founder & Master Stylist",
-    speciality: "Hair Dressing & Colouring",
-    bio: "With over 12 years in the industry, Sonali founded the salon with a vision to redefine luxury beauty in the city. Trained in London and Mumbai, she specialises in colour transformations and precision cuts that honour each client's individuality.",
-    initials: "SM",
-    price: "Price: Rs. 3,000+",
+    name: "Sonali Hettiarachchi",
+    title: "Chairwoman",
+    speciality: "Chairwoman",
+    bio: "With a clear vision for luxury and artistic expression, Sonali Hettiarachchi leads Salon Sonali as its Chairwoman. Her leadership ensures that the salon remains a sanctuary of elegance, craftsmanship, and state-of-the-art beauty practices.",
+    initials: "SH",
+    price: "Consultation: By Appointment",
   },
   {
-    name: "Rahul Verma",
-    title: "Senior Hair Stylist",
-    speciality: "Precision Cuts & Styling",
-    bio: "Rahul brings a sharp eye for structure and texture to every cut. Whether it's a classic men's trim or a bold textured style, his technical skill and relaxed approach make clients feel instantly at ease.",
-    initials: "RV",
-    price: "Price: Rs. 2,500+",
+    name: "Oshadi Karunanayaka",
+    title: "Managing Director",
+    speciality: "Managing Director",
+    bio: "Oshadi Karunanayaka oversees the operations and client experiences at Salon Sonali as Managing Director. Her dedication to excellence and detailed management ensures that every client receives a seamless, bespoke, and premium luxury service.",
+    initials: "OK",
+    price: "Consultation: By Appointment",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function TeamPageClient() {
       <section className="bg-[#F7F6F2] py-24 px-6 relative overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col gap-24 relative z-10">
           
-          {/* Member 1: Sonali Mehta (Image Left, Content Right) */}
+          {/* Member 1: Sonali Hettiarachchi (Image Left, Content Right) */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export default function TeamPageClient() {
                 }}
               >
                 {/* Initials very faint and elegant inside the box */}
-                <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">SM</span>
+                <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[0].initials}</span>
               </div>
             </div>
 
@@ -141,7 +141,7 @@ export default function TeamPageClient() {
             </div>
           </motion.div>
 
-          {/* Member 2: Rahul Verma (Content Left, Image Right) */}
+          {/* Member 2: Oshadi Karunanayaka (Content Left, Image Right) */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -190,32 +190,6 @@ export default function TeamPageClient() {
 
             {/* Diamond Image Container (Right) */}
             <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0">
-              {/* Silver/gold scissors SVG on the right */}
-              <svg 
-                viewBox="0 0 100 100" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="1.2"
-                className="absolute -right-16 top-1/2 -translate-y-1/2 w-28 sm:w-36 text-[#B89A7A]/35 pointer-events-none transform -rotate-12 z-10"
-              >
-                {/* Left Blade */}
-                <path d="M50,50 L85,25 C87,23 88,25 87,27 L55,52" strokeLinecap="round" strokeLinejoin="round" />
-                {/* Right Blade */}
-                <path d="M50,50 L85,75 C87,77 88,75 87,73 L55,48" strokeLinecap="round" strokeLinejoin="round" />
-                {/* Pivot Screw */}
-                <circle cx="50" cy="50" r="2.5" fill="#B89A7A" stroke="none" />
-                {/* Shank 1 */}
-                <path d="M50,50 C45,50 40,47 38,42 L28,42" strokeLinecap="round" strokeLinejoin="round" />
-                {/* Handle Ring 1 */}
-                <circle cx="20" cy="42" r="8" />
-                {/* Finger Rest on Ring 1 */}
-                <path d="M12,42 C10,42 8,39 9,37" strokeLinecap="round" strokeLinejoin="round" />
-                {/* Shank 2 */}
-                <path d="M50,50 C45,50 40,53 38,58 L28,58" strokeLinecap="round" strokeLinejoin="round" />
-                {/* Handle Ring 2 */}
-                <circle cx="20" cy="58" r="8" />
-              </svg>
-
               {/* The Gold Diamond Frame (slightly larger) */}
               <div 
                 className="absolute inset-2 bg-[#B89A7A]/20 transition-transform duration-500 hover:scale-105"
@@ -232,7 +206,7 @@ export default function TeamPageClient() {
                 }}
               >
                 {/* Initials very faint and elegant inside the box */}
-                <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">RV</span>
+                <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[1].initials}</span>
               </div>
             </div>
           </motion.div>
