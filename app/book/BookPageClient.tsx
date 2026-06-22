@@ -93,22 +93,22 @@ export default function BookPageClient() {
 
   if (confirmed) {
     return (
-      <div className="min-h-screen bg-[#0E0E10] flex items-center justify-center px-6">
+      <div className="min-h-screen bg-[#000000] flex items-center justify-center px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="text-center max-w-md"
         >
           <div className="text-5xl text-[#B89A7A] mb-8">✦</div>
-          <h2 className="font-playfair text-4xl text-[#F7F6F2] mb-4">You&apos;re Booked!</h2>
+          <h2 className="font-playfair text-4xl text-[#FFFFFF] mb-4">You&apos;re Booked!</h2>
           <p className="font-montserrat text-[#6B665F] mb-3">
-            <span className="text-[#F7F6F2]">{selectedService}</span>
+            <span className="text-[#FFFFFF]">{selectedService}</span>
           </p>
           <p className="font-montserrat text-[#6B665F] mb-3">
-            with <span className="text-[#F7F6F2]">{selectedSpecialist}</span>
+            with <span className="text-[#FFFFFF]">{selectedSpecialist}</span>
           </p>
           <p className="font-montserrat text-[#6B665F] mb-10">
-            on <span className="text-[#F7F6F2]">{form.date}</span> at <span className="text-[#F7F6F2]">{form.time}</span>
+            on <span className="text-[#FFFFFF]">{form.date}</span> at <span className="text-[#FFFFFF]">{form.time}</span>
           </p>
           <p className="font-montserrat text-sm text-[#6B665F] mb-10">A confirmation will be sent to <span className="text-[#B89A7A]">{form.email}</span></p>
           <button
@@ -125,11 +125,11 @@ export default function BookPageClient() {
   return (
     <>
       {/* Page Hero */}
-      <section className="bg-[#0E0E10] pt-36 pb-20 px-6 text-center relative overflow-hidden">
+      <section className="bg-[#000000] pt-36 pb-20 px-6 text-center relative overflow-hidden">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 80%, rgba(184,154,122,0.1) 0%, transparent 60%)" }} />
         <SectionReveal className="relative z-10 max-w-2xl mx-auto">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-5">Reservations</p>
-          <h1 className="font-playfair text-5xl lg:text-6xl text-[#F7F6F2] mb-6" style={{ lineHeight: 1.1 }}>
+          <h1 className="font-playfair text-5xl lg:text-6xl text-[#FFFFFF] mb-6" style={{ lineHeight: 1.1 }}>
             Book Your Appointment
           </h1>
           <div className="w-16 h-px bg-[#B89A7A] mx-auto" />
@@ -137,7 +137,7 @@ export default function BookPageClient() {
       </section>
 
       {/* Booking form */}
-      <section className="bg-[#F7F6F2] section-padding">
+      <section className="bg-[#FFFFFF] section-padding">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
           {/* Step indicator */}
           <div className="flex items-center justify-center gap-0 mb-16">
@@ -147,7 +147,7 @@ export default function BookPageClient() {
                   <div
                     className={`w-10 h-10 flex items-center justify-center font-montserrat text-sm font-medium transition-all duration-500 ${
                       i <= step
-                        ? "bg-[#B89A7A] text-[#F7F6F2]"
+                        ? "bg-[#B89A7A] text-[#FFFFFF]"
                         : "bg-[#E7E2D8] text-[#6B665F]"
                     }`}
                   >
@@ -174,7 +174,7 @@ export default function BookPageClient() {
                 exit={{ opacity: 0, x: -30 }}
                 transition={{ duration: 0.4 }}
               >
-                <h2 className="font-playfair text-3xl text-[#0E0E10] mb-10">Choose Your Service</h2>
+                <h2 className="font-playfair text-3xl text-[#000000] mb-10">Choose Your Service</h2>
                 <div className="space-y-6">
                   {serviceCategories.map((cat) => (
                     <div key={cat.category}>
@@ -186,8 +186,8 @@ export default function BookPageClient() {
                             onClick={() => setSelectedService(svc)}
                             className={`w-full text-left px-6 py-4 font-montserrat text-sm border transition-all duration-300 ${
                               selectedService === svc
-                                ? "border-[#B89A7A] bg-[#B89A7A]/5 text-[#0E0E10]"
-                                : "border-[#E7E2D8] text-[#6B665F] hover:border-[#B89A7A]/50 hover:text-[#0E0E10]"
+                                ? "border-[#B89A7A] bg-[#B89A7A]/5 text-[#000000]"
+                                : "border-[#E7E2D8] text-[#6B665F] hover:border-[#B89A7A]/50 hover:text-[#000000]"
                             }`}
                           >
                             <span className={`mr-3 ${selectedService === svc ? "text-[#B89A7A]" : "text-transparent"}`}>✓</span>
@@ -209,7 +209,7 @@ export default function BookPageClient() {
                 exit={{ opacity: 0, x: -30 }}
                 transition={{ duration: 0.4 }}
               >
-                <h2 className="font-playfair text-3xl text-[#0E0E10] mb-10">Choose Your Specialist</h2>
+                <h2 className="font-playfair text-3xl text-[#000000] mb-10">Choose Your Specialist</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {specialists.map((sp) => (
                     <button
@@ -222,13 +222,13 @@ export default function BookPageClient() {
                       }`}
                     >
                       <div
-                        className="w-12 h-12 rounded-full flex items-center justify-center font-playfair text-sm text-[#F7F6F2] flex-shrink-0"
-                        style={{ background: "linear-gradient(135deg, #0E0E10, #B89A7A)" }}
+                        className="w-12 h-12 rounded-full flex items-center justify-center font-playfair text-sm text-[#FFFFFF] flex-shrink-0"
+                        style={{ background: "linear-gradient(135deg, #000000, #B89A7A)" }}
                       >
                         {sp.initials}
                       </div>
                       <div>
-                        <p className="font-playfair text-lg text-[#0E0E10]">{sp.name}</p>
+                        <p className="font-playfair text-lg text-[#000000]">{sp.name}</p>
                         <p className="font-montserrat text-xs text-[#6B665F]">{sp.speciality}</p>
                       </div>
                       {selectedSpecialist === sp.name && (
@@ -248,13 +248,13 @@ export default function BookPageClient() {
                 exit={{ opacity: 0, x: -30 }}
                 transition={{ duration: 0.4 }}
               >
-                <h2 className="font-playfair text-3xl text-[#0E0E10] mb-10">Your Details</h2>
+                <h2 className="font-playfair text-3xl text-[#000000] mb-10">Your Details</h2>
 
                 {/* Summary */}
                 <div className="bg-[#E7E2D8] p-6 mb-10 space-y-2">
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A] mb-3">Booking Summary</p>
-                  <p className="font-montserrat text-sm text-[#0E0E10]"><span className="text-[#6B665F]">Service: </span>{selectedService}</p>
-                  <p className="font-montserrat text-sm text-[#0E0E10]"><span className="text-[#6B665F]">Specialist: </span>{selectedSpecialist}</p>
+                  <p className="font-montserrat text-sm text-[#000000]"><span className="text-[#6B665F]">Service: </span>{selectedService}</p>
+                  <p className="font-montserrat text-sm text-[#000000]"><span className="text-[#6B665F]">Specialist: </span>{selectedSpecialist}</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-8">
@@ -266,7 +266,7 @@ export default function BookPageClient() {
                         placeholder="Full Name *"
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full font-montserrat text-sm text-[#0E0E10] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors placeholder:text-[#6B665F]/60"
+                        className="w-full font-montserrat text-sm text-[#000000] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors placeholder:text-[#6B665F]/60"
                       />
                     </div>
                     <div>
@@ -276,7 +276,7 @@ export default function BookPageClient() {
                         placeholder="Email Address *"
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full font-montserrat text-sm text-[#0E0E10] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors placeholder:text-[#6B665F]/60"
+                        className="w-full font-montserrat text-sm text-[#000000] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors placeholder:text-[#6B665F]/60"
                       />
                     </div>
                     <div>
@@ -285,7 +285,7 @@ export default function BookPageClient() {
                         placeholder="Phone Number"
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full font-montserrat text-sm text-[#0E0E10] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors placeholder:text-[#6B665F]/60"
+                        className="w-full font-montserrat text-sm text-[#000000] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors placeholder:text-[#6B665F]/60"
                       />
                     </div>
                     <div>
@@ -295,7 +295,7 @@ export default function BookPageClient() {
                         value={form.date}
                         onChange={(e) => setForm({ ...form, date: e.target.value })}
                         min={new Date().toISOString().split("T")[0]}
-                        className="w-full font-montserrat text-sm text-[#0E0E10] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors"
+                        className="w-full font-montserrat text-sm text-[#000000] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors"
                       />
                     </div>
                     <div className="sm:col-span-2">
@@ -303,7 +303,7 @@ export default function BookPageClient() {
                         required
                         value={form.time}
                         onChange={(e) => setForm({ ...form, time: e.target.value })}
-                        className="w-full font-montserrat text-sm text-[#0E0E10] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors appearance-none cursor-pointer"
+                        className="w-full font-montserrat text-sm text-[#000000] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors appearance-none cursor-pointer"
                       >
                         <option value="" disabled>Preferred Time *</option>
                         {["9:00am","10:00am","11:00am","12:00pm","1:00pm","2:00pm","3:00pm","4:00pm","5:00pm","6:00pm"].map((t) => (
@@ -317,7 +317,7 @@ export default function BookPageClient() {
                         rows={3}
                         value={form.notes}
                         onChange={(e) => setForm({ ...form, notes: e.target.value })}
-                        className="w-full font-montserrat text-sm text-[#0E0E10] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors resize-none placeholder:text-[#6B665F]/60"
+                        className="w-full font-montserrat text-sm text-[#000000] bg-transparent border-b border-[#E7E2D8] px-0 py-3 outline-none focus:border-[#B89A7A] transition-colors resize-none placeholder:text-[#6B665F]/60"
                       />
                     </div>
                   </div>
