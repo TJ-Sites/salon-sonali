@@ -6,7 +6,16 @@ import SectionReveal from "@/components/ui/SectionReveal";
 
 const filters = ["All", "Hair Colouring", "Hair Cutting", "Kids Hair Cutting", "Treatments", "Dressing", "Bridle Dressing"];
 
-const galleryItems = [
+interface GalleryItem {
+  id: number;
+  category: string;
+  label: string;
+  image: string;
+  span: string;
+  gradient?: string;
+}
+
+const galleryItems: GalleryItem[] = [
   // ── Hair Colouring (11 photos)
   { id: 1,  category: "Hair Colouring", label: "Hair Colouring", image: "/hair-colouring/49eda34d-c8be-4bf5-97bd-e6bd6474ab6b.jpg", span: "row-span-2" },
   { id: 2,  category: "Hair Colouring", label: "Hair Colouring", image: "/hair-colouring/53a13a46-4df1-4ae4-96ac-818797a0e3a2.jpg", span: "" },
@@ -59,11 +68,11 @@ export default function GalleryPageClient() {
   return (
     <>
       {/* Page Hero */}
-      <section className="bg-[#0E0E10] pt-36 pb-24 px-6 text-center relative overflow-hidden">
+      <section className="bg-[#000000] pt-36 pb-24 px-6 text-center relative overflow-hidden">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 30%, rgba(184,154,122,0.1) 0%, transparent 60%)" }} />
         <SectionReveal className="relative z-10 max-w-2xl mx-auto">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-5">Our Portfolio</p>
-          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#F7F6F2] mb-6" style={{ lineHeight: 1.1 }}>
+          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#FFFFFF] mb-6" style={{ lineHeight: 1.1 }}>
             Beauty in Every Frame
           </h1>
           <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />
@@ -74,14 +83,14 @@ export default function GalleryPageClient() {
       </section>
 
       {/* Filter Bar */}
-      <section className="bg-[#F7F6F2] sticky top-20 z-30 border-b border-[#E7E2D8] shadow-sm">
+      <section className="bg-[#FFFFFF] sticky top-20 z-30 border-b border-[#E7E2D8] shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex gap-1 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
           {filters.map((f) => (
             <button
               key={f}
               onClick={() => setActiveFilter(f)}
               className={`relative font-montserrat text-xs tracking-widest uppercase px-6 py-5 whitespace-nowrap transition-colors duration-300 ${
-                activeFilter === f ? "text-[#0E0E10]" : "text-[#6B665F] hover:text-[#0E0E10]"
+                activeFilter === f ? "text-[#000000]" : "text-[#6B665F] hover:text-[#000000]"
               }`}
             >
               {f}
@@ -98,7 +107,7 @@ export default function GalleryPageClient() {
       </section>
 
       {/* Masonry/Grid */}
-      <section className="bg-[#F7F6F2] py-12 lg:py-16">
+      <section className="bg-[#FFFFFF] py-12 lg:py-16">
         <div className="w-full px-2">
           <AnimatePresence mode="wait">
             <motion.div
@@ -133,16 +142,16 @@ export default function GalleryPageClient() {
                     />
                   )}
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-[#0E0E10]/10 group-hover:bg-[#0E0E10]/50 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-[#000000]/10 group-hover:bg-[#000000]/50 transition-all duration-500" />
                   {/* Bottom shadow overlay */}
-                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0E0E10]/80 to-transparent pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#000000]/80 to-transparent pointer-events-none" />
                   {/* Label */}
                   <div className="absolute inset-x-0 bottom-0 p-5 transition-transform duration-500">
                     <p className="font-montserrat text-[10px] tracking-widest uppercase text-[#B89A7A] mb-1">{item.category}</p>
-                    <p className="font-playfair text-lg text-[#F7F6F2] group-hover:text-[#B89A7A] transition-colors duration-300">{item.label}</p>
+                    <p className="font-playfair text-lg text-[#FFFFFF] group-hover:text-[#B89A7A] transition-colors duration-300">{item.label}</p>
                   </div>
                   {/* Expand icon */}
-                  <div className="absolute top-4 right-4 w-8 h-8 border border-[#B89A7A]/0 group-hover:border-[#B89A7A]/60 flex items-center justify-center text-[#F7F6F2]/0 group-hover:text-[#F7F6F2] transition-all duration-500 text-xs">
+                  <div className="absolute top-4 right-4 w-8 h-8 border border-[#B89A7A]/0 group-hover:border-[#B89A7A]/60 flex items-center justify-center text-[#FFFFFF]/0 group-hover:text-[#FFFFFF] transition-all duration-500 text-xs">
                     ⤢
                   </div>
                 </motion.div>
@@ -162,7 +171,7 @@ export default function GalleryPageClient() {
             exit={{ opacity: 0 }}
             onClick={() => setLightboxItem(null)}
           >
-            <div className="absolute inset-0 bg-[#0E0E10]/90 backdrop-blur-md" />
+            <div className="absolute inset-0 bg-[#000000]/90 backdrop-blur-md" />
             <motion.div
               className="relative max-w-2xl w-full aspect-[4/5] overflow-hidden"
               initial={{ scale: 0.85, opacity: 0 }}
@@ -182,15 +191,15 @@ export default function GalleryPageClient() {
               )}
               {/* Close */}
               <button
-                className="absolute top-4 right-4 w-10 h-10 bg-[#0E0E10]/60 text-[#F7F6F2] flex items-center justify-center text-xl hover:bg-[#B89A7A] transition-colors z-10"
+                className="absolute top-4 right-4 w-10 h-10 bg-[#000000]/60 text-[#FFFFFF] flex items-center justify-center text-xl hover:bg-[#B89A7A] transition-colors z-10"
                 onClick={() => setLightboxItem(null)}
               >
                 ×
               </button>
               {/* Caption */}
-              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0E0E10]/80 to-transparent p-8">
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#000000]/80 to-transparent p-8">
                 <p className="font-montserrat text-[10px] tracking-widest uppercase text-[#B89A7A] mb-2">{lightboxItem.category}</p>
-                <p className="font-playfair text-2xl text-[#F7F6F2]">{lightboxItem.label}</p>
+                <p className="font-playfair text-2xl text-[#FFFFFF]">{lightboxItem.label}</p>
               </div>
             </motion.div>
           </motion.div>
