@@ -27,11 +27,11 @@ export default function TeamPageClient() {
   return (
     <>
       {/* Page Hero */}
-      <section className="bg-[#0E0E10] pt-36 pb-24 px-6 text-center relative overflow-hidden">
+      <section className="bg-[#000000] pt-36 pb-24 px-6 text-center relative overflow-hidden">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 30% 70%, rgba(184,154,122,0.08) 0%, transparent 70%)" }} />
         <SectionReveal className="relative z-10 max-w-2xl mx-auto">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-5">Meet the Experts</p>
-          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#F7F6F2] mb-6" style={{ lineHeight: 1.1 }}>
+          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#FFFFFF] mb-6" style={{ lineHeight: 1.1 }}>
             The Hands Behind Your Look
           </h1>
           <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />
@@ -42,7 +42,7 @@ export default function TeamPageClient() {
       </section>
 
       {/* Team Alternating Section */}
-      <section className="bg-[#F7F6F2] py-24 px-6 relative overflow-hidden">
+      <section className="bg-[#FFFFFF] py-24 px-6 relative overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col gap-24 relative z-10">
           
           {/* Member 1: Sonali Hettiarachchi (Image Left, Content Right) */}
@@ -111,7 +111,7 @@ export default function TeamPageClient() {
               </p>
               
               {/* Price Pill */}
-              <div className="bg-[#E7E2D8]/80 text-[#0E0E10] font-montserrat text-xs tracking-wider font-semibold px-6 py-2.5 rounded-sm mb-6 shadow-sm">
+              <div className="bg-[#E7E2D8]/80 text-[#000000] font-montserrat text-xs tracking-wider font-semibold px-6 py-2.5 rounded-sm mb-6 shadow-sm">
                 {team[0].price}
               </div>
 
@@ -159,7 +159,7 @@ export default function TeamPageClient() {
               </p>
               
               {/* Price Pill */}
-              <div className="bg-[#E7E2D8]/80 text-[#0E0E10] font-montserrat text-xs tracking-wider font-semibold px-6 py-2.5 rounded-sm mb-6 shadow-sm">
+              <div className="bg-[#E7E2D8]/80 text-[#000000] font-montserrat text-xs tracking-wider font-semibold px-6 py-2.5 rounded-sm mb-6 shadow-sm">
                 {team[1].price}
               </div>
 
@@ -218,7 +218,7 @@ export default function TeamPageClient() {
       <section className="bg-[#E7E2D8] py-20 px-6 text-center">
         <SectionReveal>
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">Work With Us</p>
-          <h2 className="font-playfair text-4xl text-[#0E0E10] mb-8">Find Your Perfect Match</h2>
+          <h2 className="font-playfair text-4xl text-[#000000] mb-8">Find Your Perfect Match</h2>
           <Link href="/contact" className="btn-outline-dark">Get in Touch</Link>
         </SectionReveal>
       </section>
