@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 import Link from "next/link";
 
@@ -9,68 +8,22 @@ const team = [
   {
     name: "Sonali Mehta",
     title: "Founder & Master Stylist",
-    speciality: "Colour Specialist · Balayage",
+    speciality: "Hair Dressing & Colouring",
     bio: "With over 12 years in the industry, Sonali founded the salon with a vision to redefine luxury beauty in the city. Trained in London and Mumbai, she specialises in colour transformations and precision cuts that honour each client's individuality.",
     initials: "SM",
-    gradient: "linear-gradient(135deg, #0E0E10 0%, #B89A7A 100%)",
-    experience: "12 Years",
-    instagram: "#",
-  },
-  {
-    name: "Priya Sharma",
-    title: "Senior Skin Therapist",
-    speciality: "Facials · Microdermabrasion",
-    bio: "Priya's passion for skin health goes beyond aesthetics. A certified skin therapist with training in advanced dermal treatments, she creates personalised protocols that deliver real, visible results.",
-    initials: "PS",
-    gradient: "linear-gradient(135deg, #2a1f14 0%, #E7E2D8 100%)",
-    experience: "8 Years",
-    instagram: "#",
-  },
-  {
-    name: "Aisha Kapoor",
-    title: "Nail Artist",
-    speciality: "Nail Art · Gel Systems",
-    bio: "Aisha transforms nails into wearable art. From minimalist geometry to intricate hand-painted florals, her precision and creativity have made her one of the most booked specialists on the team.",
-    initials: "AK",
-    gradient: "linear-gradient(135deg, #1a1408 0%, #6B665F 100%)",
-    experience: "6 Years",
-    instagram: "#",
+    price: "Price: Rs. 3,000+",
   },
   {
     name: "Rahul Verma",
-    title: "Hair Stylist",
-    speciality: "Cuts · Keratin · Men's Grooming",
+    title: "Senior Hair Stylist",
+    speciality: "Precision Cuts & Styling",
     bio: "Rahul brings a sharp eye for structure and texture to every cut. Whether it's a classic men's trim or a bold textured style, his technical skill and relaxed approach make clients feel instantly at ease.",
     initials: "RV",
-    gradient: "linear-gradient(135deg, #0E0E10 30%, #B89A7A 100%)",
-    experience: "5 Years",
-    instagram: "#",
-  },
-  {
-    name: "Divya Nair",
-    title: "Wellness Specialist",
-    speciality: "Lash & Brow · Scalp Therapy",
-    bio: "Divya believes beauty is holistic. Specialising in lash lifts, brow sculpting, and scalp treatments, she brings a calm, nurturing energy to every appointment that leaves clients glowing from within.",
-    initials: "DN",
-    gradient: "linear-gradient(135deg, #3d2c1e 0%, #E7E2D8 100%)",
-    experience: "7 Years",
-    instagram: "#",
-  },
-  {
-    name: "Kavya Singh",
-    title: "Bridal Specialist",
-    speciality: "Bridal Hair · Makeup · Styling",
-    bio: "Kavya's portfolio spans hundreds of weddings across India and internationally. Her meticulous attention to detail and ability to execute any aesthetic — from classic to contemporary — makes her the go-to for brides.",
-    initials: "KS",
-    gradient: "linear-gradient(135deg, #1a1408 20%, #B89A7A 80%)",
-    experience: "9 Years",
-    instagram: "#",
+    price: "Price: Rs. 2,500+",
   },
 ];
 
 export default function TeamPageClient() {
-  const [selectedMember, setSelectedMember] = useState<(typeof team)[0] | null>(null);
-
   return (
     <>
       {/* Page Hero */}
@@ -88,138 +41,204 @@ export default function TeamPageClient() {
         </SectionReveal>
       </section>
 
-      {/* Team Grid */}
-      <section className="bg-[#F7F6F2] section-padding">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {team.map((member, i) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.7, delay: i * 0.1 }}
-                className="group cursor-pointer"
-                onClick={() => setSelectedMember(member)}
+      {/* Team Alternating Section */}
+      <section className="bg-[#F7F6F2] py-24 px-6 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto flex flex-col gap-24 relative z-10">
+          
+          {/* Member 1: Sonali Mehta (Image Left, Content Right) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col md:flex-row items-center gap-12 md:gap-16"
+          >
+            {/* Diamond Image Container (Left) */}
+            <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0">
+              {/* Gold brush stroke SVG at top-left */}
+              <svg 
+                viewBox="0 0 100 40" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="absolute -top-6 -left-10 w-28 sm:w-36 text-[#B89A7A]/75 pointer-events-none transform -rotate-12 z-10"
               >
-                {/* Photo area */}
-                <div className="relative overflow-hidden aspect-[3/4] mb-5">
-                  {/* Gradient placeholder */}
-                  <div
-                    className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-                    style={{ background: member.gradient }}
-                  />
-                  {/* Initials */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-playfair text-5xl text-[#F7F6F2]/20 italic">{member.initials}</span>
-                  </div>
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-[#0E0E10]/0 group-hover:bg-[#0E0E10]/50 transition-all duration-500 flex items-end">
-                    <div className="w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                      <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A] mb-1">
-                        {member.speciality}
-                      </p>
-                      <p className="font-montserrat text-xs text-[#F7F6F2]/70">
-                        View Profile →
-                      </p>
-                    </div>
-                  </div>
-                  {/* Gold corner */}
-                  <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-[#B89A7A]/0 group-hover:border-[#B89A7A]/70 transition-all duration-500" />
-                </div>
+                <path 
+                  d="M5,30 C20,20 40,12 70,10 C90,8 100,5 105,3 C92,7 75,14 55,18 C35,22 18,27 5,30 Z" 
+                  fill="currentColor" 
+                  opacity="0.8" 
+                />
+                <path 
+                  d="M12,25 C30,17 50,14 72,12 C85,10 93,8 97,6 C84,9 66,14 48,18 C30,21 17,24 12,25 Z" 
+                  fill="currentColor" 
+                  opacity="0.9" 
+                />
+                <path 
+                  d="M2,33 C15,26 35,17 60,14 C78,11 95,9 101,7" 
+                  stroke="currentColor" 
+                  strokeWidth="1.2" 
+                  strokeLinecap="round" 
+                  opacity="0.5" 
+                />
+              </svg>
 
-                {/* Info */}
-                <div>
-                  <h3 className="font-playfair text-2xl text-[#0E0E10] group-hover:text-[#B89A7A] transition-colors duration-300">
-                    {member.name}
-                  </h3>
-                  <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mt-1">
-                    {member.title}
-                  </p>
-                  <div className="w-8 h-px bg-[#B89A7A] mt-3 group-hover:w-16 transition-all duration-500" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              {/* The Gold Diamond Frame (slightly larger) */}
+              <div 
+                className="absolute inset-2 bg-[#B89A7A]/20 transition-transform duration-500 hover:scale-105"
+                style={{
+                  clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
+                }}
+              />
+              
+              {/* The Empty Diamond Box (Inner) */}
+              <div 
+                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-102"
+                style={{
+                  clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
+                }}
+              >
+                {/* Initials very faint and elegant inside the box */}
+                <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">SM</span>
+              </div>
+            </div>
+
+            {/* Content Container (Right) */}
+            <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start">
+              <h2 className="font-playfair text-3xl sm:text-4xl text-[#B89A7A] mb-4">
+                {team[0].speciality}
+              </h2>
+              <p className="font-montserrat text-[#6B665F] text-sm sm:text-base leading-relaxed mb-6 max-w-xl text-center md:text-left font-light">
+                {team[0].bio}
+              </p>
+              
+              {/* Price Pill */}
+              <div className="bg-[#E7E2D8]/80 text-[#0E0E10] font-montserrat text-xs tracking-wider font-semibold px-6 py-2.5 rounded-sm mb-6 shadow-sm">
+                {team[0].price}
+              </div>
+
+              {/* Signature area */}
+              <div className="flex flex-col items-center md:items-start mt-2">
+                <span className="font-alexbrush text-4xl text-[#6B665F]/90 select-none tracking-wide">
+                  {team[0].name}
+                </span>
+                
+                {/* Wavy Underline */}
+                <svg 
+                  width="110" 
+                  height="8" 
+                  viewBox="0 0 110 8" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="mt-1 text-[#B89A7A]"
+                >
+                  <path 
+                    d="M0,4 Q13.75,0 27.5,4 T55,4 T82.5,4 T110,4" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5" 
+                    fill="none" 
+                  />
+                </svg>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Member 2: Rahul Verma (Content Left, Image Right) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16"
+          >
+            {/* Content Container (Left) */}
+            <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start">
+              <h2 className="font-playfair text-3xl sm:text-4xl text-[#B89A7A] mb-4">
+                {team[1].speciality}
+              </h2>
+              <p className="font-montserrat text-[#6B665F] text-sm sm:text-base leading-relaxed mb-6 max-w-xl text-center md:text-left font-light">
+                {team[1].bio}
+              </p>
+              
+              {/* Price Pill */}
+              <div className="bg-[#E7E2D8]/80 text-[#0E0E10] font-montserrat text-xs tracking-wider font-semibold px-6 py-2.5 rounded-sm mb-6 shadow-sm">
+                {team[1].price}
+              </div>
+
+              {/* Signature area */}
+              <div className="flex flex-col items-center md:items-start mt-2">
+                <span className="font-alexbrush text-4xl text-[#6B665F]/90 select-none tracking-wide">
+                  {team[1].name}
+                </span>
+                
+                {/* Wavy Underline */}
+                <svg 
+                  width="110" 
+                  height="8" 
+                  viewBox="0 0 110 8" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="mt-1 text-[#B89A7A]"
+                >
+                  <path 
+                    d="M0,4 Q13.75,0 27.5,4 T55,4 T82.5,4 T110,4" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5" 
+                    fill="none" 
+                  />
+                </svg>
+              </div>
+            </div>
+
+            {/* Diamond Image Container (Right) */}
+            <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0">
+              {/* Silver/gold scissors SVG on the right */}
+              <svg 
+                viewBox="0 0 100 100" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="1.2"
+                className="absolute -right-16 top-1/2 -translate-y-1/2 w-28 sm:w-36 text-[#B89A7A]/35 pointer-events-none transform -rotate-12 z-10"
+              >
+                {/* Left Blade */}
+                <path d="M50,50 L85,25 C87,23 88,25 87,27 L55,52" strokeLinecap="round" strokeLinejoin="round" />
+                {/* Right Blade */}
+                <path d="M50,50 L85,75 C87,77 88,75 87,73 L55,48" strokeLinecap="round" strokeLinejoin="round" />
+                {/* Pivot Screw */}
+                <circle cx="50" cy="50" r="2.5" fill="#B89A7A" stroke="none" />
+                {/* Shank 1 */}
+                <path d="M50,50 C45,50 40,47 38,42 L28,42" strokeLinecap="round" strokeLinejoin="round" />
+                {/* Handle Ring 1 */}
+                <circle cx="20" cy="42" r="8" />
+                {/* Finger Rest on Ring 1 */}
+                <path d="M12,42 C10,42 8,39 9,37" strokeLinecap="round" strokeLinejoin="round" />
+                {/* Shank 2 */}
+                <path d="M50,50 C45,50 40,53 38,58 L28,58" strokeLinecap="round" strokeLinejoin="round" />
+                {/* Handle Ring 2 */}
+                <circle cx="20" cy="58" r="8" />
+              </svg>
+
+              {/* The Gold Diamond Frame (slightly larger) */}
+              <div 
+                className="absolute inset-2 bg-[#B89A7A]/20 transition-transform duration-500 hover:scale-105"
+                style={{
+                  clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
+                }}
+              />
+              
+              {/* The Empty Diamond Box (Inner) */}
+              <div 
+                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-102"
+                style={{
+                  clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
+                }}
+              >
+                {/* Initials very faint and elegant inside the box */}
+                <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">RV</span>
+              </div>
+            </div>
+          </motion.div>
+
         </div>
       </section>
-
-      {/* Bio Modal */}
-      <AnimatePresence>
-        {selectedMember && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedMember(null)}
-          >
-            {/* Backdrop */}
-            <div className="absolute inset-0 bg-[#0E0E10]/80 backdrop-blur-sm" />
-
-            {/* Modal */}
-            <motion.div
-              className="relative bg-[#F7F6F2] max-w-xl w-full overflow-hidden"
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.95, opacity: 0, y: 10 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Top gradient band */}
-              <div className="h-32" style={{ background: selectedMember.gradient }} />
-
-              {/* Avatar */}
-              <div className="px-10 -mt-10 relative z-10">
-                <div
-                  className="w-20 h-20 rounded-full flex items-center justify-center font-playfair text-2xl text-[#F7F6F2] border-4 border-[#F7F6F2]"
-                  style={{ background: selectedMember.gradient }}
-                >
-                  {selectedMember.initials}
-                </div>
-              </div>
-
-              <div className="px-10 pt-5 pb-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <h2 className="font-playfair text-3xl text-[#0E0E10]">{selectedMember.name}</h2>
-                    <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A] mt-1">{selectedMember.title}</p>
-                  </div>
-                  <button
-                    onClick={() => setSelectedMember(null)}
-                    className="text-[#6B665F] hover:text-[#0E0E10] transition-colors text-2xl leading-none mt-1"
-                  >
-                    ×
-                  </button>
-                </div>
-
-                <div className="flex gap-6 mb-6 pb-6 border-b border-[#E7E2D8]">
-                  <div>
-                    <p className="font-montserrat text-[10px] tracking-widest uppercase text-[#6B665F] mb-1">Speciality</p>
-                    <p className="font-montserrat text-sm text-[#0E0E10]">{selectedMember.speciality}</p>
-                  </div>
-                  <div>
-                    <p className="font-montserrat text-[10px] tracking-widest uppercase text-[#6B665F] mb-1">Experience</p>
-                    <p className="font-montserrat text-sm text-[#0E0E10]">{selectedMember.experience}</p>
-                  </div>
-                </div>
-
-                <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed mb-8">
-                  {selectedMember.bio}
-                </p>
-
-                <Link
-                  href="/contact"
-                  className="btn-primary text-xs"
-                  onClick={() => setSelectedMember(null)}
-                >
-                  Book with {selectedMember.name.split(" ")[0]}
-                </Link>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Bottom CTA */}
       <section className="bg-[#E7E2D8] py-20 px-6 text-center">

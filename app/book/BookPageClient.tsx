@@ -8,27 +8,64 @@ const steps = ["Service", "Specialist", "Details"];
 
 const serviceCategories = [
   {
-    category: "Hair",
-    services: ["Signature Cut & Blowout – $85", "Full Colour – from $160", "Balayage / Highlights – from $200", "Keratin Treatment – $250", "Deep Conditioning Ritual – $60"],
+    category: "Hair Services",
+    services: [
+      "Hair Cutting – Rs. 3,000+",
+      "Hair Colouring – Rs. 8,500+",
+      "Keratine Treatments – Rs. 18,000+",
+      "Hair Extentions – Price on Request",
+      "Hair Straightening – Rs. 15,000+",
+      "Hair Relaxing – Rs. 10,000+",
+      "Baby Hair Cuts – Rs. 1,500"
+    ],
   },
   {
-    category: "Skin",
-    services: ["Signature Facial – $95", "Microdermabrasion – $120", "LED Light Therapy – $75", "Chemical Peel – $110"],
+    category: "Hair Treatments",
+    services: [
+      "Hair Growth Treatments – Rs. 5,000+",
+      "Anti - Dandruff Treatments – Rs. 3,500+",
+      "Scalp Analysis – Rs. 1,500",
+      "Bond Fusion Treatments – Rs. 7,000+",
+      "Conditioner Treatments – Rs. 3,000+",
+      "Oil Treatments – Rs. 2,500"
+    ],
   },
   {
-    category: "Nails",
-    services: ["Classic Manicure – $40", "Gel Manicure – $60", "Luxury Pedicure – $70", "Nail Art – from $20"],
+    category: "Skin Treatments",
+    services: [
+      "Pimple/Acne Treatments – Rs. 4,500+",
+      "Anti - Pigmentation Treatments – Rs. 6,000+",
+      "Skin Lightning Treatments – Rs. 7,500+",
+      "Anti - Aging Treatments – Rs. 8,000+"
+    ],
   },
   {
-    category: "Wellness",
-    services: ["Scalp Massage & Treatment – $50", "Eyebrow Sculpting – $45", "Lash Lift & Tint – $90"],
+    category: "Dressings",
+    services: [
+      "Bridal Dressings – Price on Request",
+      "Makeup – Rs. 7,500+",
+      "Hair Styles – Rs. 4,500+",
+      "Hair Settings – Rs. 3,000+",
+      "Saree Draping – Rs. 2,000+"
+    ],
+  },
+  {
+    category: "Other Services",
+    services: [
+      "Eyebrows Shaping – Rs. 1,000",
+      "Eye Lash Extentions – Rs. 8,000+",
+      "Face Waxing – Rs. 2,500",
+      "Body Waxing – Rs. 6,000+",
+      "Menicure – Rs. 3,500",
+      "Pedicure – Rs. 4,500"
+    ],
   },
 ];
 
 const specialists = [
   { name: "Sonali Mehta", speciality: "Colour & Cuts", initials: "SM" },
   { name: "Priya Sharma", speciality: "Skin Treatments", initials: "PS" },
-  { name: "Aisha Kapoor", speciality: "Nail Art", initials: "AK" },
+  { name: "Aisha Kapoor", speciality: "Waxing & Brows", initials: "AK" },
   { name: "Rahul Verma", speciality: "Cuts & Styling", initials: "RV" },
   { name: "Divya Nair", speciality: "Lash & Brow", initials: "DN" },
   { name: "Kavya Singh", speciality: "Bridal", initials: "KS" },

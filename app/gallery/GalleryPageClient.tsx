@@ -4,20 +4,20 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 
-const filters = ["All", "Hair", "Skin", "Nails", "Bridal"];
+const filters = ["All", "Hair", "Skin", "Other", "Bridal"];
 
 const galleryItems = [
   { id: 1, category: "Hair", label: "Sun-Kissed Balayage", gradient: "linear-gradient(135deg, #1a0f08 0%, #B89A7A 100%)", span: "row-span-2" },
   { id: 2, category: "Skin", label: "Radiance Facial", gradient: "linear-gradient(135deg, #0E0E10 0%, #6B665F 100%)", span: "" },
-  { id: 3, category: "Nails", label: "Geometric Nail Art", gradient: "linear-gradient(45deg, #2a1f14 0%, #B89A7A 60%, #F7F6F2 100%)", span: "" },
+  { id: 3, category: "Other", label: "Eyebrows Shaping", gradient: "linear-gradient(45deg, #2a1f14 0%, #B89A7A 60%, #F7F6F2 100%)", span: "" },
   { id: 4, category: "Bridal", label: "Bridal Up-Do", gradient: "linear-gradient(135deg, #1a1408 0%, #E7E2D8 100%)", span: "row-span-2" },
   { id: 5, category: "Hair", label: "Rich Brunette Gloss", gradient: "linear-gradient(135deg, #0E0E10 0%, #3d2c1e 100%)", span: "" },
-  { id: 6, category: "Nails", label: "Soft Nude Gel", gradient: "linear-gradient(135deg, #E7E2D8 0%, #B89A7A 100%)", span: "" },
+  { id: 6, category: "Other", label: "Classic Menicure", gradient: "linear-gradient(135deg, #E7E2D8 0%, #B89A7A 100%)", span: "" },
   { id: 7, category: "Hair", label: "Precision Bob Cut", gradient: "linear-gradient(160deg, #0E0E10 30%, #B89A7A 100%)", span: "" },
   { id: 8, category: "Skin", label: "LED Glow Treatment", gradient: "linear-gradient(135deg, #1a0f08 0%, #6B665F 60%, #B89A7A 100%)", span: "row-span-2" },
   { id: 9, category: "Bridal", label: "Bridal Makeup & Styling", gradient: "linear-gradient(135deg, #2a1f14 0%, #F7F6F2 100%)", span: "" },
   { id: 10, category: "Hair", label: "Platinum Blonde", gradient: "linear-gradient(135deg, #6B665F 0%, #E7E2D8 100%)", span: "" },
-  { id: 11, category: "Nails", label: "French Ombré", gradient: "linear-gradient(135deg, #F7F6F2 0%, #B89A7A 100%)", span: "" },
+  { id: 11, category: "Other", label: "Face Waxing", gradient: "linear-gradient(135deg, #F7F6F2 0%, #B89A7A 100%)", span: "" },
   { id: 12, category: "Bridal", label: "Loose Waves Bridal", gradient: "linear-gradient(135deg, #1a1408 0%, #B89A7A 50%, #E7E2D8 100%)", span: "" },
 ];
 

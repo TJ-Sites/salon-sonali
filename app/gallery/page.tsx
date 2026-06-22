@@ -3,7 +3,7 @@ import GalleryPageClient from "./GalleryPageClient";
 
 export const metadata: Metadata = {
   title: "Gallery",
-  description: "Browse Salon Sonali's portfolio of transformations — hair colour, cuts, skin treatments, nail art, and bridal looks.",
+  description: "Browse Salon Sonali's portfolio of transformations — hair colour, cuts, skin treatments, grooming, and bridal looks.",
 };
 
 export default function GalleryPage() {

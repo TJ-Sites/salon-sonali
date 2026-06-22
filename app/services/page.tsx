@@ -4,7 +4,7 @@ import ServicesPageClient from "./ServicesPageClient";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore Salon Sonali's full menu of luxury hair, skin, nail, and wellness services. Premium treatments tailored to you.",
+    "Explore Salon Sonali's full menu of luxury hair, skin, dressings, and beauty services. Premium treatments tailored to you.",
 };
 
 export default function ServicesPage() {

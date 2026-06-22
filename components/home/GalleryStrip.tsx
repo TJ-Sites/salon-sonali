@@ -7,7 +7,7 @@ import Link from "next/link";
 const galleryItems = [
   { id: 1, bg: "linear-gradient(135deg, #1a1408 0%, #B89A7A 100%)", label: "Hair Colour" },
   { id: 2, bg: "linear-gradient(135deg, #0E0E10 0%, #6B665F 100%)", label: "Skin Care" },
-  { id: 3, bg: "linear-gradient(45deg, #2a1f14 0%, #B89A7A 60%, #F7F6F2 100%)", label: "Nail Art" },
+  { id: 3, bg: "linear-gradient(45deg, #2a1f14 0%, #B89A7A 60%, #F7F6F2 100%)", label: "Grooming" },
   { id: 4, bg: "linear-gradient(135deg, #0E0E10 30%, #B89A7A 100%)", label: "Styling" },
   { id: 5, bg: "linear-gradient(135deg, #3d2c1e 0%, #E7E2D8 100%)", label: "Treatments" },
   { id: 6, bg: "linear-gradient(135deg, #1a1408 0%, #6B665F 50%, #B89A7A 100%)", label: "Bridal" },

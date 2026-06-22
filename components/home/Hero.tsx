@@ -1,19 +1,23 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export default function Hero() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const subRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", onScroll, { passive: true });
+
     const heading = headingRef.current;
     const sub = subRef.current;
     const cta = ctaRef.current;
 
-    if (!heading) return;
+    if (!heading) return () => window.removeEventListener("scroll", onScroll);
 
     // Wrap each word in a span for stagger animation
     const text = heading.textContent || "";
@@ -41,29 +45,34 @@ export default function Hero() {
       }
     }, 300);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ backgroundColor: "#0E0E10" }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden transition-colors duration-700"
+      style={{ backgroundColor: scrolled ? "#F7F6F2" : "#0E0E10" }}
     >
       {/* Background gradient */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 transition-opacity duration-700"
         style={{
           background:
             "radial-gradient(ellipse at 60% 40%, rgba(184,154,122,0.12) 0%, transparent 70%), radial-gradient(ellipse at 20% 80%, rgba(184,154,122,0.07) 0%, transparent 60%)",
+          opacity: scrolled ? 0.3 : 1,
         }}
       />
 
       {/* Subtle grid overlay */}
       <div
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-5 transition-opacity duration-700"
         style={{
           backgroundImage: `linear-gradient(rgba(247,246,242,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(247,246,242,0.3) 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
+          opacity: scrolled ? 0.02 : 0.05,
         }}
       />
 
@@ -80,10 +89,11 @@ export default function Hero() {
         {/* Main heading */}
         <h1
           ref={headingRef}
-          className="font-playfair font-bold leading-tight mb-8"
+          className={`font-playfair font-bold leading-tight mb-8 transition-colors duration-500 ${
+            scrolled ? "text-[#0E0E10]" : "text-[#F7F6F2]"
+          }`}
           style={{
             fontSize: "clamp(3rem, 8vw, 7rem)",
-            color: "#F7F6F2",
             letterSpacing: "-0.02em",
           }}
         >
@@ -93,14 +103,16 @@ export default function Hero() {
         {/* Subheading */}
         <p
           ref={subRef}
-          className="font-montserrat text-lg text-[#6B665F] max-w-xl mx-auto leading-relaxed mb-12"
+          className={`font-montserrat text-lg max-w-xl mx-auto leading-relaxed mb-12 transition-colors duration-500 ${
+            scrolled ? "text-[#3D3A35]" : "text-[#A39F99]"
+          }`}
           style={{
             opacity: 0,
             transform: "translateY(20px)",
             transition: "opacity 0.8s ease 1.1s, transform 0.8s ease 1.1s",
           }}
         >
-          Experience transformative hair, skin, nail, and wellness treatments
+          Experience transformative hair, skin, dressings, and beauty treatments
           crafted for the modern woman.
         </p>
 
@@ -114,10 +126,10 @@ export default function Hero() {
             transition: "opacity 0.8s ease 1.4s, transform 0.8s ease 1.4s",
           }}
         >
-          <Link href="/contact" className="btn-primary">
+          <Link href="/contact" className={scrolled ? "btn-outline-dark" : "btn-primary"}>
             Book Appointment
           </Link>
-          <Link href="/services" className="btn-outline">
+          <Link href="/services" className={scrolled ? "btn-outline-dark" : "btn-outline"}>
             Our Services
           </Link>
         </div>

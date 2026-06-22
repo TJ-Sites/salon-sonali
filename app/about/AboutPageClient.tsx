@@ -13,7 +13,7 @@ const values = [
 
 const milestones = [
   { year: "2012", event: "Salon Sonali opens its doors in a small, intimate studio with a team of two." },
-  { year: "2015", event: "Expanded to a full-service salon, adding skin and nail treatments to our offering." },
+  { year: "2015", event: "Expanded to a full-service salon, adding skin and advanced beauty treatments to our offering." },
   { year: "2018", event: "Launched our bridal specialist programme — now one of our most in-demand services." },
   { year: "2021", event: "Reached 5,000 happy clients and welcomed three new specialists to the team." },
   { year: "2024", event: "Relocated to our current flagship space — designed to feel like a sanctuary." },

@@ -24,20 +24,30 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-3 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#F7F6F2]/95 backdrop-blur-sm shadow-sm"
+            ? "bg-[#F7F6F2]/95 backdrop-blur-sm shadow-sm border-b border-[#E7E2D8]"
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
+        <div
+          className={`max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between transition-all duration-500 ${
+            scrolled ? "h-16 lg:h-20" : "h-24 lg:h-32"
+          }`}
+        >
           {/* Logo */}
-          <Link
-            href="/"
-            className="font-playfair font-bold text-xl lg:text-2xl tracking-wide"
-            style={{ color: scrolled ? "#0E0E10" : "#F7F6F2" }}
-          >
-            Salon<span style={{ color: "#B89A7A" }}> Sonali</span>
+          <Link href="/" className="flex items-center">
+            <img
+              src="/logo.jpg"
+              alt="Salon Sonali Logo"
+              className={`w-auto object-contain transition-all duration-500 ${
+                scrolled ? "h-12 lg:h-16" : "h-20 lg:h-28"
+              }`}
+              style={{
+                filter: scrolled ? "invert(1)" : "none",
+                mixBlendMode: scrolled ? "multiply" : "screen",
+              }}
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -59,23 +69,23 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden flex flex-col gap-1.5 p-2"
+            className="lg:hidden flex flex-col gap-1.5 p-2 group"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-[#0E0E10]" : "bg-[#F7F6F2]"
+                scrolled ? "bg-[#0E0E10] group-hover:bg-[#B89A7A]" : "bg-[#F7F6F2] group-hover:bg-[#B89A7A]"
               } ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
             />
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-[#0E0E10]" : "bg-[#F7F6F2]"
+                scrolled ? "bg-[#0E0E10] group-hover:bg-[#B89A7A]" : "bg-[#F7F6F2] group-hover:bg-[#B89A7A]"
               } ${menuOpen ? "opacity-0" : ""}`}
             />
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-[#0E0E10]" : "bg-[#F7F6F2]"
+                scrolled ? "bg-[#0E0E10] group-hover:bg-[#B89A7A]" : "bg-[#F7F6F2] group-hover:bg-[#B89A7A]"
               } ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
             />
           </button>

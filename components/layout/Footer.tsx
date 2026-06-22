@@ -49,9 +49,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Brand */}
         <div>
-          <h3 className="font-playfair text-2xl mb-4">
-            Salon<span className="text-[#B89A7A]"> Sonali</span>
-          </h3>
+          <Link href="/" className="inline-block mb-4">
+            <img
+              src="/logo.jpg"
+              alt="Salon Sonali Logo"
+              className="h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              style={{ mixBlendMode: "screen" }}
+            />
+          </Link>
           <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed max-w-xs">
             A luxury hair and beauty studio dedicated to helping you look and
             feel your absolute best.

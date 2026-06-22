@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Montserrat, Yeseva_One } from "next/font/google";
+import { Playfair_Display, Montserrat, Yeseva_One, Alex_Brush } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -28,21 +28,28 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+const alexBrush = Alex_Brush({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-alex-brush",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Salon Sonali | Luxury Hair & Beauty Studio",
     template: "%s | Salon Sonali",
   },
   description:
-    "Salon Sonali is a premium hair and beauty studio offering expert hair, skin, nails, and wellness treatments. Book your transformation today.",
-  keywords: ["salon", "hair salon", "beauty studio", "hair", "skin", "nails", "wellness", "luxury salon"],
+    "Salon Sonali is a premium hair and beauty studio offering expert hair, skin, dressings, and wellness treatments. Book your transformation today.",
+  keywords: ["salon", "hair salon", "beauty studio", "hair", "skin", "dressings", "wellness", "luxury salon"],
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Salon Sonali",
     title: "Salon Sonali | Luxury Hair & Beauty Studio",
     description:
-      "Premium hair and beauty studio offering expert treatments for hair, skin, nails, and wellness.",
+      "Premium hair and beauty studio offering expert treatments for hair, skin, dressings, and wellness.",
   },
   twitter: {
     card: "summary_large_image",
@@ -57,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${montserrat.variable} ${yeseva.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${montserrat.variable} ${yeseva.variable} ${alexBrush.variable}`}>
       <body>
         <LenisProvider>
           <ScrollProgress />

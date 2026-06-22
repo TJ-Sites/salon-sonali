@@ -20,6 +20,7 @@ const config: Config = {
       fontFamily: {
         playfair: ["var(--font-playfair)", "Georgia", "serif"],
         montserrat: ["var(--font-montserrat)", "Helvetica Neue", "sans-serif"],
+        alexbrush: ["var(--font-alex-brush)", "cursive"],
       },
       animation: {
         marquee: "marquee 30s linear infinite",
