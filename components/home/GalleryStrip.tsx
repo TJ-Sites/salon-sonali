@@ -73,6 +73,26 @@ const galleryCategories = [
       "/bridle-dressing/cbeafd7d-67d8-4482-b8d4-c697958b916f.jpg",
     ],
   },
+  {
+    id: 7,
+    label: "Eyebrows Shaping",
+    images: [
+      "/eyebrows-shaping/07a9c5eb-7e3c-4171-b122-3bcf77d320f5.jpg",
+      "/eyebrows-shaping/bc280a3a-47c1-49ee-a0d2-b68c52af183f.jpg",
+      "/eyebrows-shaping/d8ae8638-72f3-4157-af27-27b917e2cf07.jpg",
+    ],
+  },
+  {
+    id: 8,
+    label: "Hair Removing",
+    images: [
+      "/hair-removing/06da87b8-60fe-4e0b-be1a-dfc34ec3c7fd.jpg",
+      "/hair-removing/6e6611ef-f31c-4166-a5ab-3b50f397cf76.jpg",
+      "/hair-removing/962ca7fd-25f8-4e54-8328-566b9b286ab7.jpg",
+      "/hair-removing/a125084f-1961-4d22-a6c2-33c09598612f.jpg",
+      "/hair-removing/f8368447-aae5-47ae-a9b1-578d33941ad3.jpg",
+    ],
+  },
 ];
 
 function GalleryCard({ item, index }: { item: typeof galleryCategories[0]; index: number }) {
@@ -176,7 +196,7 @@ export default function GalleryStrip() {
         className="flex gap-4 pl-6 lg:pl-12 pr-0 overflow-x-auto pb-4"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {galleryCategories.slice(0, 4).map((cat, index) => (
+        {galleryCategories.map((cat, index) => (
           <GalleryCard key={cat.id} item={cat} index={index} />
         ))}
         {/* Spacer to act as padding-right at the end of scroll */}
