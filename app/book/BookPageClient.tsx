@@ -50,12 +50,22 @@ const serviceCategories = [
     ],
   },
   {
-    category: "Other Services",
+    category: "Eyebrows Shaping",
     services: [
       "Eyebrows Shaping – Rs. 1,000",
-      "Eye Lash Extentions – Rs. 8,000+",
+      "Eye Lash Extentions – Rs. 8,000+"
+    ],
+  },
+  {
+    category: "Hair Removing",
+    services: [
       "Face Waxing – Rs. 2,500",
-      "Body Waxing – Rs. 6,000+",
+      "Body Waxing – Rs. 6,000+"
+    ],
+  },
+  {
+    category: "Other Services",
+    services: [
       "Menicure – Rs. 3,500",
       "Pedicure – Rs. 4,500"
     ],

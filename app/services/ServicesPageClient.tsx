@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 import Link from "next/link";
 
-const categories = ["All", "Hair Services", "Hair Treatments", "Skin Treatments", "Dressings", "Other Services"];
+const categories = ["All", "Hair Services", "Hair Treatments", "Skin Treatments", "Dressings", "Eyebrows Shaping", "Hair Removing", "Other Services"];
 
 const services = [
   // HAIR SERVICES
@@ -38,11 +38,15 @@ const services = [
   { category: "Dressings", name: "Hair Settings", duration: "45 min", price: "Rs. 3,000+", description: "Long-lasting hair setting and volume blow-outs for everyday elegance or business meetings." },
   { category: "Dressings", name: "Saree Draping", duration: "30 min", price: "Rs. 2,000+", description: "Perfect and secure traditional or modern saree draping services for any occasion." },
 
+  // EYEBROWS SHAPING
+  { category: "Eyebrows Shaping", name: "Eyebrows Shaping", duration: "20 min", price: "Rs. 1,000", description: "Precision shaping and threading to enhance your natural brow structure and frame your face." },
+  { category: "Eyebrows Shaping", name: "Eye Lash Extentions", duration: "90 min", price: "Rs. 8,000+", description: "Premium quality semi-permanent eyelash extensions for added volume, length, and a beautiful natural look." },
+
+  // HAIR REMOVING
+  { category: "Hair Removing", name: "Face Waxing", duration: "30 min", price: "Rs. 2,500", description: "Gentle waxing service for face, removing unwanted hair and leaving skin feeling smooth." },
+  { category: "Hair Removing", name: "Body Waxing", duration: "60 min+", price: "Rs. 6,000+", description: "Professional full body or targeted waxing using high-quality wax suitable for sensitive skin." },
+
   // OTHER SERVICES
-  { category: "Other Services", name: "Eyebrows Shaping", duration: "20 min", price: "Rs. 1,000", description: "Precision shaping and threading to enhance your natural brow structure and frame your face." },
-  { category: "Other Services", name: "Eye Lash Extentions", duration: "90 min", price: "Rs. 8,000+", description: "Premium quality semi-permanent eyelash extensions for added volume, length, and a beautiful natural look." },
-  { category: "Other Services", name: "Face Waxing", duration: "30 min", price: "Rs. 2,500", description: "Gentle waxing service for face, removing unwanted hair and leaving skin feeling smooth." },
-  { category: "Other Services", name: "Body Waxing", duration: "60 min+", price: "Rs. 6,000+", description: "Professional full body or targeted waxing using high-quality wax suitable for sensitive skin." },
   { category: "Other Services", name: "Menicure", duration: "45 min", price: "Rs. 3,500", description: "Classic nail grooming, cuticle care, hand massage, and professional polishing for a clean look." },
   { category: "Other Services", name: "Pedicure", duration: "60 min", price: "Rs. 4,500", description: "Relaxing foot soak, exfoliation, cuticle care, massage, and professional polishing." },
 ];
