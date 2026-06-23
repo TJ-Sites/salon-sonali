@@ -30,7 +30,7 @@ export default function AboutTeaser() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#F7F6F2] overflow-hidden">
+    <section ref={sectionRef} className="bg-[#FFFFFF] overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
         {/* Image side */}
         <div
@@ -47,12 +47,12 @@ export default function AboutTeaser() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(135deg, #0E0E10 0%, #2a2420 40%, #B89A7A 100%)",
+                "linear-gradient(135deg, #000000 0%, #2a2420 40%, #B89A7A 100%)",
             }}
           />
           {/* Decorative text */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="font-playfair text-6xl italic text-[#F7F6F2]/20">
+            <p className="font-playfair text-6xl italic text-[#FFFFFF]/20">
               Sonali
             </p>
           </div>
@@ -74,7 +74,7 @@ export default function AboutTeaser() {
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-6">
             Our Story
           </p>
-          <h2 className="font-playfair text-4xl lg:text-5xl text-[#0E0E10] leading-tight mb-8">
+          <h2 className="font-playfair text-4xl lg:text-5xl text-[#000000] leading-tight mb-8">
             Crafted with Passion,{" "}
             <em className="italic">Delivered with Care</em>
           </h2>

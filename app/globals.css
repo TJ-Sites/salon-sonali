@@ -5,13 +5,14 @@
 @tailwind utilities;
 
 :root {
-  --aurora-black: #0E0E10;
+  --aurora-black: #000000;
   --aurora-gray: #6B665F;
   --aurora-gold: #B89A7A;
   --aurora-linen: #E7E2D8;
-  --aurora-cream: #F7F6F2;
+  --aurora-cream: #FFFFFF;
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-montserrat: 'Montserrat', 'Helvetica Neue', sans-serif;
+  --font-yeseva: 'Yeseva One', 'Playfair Display', Georgia, serif;
 }
 
 * {
@@ -35,8 +36,15 @@ body {
 
 /* ── Typography ── */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair);
+  font-family: var(--font-acheria), var(--font-playfair), serif;
   line-height: 1.15;
+}
+
+/* Custom display font for all page header sections with dark background */
+section.bg-\[\#000000\] h1,
+section.relative.min-h-screen h1 {
+  font-family: var(--font-acheria), var(--font-yeseva), var(--font-playfair), serif !important;
+  font-weight: 400 !important;
 }
 
 /* ── Scroll Progress Bar ── */
@@ -101,72 +109,162 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ── Button Styles ── */
+/* ── Button Styles (Minimalist Box Type) ── */
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 2.25rem;
-  background-color: var(--aurora-gold);
-  color: var(--aurora-cream);
+  justify-content: center;
+  padding: 1rem 2.5rem;
   font-family: var(--font-montserrat);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: 2px solid var(--aurora-gold);
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all 0.3s ease;
   text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 .btn-primary:hover {
   background-color: transparent;
-  color: var(--aurora-gold);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 2.25rem;
-  background-color: transparent;
-  color: var(--aurora-cream);
+  justify-content: center;
+  padding: 1rem 2.5rem;
   font-family: var(--font-montserrat);
   font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: 2px solid var(--aurora-cream);
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all 0.3s ease;
   text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 .btn-outline:hover {
-  background-color: var(--aurora-cream);
-  color: var(--aurora-black);
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .btn-outline-dark {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 2.25rem;
-  background-color: transparent;
-  color: var(--aurora-black);
+  justify-content: center;
+  padding: 1rem 2.5rem;
   font-family: var(--font-montserrat);
   font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: 2px solid var(--aurora-black);
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all 0.3s ease;
   text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 .btn-outline-dark:hover {
-  background-color: var(--aurora-black);
-  color: var(--aurora-cream);
+  background-color: #000000;
+  color: #FFFFFF;
 }
+
+/* ── Hero Scroll-Transition Buttons ── */
+.btn-hero-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 1.2s cubic-bezier(0.25, 1, 0.3, 1), 
+              color 1.2s cubic-bezier(0.25, 1, 0.3, 1), 
+              border-color 1.2s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.hero-scrolled .btn-hero-solid {
+  background-color: transparent;
+  color: #000000;
+  border-color: #000000;
+}
+
+.btn-hero-solid:hover {
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.hero-scrolled .btn-hero-solid:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #000000 !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.btn-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 1.2s cubic-bezier(0.25, 1, 0.3, 1), 
+              color 1.2s cubic-bezier(0.25, 1, 0.3, 1), 
+              border-color 1.2s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.hero-scrolled .btn-hero-outline {
+  color: #000000;
+  border-color: #000000;
+}
+
+.btn-hero-outline:hover {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: #FFFFFF !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.hero-scrolled .btn-hero-outline:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #000000 !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
 
 /* ── Marquee ── */
 .marquee-wrapper {

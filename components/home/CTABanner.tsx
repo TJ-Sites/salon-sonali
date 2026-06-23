@@ -4,7 +4,7 @@ export default function CTABanner() {
   return (
     <section
       className="relative grain overflow-hidden"
-      style={{ backgroundColor: "#0E0E10" }}
+      style={{ backgroundColor: "#000000" }}
     >
       {/* Gold accent lines */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B89A7A]/50 to-transparent" />
@@ -24,7 +24,7 @@ export default function CTABanner() {
           Your Transformation Awaits
         </p>
         <h2
-          className="font-playfair font-bold text-[#F7F6F2] mb-6"
+          className="font-playfair font-bold text-[#FFFFFF] mb-6"
           style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.1 }}
         >
           Ready to Transform?
@@ -34,7 +34,7 @@ export default function CTABanner() {
           you&apos;ve always dreamed of.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/book" className="btn-primary text-sm">
+          <Link href="/contact" className="btn-primary text-sm">
             Book Your Appointment
           </Link>
           <Link href="/contact" className="btn-outline text-sm">
@@ -43,10 +43,10 @@ export default function CTABanner() {
         </div>
 
         {/* Decorative asterisks */}
-        <div className="flex justify-center gap-4 mt-16 text-[#B89A7A]/30 text-xs tracking-widest">
-          <span>✦</span>
-          <span>✦</span>
-          <span>✦</span>
+        <div className="flex justify-center gap-6 mt-16">
+          <div className="w-8 h-px bg-[#B89A7A]/30" />
+          <div className="w-8 h-px bg-[#B89A7A]/30" />
+          <div className="w-8 h-px bg-[#B89A7A]/30" />
         </div>
       </div>
     </section>

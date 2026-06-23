@@ -10,16 +10,18 @@ const config: Config = {
     extend: {
       colors: {
         aurora: {
-          black: "#0E0E10",
+          black: "#000000",
           gray: "#6B665F",
           gold: "#B89A7A",
           linen: "#E7E2D8",
-          cream: "#F7F6F2",
+          cream: "#FFFFFF",
         },
       },
       fontFamily: {
-        playfair: ["var(--font-playfair)", "Georgia", "serif"],
+        playfair: ["var(--font-acheria)", "var(--font-playfair)", "Georgia", "serif"],
         montserrat: ["var(--font-montserrat)", "Helvetica Neue", "sans-serif"],
+        alexbrush: ["var(--font-alex-brush)", "cursive"],
+        acheria: ["var(--font-acheria)", "var(--font-playfair)", "Georgia", "serif"],
       },
       animation: {
         marquee: "marquee 30s linear infinite",

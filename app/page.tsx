@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Salon Sonali | Luxury Hair & Beauty Studio",
   description:
-    "Salon Sonali is a premium luxury hair and beauty studio. Expert treatments for hair, skin, nails, and wellness. Book your transformation today.",
+    "Salon Sonali is a premium luxury hair and beauty studio. Expert treatments for hair, skin, dressings, and wellness. Book your transformation today.",
 };
 
 export default function HomePage() {
