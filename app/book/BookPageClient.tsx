@@ -10,64 +10,64 @@ const serviceCategories = [
   {
     category: "Hair Services",
     services: [
-      "Hair Cutting – Rs. 3,000+",
-      "Hair Colouring – Rs. 8,500+",
-      "Keratine Treatments – Rs. 18,000+",
-      "Hair Extentions – Price on Request",
-      "Hair Straightening – Rs. 15,000+",
-      "Hair Relaxing – Rs. 10,000+",
-      "Baby Hair Cuts – Rs. 1,500"
+      "Hair Cutting",
+      "Hair Colouring",
+      "Keratine Treatments",
+      "Hair Extentions",
+      "Hair Straightening",
+      "Hair Relaxing",
+      "Baby Hair Cuts"
     ],
   },
   {
     category: "Hair Treatments",
     services: [
-      "Hair Growth Treatments – Rs. 5,000+",
-      "Anti - Dandruff Treatments – Rs. 3,500+",
-      "Scalp Analysis – Rs. 1,500",
-      "Bond Fusion Treatments – Rs. 7,000+",
-      "Conditioner Treatments – Rs. 3,000+",
-      "Oil Treatments – Rs. 2,500"
+      "Hair Growth Treatments",
+      "Anti - Dandruff Treatments",
+      "Scalp Analysis",
+      "Bond Fusion Treatments",
+      "Conditioner Treatments",
+      "Oil Treatments"
     ],
   },
   {
     category: "Skin Treatments",
     services: [
-      "Pimple/Acne Treatments – Rs. 4,500+",
-      "Anti - Pigmentation Treatments – Rs. 6,000+",
-      "Skin Lightning Treatments – Rs. 7,500+",
-      "Anti - Aging Treatments – Rs. 8,000+"
+      "Pimple/Acne Treatments",
+      "Anti - Pigmentation Treatments",
+      "Skin Lightning Treatments",
+      "Anti - Aging Treatments"
     ],
   },
   {
     category: "Dressings",
     services: [
-      "Bridal Dressings – Price on Request",
-      "Makeup – Rs. 7,500+",
-      "Hair Styles – Rs. 4,500+",
-      "Hair Settings – Rs. 3,000+",
-      "Saree Draping – Rs. 2,000+"
+      "Bridal Dressings",
+      "Makeup",
+      "Hair Styles",
+      "Hair Settings",
+      "Saree Draping"
     ],
   },
   {
     category: "Eyebrows Shaping",
     services: [
-      "Eyebrows Shaping – Rs. 1,000",
-      "Eye Lash Extentions – Rs. 8,000+"
+      "Eyebrows Shaping",
+      "Eye Lash Extentions"
     ],
   },
   {
     category: "Hair Removing",
     services: [
-      "Face Waxing – Rs. 2,500",
-      "Body Waxing – Rs. 6,000+"
+      "Face Waxing",
+      "Body Waxing"
     ],
   },
   {
     category: "Other Services",
     services: [
-      "Menicure – Rs. 3,500",
-      "Pedicure – Rs. 4,500"
+      "Menicure",
+      "Pedicure"
     ],
   },
 ];

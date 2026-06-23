@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 
@@ -830,6 +830,39 @@ export default function GalleryPageClient() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [lightboxItem, setLightboxItem] = useState<(typeof galleryItems)[0] | null>(null);
 
+  const [showRightArrow, setShowRightArrow] = useState(false);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setShowLeftArrow(scrollLeft > 10);
+      setShowRightArrow(scrollLeft + clientWidth < scrollWidth - 10);
+    }
+  };
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 200;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("resize", handleScroll);
+    return () => window.removeEventListener("resize", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(handleScroll, 100);
+    return () => clearTimeout(timer);
+  }, [activeFilter]);
+
   const filtered =
     activeFilter === "All"
       ? galleryItems
@@ -854,25 +887,63 @@ export default function GalleryPageClient() {
 
       {/* Filter Bar */}
       <section className="bg-[#FFFFFF] sticky top-20 z-30 border-b border-[#E7E2D8] shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex gap-1 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
-          {filters.map((f) => (
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative flex items-center">
+          {/* Left Arrow */}
+          {showLeftArrow && (
             <button
-              key={f}
-              onClick={() => setActiveFilter(f)}
-              className={`relative font-montserrat text-xs tracking-widest uppercase px-6 py-5 whitespace-nowrap transition-colors duration-300 ${
-                activeFilter === f ? "text-[#000000]" : "text-[#6B665F] hover:text-[#000000]"
-              }`}
+              onClick={() => scroll("left")}
+              className="absolute left-0 top-0 bottom-0 z-20 flex items-center justify-start w-16 bg-gradient-to-r from-white via-white/80 to-transparent pr-4"
+              aria-label="Scroll left"
             >
-              {f}
-              {activeFilter === f && (
-                <motion.div
-                  layoutId="gallery-tab"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#B89A7A]"
-                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                />
-              )}
+              <div className="w-8 h-8 rounded-full bg-white border border-[#E7E2D8] flex items-center justify-center shadow-sm text-[#B89A7A] hover:bg-[#B89A7A] hover:text-white transition-colors duration-300">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                </svg>
+              </div>
             </button>
-          ))}
+          )}
+
+          {/* Scrollable container */}
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="w-full flex gap-1 overflow-x-auto scroll-smooth"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {filters.map((f) => (
+              <button
+                key={f}
+                onClick={() => setActiveFilter(f)}
+                className={`relative font-montserrat text-xs tracking-widest uppercase px-6 py-5 whitespace-nowrap transition-colors duration-300 ${
+                  activeFilter === f ? "text-[#000000]" : "text-[#6B665F] hover:text-[#000000]"
+                }`}
+              >
+                {f}
+                {activeFilter === f && (
+                  <motion.div
+                    layoutId="gallery-tab"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#B89A7A]"
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                  />
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          {showRightArrow && (
+            <button
+              onClick={() => scroll("right")}
+              className="absolute right-0 top-0 bottom-0 z-20 flex items-center justify-end w-16 bg-gradient-to-l from-white via-white/80 to-transparent pl-4"
+              aria-label="Scroll right"
+            >
+              <div className="w-8 h-8 rounded-full bg-white border border-[#E7E2D8] flex items-center justify-center shadow-sm text-[#B89A7A] hover:bg-[#B89A7A] hover:text-white transition-colors duration-300">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </button>
+          )}
         </div>
       </section>
 
