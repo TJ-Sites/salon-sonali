@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 
 const filters = [
-  "All",
   "Hair Colouring",
   "Hair Cutting",
   "Kids Hair Cutting",
@@ -827,7 +826,7 @@ const galleryItems: GalleryItem[] = [
 ];
 
 export default function GalleryPageClient() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Hair Colouring");
   const [lightboxItem, setLightboxItem] = useState<(typeof galleryItems)[0] | null>(null);
 
   const [showRightArrow, setShowRightArrow] = useState(false);
@@ -863,10 +862,7 @@ export default function GalleryPageClient() {
     return () => clearTimeout(timer);
   }, [activeFilter]);
 
-  const filtered =
-    activeFilter === "All"
-      ? galleryItems
-      : galleryItems.filter((g) => g.category === activeFilter);
+  const filtered = galleryItems.filter((g) => g.category === activeFilter);
 
   return (
     <>

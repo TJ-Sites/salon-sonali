@@ -12,7 +12,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2012", event: "Salon Sonali opens its doors in a small, intimate studio with a team of two." },
+  { year: "1998", event: "Salon Sonali opens its doors in a small, intimate studio with a team of two." },
   { year: "2015", event: "Expanded to a full-service salon, adding skin and advanced beauty treatments to our offering." },
   { year: "2018", event: "Launched our bridal specialist programme — now one of our most in-demand services." },
   { year: "2021", event: "Reached 5,000 happy clients and welcomed three new specialists to the team." },
@@ -47,7 +47,7 @@ export default function AboutPageClient() {
               style={{ background: "linear-gradient(135deg, #000000 0%, #3d2c1e 50%, #B89A7A 100%)" }}
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <p className="font-playfair text-8xl italic text-[#FFFFFF]/10">12+</p>
+              <p className="font-playfair text-8xl italic text-[#FFFFFF]/10">26+</p>
             </div>
             <div className="absolute bottom-10 left-10">
               <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A]">Years of Excellence</p>
@@ -62,7 +62,7 @@ export default function AboutPageClient() {
               From a Single Chair to a Full Sanctuary
             </h2>
             <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed mb-5">
-              Salon Sonali started in 2012 as a small, two-chair studio with one clear vision: to make every person who walks through the door feel extraordinary. Founder Sonali Mehta had spent years working in acclaimed salons across London and Mumbai, absorbing the finest techniques and the belief that great beauty work is a form of art.
+              Salon Sonali started in 1998 as a small, two-chair studio with one clear vision: to make every person who walks through the door feel extraordinary. Founder Sonali Mehta had spent years working in acclaimed salons across London and Mumbai, absorbing the finest techniques and the belief that great beauty work is a form of art.
             </p>
             <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed mb-10">
               What began as an intimate space has grown into a full-service sanctuary — but the heart of it has never changed. Every client is a person, not a booking slot. Every appointment is an opportunity to listen, collaborate, and create something genuinely beautiful.
@@ -104,7 +104,7 @@ export default function AboutPageClient() {
       <section className="bg-[#FFFFFF] section-padding">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
           <SectionReveal className="text-center mb-16">
-            <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">A Decade of Growth</p>
+            <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">Decades of Growth</p>
             <h2 className="font-playfair text-4xl text-[#000000]">Our Journey</h2>
             <div className="w-16 h-px bg-[#B89A7A] mx-auto mt-6" />
           </SectionReveal>
