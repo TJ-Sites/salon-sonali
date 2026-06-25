@@ -35,6 +35,14 @@ const galleryCategories = [
   },
   {
     id: 3,
+    label: "Skin Care",
+    images: [
+      "/treatments.jpg",
+      "/treatments/5a563f88-e53c-42ea-95fd-17bff1a022dc.jpg",
+    ],
+  },
+  {
+    id: 4,
     label: "Kids Hair Cutting",
     images: [
       "/kids-hair-cutting/254eac87-cca6-4fb9-b827-72d9dedaeb6f.jpg",
@@ -43,7 +51,7 @@ const galleryCategories = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     label: "Treatments",
     images: [
       "/treatments.jpg",
@@ -54,7 +62,7 @@ const galleryCategories = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     label: "Dressing",
     images: [
       "/dressing/1429132a-3230-456f-a43f-eee1edfe3301.jpg",
@@ -64,7 +72,7 @@ const galleryCategories = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     label: "Bridle Dressing",
     images: [
       "/bridle-dressing/05402c34-ce06-4184-b0d1-4ce40e05ec5a.jpg",
@@ -74,7 +82,7 @@ const galleryCategories = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     label: "Eyebrows Shaping",
     images: [
       "/eyebrows-shaping/07a9c5eb-7e3c-4171-b122-3bcf77d320f5.jpg",
@@ -83,7 +91,7 @@ const galleryCategories = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     label: "Hair Removing",
     images: [
       "/hair-removing/06da87b8-60fe-4e0b-be1a-dfc34ec3c7fd.jpg",

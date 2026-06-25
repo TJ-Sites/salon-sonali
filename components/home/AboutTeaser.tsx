@@ -75,8 +75,7 @@ export default function AboutTeaser() {
             Our Story
           </p>
           <h2 className="font-playfair text-4xl lg:text-5xl text-[#000000] leading-tight mb-8">
-            Crafted with Passion,{" "}
-            <em className="italic">Delivered with Care</em>
+            Crafted with Passion, Delivered with Care
           </h2>
           <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed mb-6">
             Salon Sonali was born from a simple belief: every person deserves to
