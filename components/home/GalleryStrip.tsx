@@ -8,99 +8,65 @@ const galleryCategories = [
     id: 1,
     label: "Hair Colouring",
     images: [
-      "/hair-colour.jpg",
-      "/hair-colouring/49eda34d-c8be-4bf5-97bd-e6bd6474ab6b.jpg",
-      "/hair-colouring/53a13a46-4df1-4ae4-96ac-818797a0e3a2.jpg",
-      "/hair-colouring/5dab9db0-15b8-48bb-8701-ca3d23bed373.jpg",
-      "/hair-colouring/7700bf53-2276-416d-b5f6-60b9971a1279.jpg",
-      "/hair-colouring/7d12699c-38e0-4b78-8917-c5759c090682.jpg",
-      "/hair-colouring/8bcfaf01-912b-4a40-b0f9-436d765f2b4d.jpg",
-      "/hair-colouring/d4f2fce8-c07e-4445-b80c-f210d5809e3e.jpg",
-      "/hair-colouring/eae3f095-76b3-46d1-926a-139828e43235.jpg",
-      "/hair-colouring/f06a1b3a-021e-415d-b596-67f65551f6c8.jpg",
-      "/hair-colouring/fefc98df-be10-478a-91b9-833ec6414070.jpg",
+      "/covers/hair_colouring.png"
     ],
   },
   {
     id: 2,
     label: "Hair Cutting",
     images: [
-      "/hair-cutting/33a4ca6a-bde6-4aa7-a184-0ef23bd05d5c.jpg",
-      "/hair-cutting/577b0f81-bd47-4df6-9d39-2c42ea24805a.jpg",
-      "/hair-cutting/688f4958-31d6-4ef4-826a-fe059bcba7a4.jpg",
-      "/hair-cutting/90639d09-e512-4cb6-9efa-beb7fe365f15.jpg",
-      "/hair-cutting/9c6561c7-d594-40da-be3b-7995fe7a1615.jpg",
-      "/hair-cutting/c1c78ce3-3ba2-40e3-ac0a-584faf1bad26.jpg",
+      "/covers/hair_cutting.png"
     ],
   },
   {
     id: 3,
     label: "Skin Care",
     images: [
-      "/treatments.jpg",
-      "/treatments/5a563f88-e53c-42ea-95fd-17bff1a022dc.jpg",
+      "/treatments/cleo_natures_collection.png"
     ],
   },
   {
     id: 4,
     label: "Kids Hair Cutting",
     images: [
-      "/kids-hair-cutting/254eac87-cca6-4fb9-b827-72d9dedaeb6f.jpg",
-      "/kids-hair-cutting/a6269c77-97c8-4248-90c0-7c44aec5c83c.jpg",
-      "/kids-hair-cutting/d487e19f-b8d1-4a59-bad0-a2b8cf9a3526.jpg",
+      "/covers/kids_hair_cutting.png"
     ],
   },
   {
     id: 5,
     label: "Treatments",
     images: [
-      "/treatments.jpg",
-      "/treatments/4ecf2a7c-c4d7-49ef-be4f-2a6254c710f5.jpg",
-      "/treatments/5a563f88-e53c-42ea-95fd-17bff1a022dc.jpg",
-      "/treatments/6b1fd28b-e832-48c2-bbc0-33330bae2d48.jpg",
-      "/treatments/b45c10cb-add9-47bd-8b02-6c6a59c67d76.jpg",
+      "/covers/treatments.png"
     ],
   },
   {
     id: 6,
     label: "Dressing",
     images: [
-      "/dressing/1429132a-3230-456f-a43f-eee1edfe3301.jpg",
-      "/dressing/2ff6af4d-62ea-4eec-8bad-30dc924cdafa.jpg",
-      "/dressing/a1916995-b3e6-4f91-9c39-c3e154ee28a2.jpg",
-      "/dressing/f90f487d-b95e-4943-a071-9a7389a7d1bf.jpg",
+      "/covers/dressing.png"
     ],
   },
   {
     id: 7,
     label: "Bridle Dressing",
     images: [
-      "/bridle-dressing/05402c34-ce06-4184-b0d1-4ce40e05ec5a.jpg",
-      "/bridle-dressing/0b300dbb-7344-45a2-9388-fe2daae81b4e.jpg",
-      "/bridle-dressing/709931cc-0f01-4b6b-823a-a4a6356a314c.jpg",
-      "/bridle-dressing/cbeafd7d-67d8-4482-b8d4-c697958b916f.jpg",
+      "/covers/bridal_dressing.png"
     ],
   },
   {
     id: 8,
     label: "Eyebrows Shaping",
     images: [
-      "/eyebrows-shaping/07a9c5eb-7e3c-4171-b122-3bcf77d320f5.jpg",
-      "/eyebrows-shaping/bc280a3a-47c1-49ee-a0d2-b68c52af183f.jpg",
-      "/eyebrows-shaping/d8ae8638-72f3-4157-af27-27b917e2cf07.jpg",
+      "/covers/eyebrow_shaping.png"
     ],
   },
   {
     id: 9,
     label: "Hair Removing",
     images: [
-      "/hair-removing/06da87b8-60fe-4e0b-be1a-dfc34ec3c7fd.jpg",
-      "/hair-removing/6e6611ef-f31c-4166-a5ab-3b50f397cf76.jpg",
-      "/hair-removing/962ca7fd-25f8-4e54-8328-566b9b286ab7.jpg",
-      "/hair-removing/a125084f-1961-4d22-a6c2-33c09598612f.jpg",
-      "/hair-removing/f8368447-aae5-47ae-a9b1-578d33941ad3.jpg",
+      "/covers/hair_removing.png"
     ],
-  },
+  }
 ];
 
 function GalleryCard({ item, index }: { item: typeof galleryCategories[0]; index: number }) {

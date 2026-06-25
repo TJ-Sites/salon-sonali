@@ -42,13 +42,10 @@ export default function AboutTeaser() {
             transition: "opacity 0.9s ease, transform 0.9s ease",
           }}
         >
-          {/* Placeholder image using CSS gradient */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(135deg, #000000 0%, #2a2420 40%, #B89A7A 100%)",
-            }}
+          <img
+            src="/about_teaser.png"
+            alt="Salon Sonali Interior"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
           {/* Decorative text */}
           <div className="absolute inset-0 flex items-center justify-center">
