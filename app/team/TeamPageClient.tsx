@@ -44,9 +44,9 @@ export default function TeamPageClient() {
       {/* Team Alternating Section */}
       <section className="bg-[#FFFFFF] py-24 px-6 relative overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col gap-24 relative z-10">
-          
+
           {/* Member 1: Sonali Hettiarachchi (Image Left, Content Right) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -56,41 +56,41 @@ export default function TeamPageClient() {
             {/* Diamond Image Container (Left) */}
             <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0">
               {/* Gold brush stroke SVG at top-left */}
-              <svg 
-                viewBox="0 0 100 40" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg" 
+              <svg
+                viewBox="0 0 100 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
                 className="absolute -top-6 -left-10 w-28 sm:w-36 text-[#B89A7A]/75 pointer-events-none transform -rotate-12 z-10"
               >
-                <path 
-                  d="M5,30 C20,20 40,12 70,10 C90,8 100,5 105,3 C92,7 75,14 55,18 C35,22 18,27 5,30 Z" 
-                  fill="currentColor" 
-                  opacity="0.8" 
+                <path
+                  d="M5,30 C20,20 40,12 70,10 C90,8 100,5 105,3 C92,7 75,14 55,18 C35,22 18,27 5,30 Z"
+                  fill="currentColor"
+                  opacity="0.8"
                 />
-                <path 
-                  d="M12,25 C30,17 50,14 72,12 C85,10 93,8 97,6 C84,9 66,14 48,18 C30,21 17,24 12,25 Z" 
-                  fill="currentColor" 
-                  opacity="0.9" 
+                <path
+                  d="M12,25 C30,17 50,14 72,12 C85,10 93,8 97,6 C84,9 66,14 48,18 C30,21 17,24 12,25 Z"
+                  fill="currentColor"
+                  opacity="0.9"
                 />
-                <path 
-                  d="M2,33 C15,26 35,17 60,14 C78,11 95,9 101,7" 
-                  stroke="currentColor" 
-                  strokeWidth="1.2" 
-                  strokeLinecap="round" 
-                  opacity="0.5" 
+                <path
+                  d="M2,33 C15,26 35,17 60,14 C78,11 95,9 101,7"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  opacity="0.5"
                 />
               </svg>
 
               {/* The Gold Diamond Frame (slightly larger) */}
-              <div 
+              <div
                 className="absolute inset-2 bg-[#B89A7A]/20 transition-transform duration-500 hover:scale-105"
                 style={{
                   clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
                 }}
               />
-              
+
               {/* The Empty Diamond Box (Inner) */}
-              <div 
+              <div
                 className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-102"
                 style={{
                   clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
@@ -109,7 +109,7 @@ export default function TeamPageClient() {
               <p className="font-montserrat text-[#6B665F] text-sm sm:text-base leading-relaxed mb-6 max-w-xl text-center md:text-left font-light">
                 {team[0].bio}
               </p>
-              
+
               {/* Price Pill */}
               <div className="bg-[#E7E2D8]/80 text-[#000000] font-montserrat text-xs tracking-wider font-semibold px-6 py-2.5 rounded-sm mb-6 shadow-sm">
                 {team[0].price}
@@ -120,21 +120,21 @@ export default function TeamPageClient() {
                 <span className="font-alexbrush text-4xl text-[#6B665F]/90 select-none tracking-wide">
                   {team[0].name}
                 </span>
-                
+
                 {/* Wavy Underline */}
-                <svg 
-                  width="110" 
-                  height="8" 
-                  viewBox="0 0 110 8" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg" 
+                <svg
+                  width="110"
+                  height="8"
+                  viewBox="0 0 110 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                   className="mt-1 text-[#B89A7A]"
                 >
-                  <path 
-                    d="M0,4 Q13.75,0 27.5,4 T55,4 T82.5,4 T110,4" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    fill="none" 
+                  <path
+                    d="M0,4 Q13.75,0 27.5,4 T55,4 T82.5,4 T110,4"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    fill="none"
                   />
                 </svg>
               </div>
@@ -142,7 +142,7 @@ export default function TeamPageClient() {
           </motion.div>
 
           {/* Member 2: Oshadi Karunanayaka (Content Left, Image Right) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -157,7 +157,7 @@ export default function TeamPageClient() {
               <p className="font-montserrat text-[#6B665F] text-sm sm:text-base leading-relaxed mb-6 max-w-xl text-center md:text-left font-light">
                 {team[1].bio}
               </p>
-              
+
               {/* Price Pill */}
               <div className="bg-[#E7E2D8]/80 text-[#000000] font-montserrat text-xs tracking-wider font-semibold px-6 py-2.5 rounded-sm mb-6 shadow-sm">
                 {team[1].price}
@@ -168,21 +168,21 @@ export default function TeamPageClient() {
                 <span className="font-alexbrush text-4xl text-[#6B665F]/90 select-none tracking-wide">
                   {team[1].name}
                 </span>
-                
+
                 {/* Wavy Underline */}
-                <svg 
-                  width="110" 
-                  height="8" 
-                  viewBox="0 0 110 8" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg" 
+                <svg
+                  width="110"
+                  height="8"
+                  viewBox="0 0 110 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                   className="mt-1 text-[#B89A7A]"
                 >
-                  <path 
-                    d="M0,4 Q13.75,0 27.5,4 T55,4 T82.5,4 T110,4" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    fill="none" 
+                  <path
+                    d="M0,4 Q13.75,0 27.5,4 T55,4 T82.5,4 T110,4"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    fill="none"
                   />
                 </svg>
               </div>
@@ -191,15 +191,15 @@ export default function TeamPageClient() {
             {/* Diamond Image Container (Right) */}
             <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0">
               {/* The Gold Diamond Frame (slightly larger) */}
-              <div 
+              <div
                 className="absolute inset-2 bg-[#B89A7A]/20 transition-transform duration-500 hover:scale-105"
                 style={{
                   clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
                 }}
               />
-              
+
               {/* The Empty Diamond Box (Inner) */}
-              <div 
+              <div
                 className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-102"
                 style={{
                   clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"

@@ -143,7 +143,18 @@ export default function GalleryStrip() {
   const stripRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="bg-[#000000] py-24 lg:py-32 overflow-hidden">
+    <section className="relative bg-[#000000] py-24 lg:py-32 overflow-hidden">
+      {/* Lace Background */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/lace-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.35,
+          mixBlendMode: "screen" as const,
+        }}
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
         <div className="flex items-end justify-between">
           <div>

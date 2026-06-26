@@ -10,6 +10,18 @@ export default function CTABanner() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B89A7A]/50 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B89A7A]/50 to-transparent" />
 
+      {/* Lace Background */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/lace-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.3,
+          mixBlendMode: "screen" as const,
+        }}
+      />
+
       {/* Background glow */}
       <div
         className="absolute inset-0"
