@@ -47,12 +47,7 @@ export default function AboutTeaser() {
             alt="Salon Sonali Interior"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          {/* Decorative text */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <p className="font-playfair text-6xl italic text-[#FFFFFF]/20">
-              Sonali
-            </p>
-          </div>
+
           {/* Gold frame accent */}
           <div className="absolute bottom-8 left-8 w-24 h-px bg-[#B89A7A]" />
           <div className="absolute bottom-8 left-8 h-24 w-px bg-[#B89A7A]" />

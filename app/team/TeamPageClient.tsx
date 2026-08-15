@@ -3,10 +3,12 @@
 import { motion } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 import Link from "next/link";
+import Image from "next/image";
 
 const team = [
   {
     name: "Sonali Hettiarachchi",
+    image: "/team/sonali.jpg",
     title: "Chairwoman",
     speciality: "Chairwoman",
     bio: "With a clear vision for luxury and artistic expression, Sonali Hettiarachchi leads Salon Sonali as its Chairwoman. Her leadership ensures that the salon remains a sanctuary of elegance, craftsmanship, and state-of-the-art beauty practices.",
@@ -15,6 +17,7 @@ const team = [
   },
   {
     name: "Oshadi Karunanayaka",
+    image: "/team/oshadi.jpg",
     title: "Managing Director",
     speciality: "Managing Director",
     bio: "Oshadi Karunanayaka oversees the operations and client experiences at Salon Sonali as Managing Director. Her dedication to excellence and detailed management ensures that every client receives a seamless, bespoke, and premium luxury service.",
@@ -54,7 +57,7 @@ export default function TeamPageClient() {
             className="flex flex-col md:flex-row items-center gap-12 md:gap-16"
           >
             {/* Diamond Image Container (Left) */}
-            <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0">
+            <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0 group">
               {/* Gold brush stroke SVG at top-left */}
               <svg
                 viewBox="0 0 100 40"
@@ -83,21 +86,18 @@ export default function TeamPageClient() {
 
               {/* The Gold Diamond Frame (slightly larger) */}
               <div
-                className="absolute inset-2 bg-[#B89A7A]/20 transition-transform duration-500 hover:scale-105"
-                style={{
-                  clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
-                }}
+                className="absolute inset-2 bg-[#B89A7A]/20 transition-all duration-700 ease-in-out [clip-path:polygon(50%_0%,100%_50%,50%_100%,0%_50%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] group-hover:scale-105"
               />
 
-              {/* The Empty Diamond Box (Inner) */}
+              {/* The Image/Diamond Box (Inner) */}
               <div
-                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-102"
-                style={{
-                  clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
-                }}
+                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-all duration-700 ease-in-out overflow-hidden [clip-path:polygon(50%_0%,100%_50%,50%_100%,0%_50%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)]"
               >
-                {/* Initials very faint and elegant inside the box */}
-                <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[0].initials}</span>
+                {team[0].image ? (
+                  <Image src={team[0].image} alt={team[0].name} fill className="object-cover transform scale-125 hover:scale-110 transition-transform duration-700" />
+                ) : (
+                  <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[0].initials}</span>
+                )}
               </div>
             </div>
 
@@ -189,24 +189,21 @@ export default function TeamPageClient() {
             </div>
 
             {/* Diamond Image Container (Right) */}
-            <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0">
+            <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0 group">
               {/* The Gold Diamond Frame (slightly larger) */}
               <div
-                className="absolute inset-2 bg-[#B89A7A]/20 transition-transform duration-500 hover:scale-105"
-                style={{
-                  clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
-                }}
+                className="absolute inset-2 bg-[#B89A7A]/20 transition-all duration-700 ease-in-out [clip-path:polygon(50%_0%,100%_50%,50%_100%,0%_50%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] group-hover:scale-105"
               />
 
-              {/* The Empty Diamond Box (Inner) */}
+              {/* The Image/Diamond Box (Inner) */}
               <div
-                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-102"
-                style={{
-                  clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
-                }}
+                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-all duration-700 ease-in-out overflow-hidden [clip-path:polygon(50%_0%,100%_50%,50%_100%,0%_50%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)]"
               >
-                {/* Initials very faint and elegant inside the box */}
-                <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[1].initials}</span>
+                {team[1].image ? (
+                  <Image src={team[1].image} alt={team[1].name} fill className="object-cover transform scale-125 hover:scale-110 transition-transform duration-700" />
+                ) : (
+                  <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[1].initials}</span>
+                )}
               </div>
             </div>
           </motion.div>
