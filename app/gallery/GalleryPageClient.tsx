@@ -33,62 +33,6 @@ const galleryItems: GalleryItem[] = [
     "span": "row-span-2"
   },
   {
-    "id": 2,
-    "category": "Hair Colouring",
-    "label": "Hair Colouring",
-    "image": "/hair-colouring/476633708_635085332406553_6973431508254214019_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 3,
-    "category": "Hair Colouring",
-    "label": "Hair Colouring",
-    "image": "/hair-colouring/477406855_635085422406544_9192093169699208301_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 4,
-    "category": "Hair Colouring",
-    "label": "Hair Colouring",
-    "image": "/hair-colouring/477680593_635085329073220_1917597667652341141_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 5,
-    "category": "Hair Colouring",
-    "label": "Hair Colouring",
-    "image": "/hair-colouring/479183243_638009865447433_2781064228357959470_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 6,
-    "category": "Hair Colouring",
-    "label": "Hair Colouring",
-    "image": "/hair-colouring/479899386_638009895447430_6264234521024702527_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 7,
-    "category": "Hair Colouring",
-    "label": "Hair Colouring",
-    "image": "/hair-colouring/479995886_637991728782580_1385564044253699664_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 8,
-    "category": "Hair Colouring",
-    "label": "Hair Colouring",
-    "image": "/hair-colouring/480024032_637991575449262_4107148960526616707_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 9,
-    "category": "Hair Colouring",
-    "label": "Hair Colouring",
-    "image": "/hair-colouring/480066413_637991465449273_6575061237903885148_n.jpg",
-    "span": "row-span-2"
-  },
-  {
     "id": 10,
     "category": "Hair Colouring",
     "label": "Hair Colouring",
@@ -215,13 +159,6 @@ const galleryItems: GalleryItem[] = [
     "span": ""
   },
   {
-    "id": 28,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/24ffad4a-c113-47f5-9c23-acf72cd3a421.jpg",
-    "span": ""
-  },
-  {
     "id": 29,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
@@ -236,220 +173,10 @@ const galleryItems: GalleryItem[] = [
     "span": ""
   },
   {
-    "id": 31,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/472379373_610859251495828_8585019360744813013_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 32,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/472403779_610861164828970_6572959722771062852_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 33,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/472722935_610859278162492_3908833863299654205_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 34,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/473139949_615397334375353_8516036457095827380_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 35,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/474475455_621618727086547_7623506510128393008_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 36,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/474761585_626797566568663_2816082510399916832_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 37,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/475218720_627435983171488_7525288134612592524_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 38,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/475268723_627452919836461_2996270922829323342_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 39,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/475305994_627453166503103_3804702372426897220_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 40,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/475322325_627449003170186_345723070153163473_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 41,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/475344593_627453079836445_3758067134907509588_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 42,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/475393856_627451996503220_7908713043337403655_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 43,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/475658885_627453193169767_8733379943145973490_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 44,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/475773985_627452879836465_6080424938647856392_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 45,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/477344734_638351248746628_6643860712141326879_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 46,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/477700949_638325365415883_158188117468963783_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 47,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/477717755_638351292079957_3592766358837928855_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 48,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/478515300_638351102079976_3943474908184951992_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 49,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/479194236_638186578763095_7588947713267778484_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 50,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/479470373_638348568746896_6403530151683163789_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 51,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/480087934_638027362112350_5522930675671445540_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 52,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/480152539_638353352079751_5406044082276120597_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 53,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/480190913_638351315413288_3974360559679799983_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 54,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/480201080_638351218746631_5943836725183295462_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 55,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/484072414_662244383023981_152544508250431306_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 56,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/493524529_716274330954319_9117501378422736260_n.jpg",
-    "span": ""
-  },
-  {
     "id": 57,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/4e0786bf-5f34-4e59-ac74-ae0c988358e1.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 58,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/514364941_741561935092225_1763095667017129296_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 59,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/514470172_740024795245939_3154154060440441680_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 60,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/515911318_781920164389735_4053709621889629875_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 61,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/516848715_747568081158277_2277174226368101211_n.jpg",
     "span": "row-span-2"
   },
   {
@@ -467,74 +194,11 @@ const galleryItems: GalleryItem[] = [
     "span": ""
   },
   {
-    "id": 64,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/539262610_781920204389731_1498328832732035781_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 65,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/539898804_786894920558926_3585853583287535392_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 66,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/5525944e-60f5-479a-a364-3b28f9db122c.jpg",
-    "span": ""
-  },
-  {
-    "id": 67,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/559106267_818485780733173_7459961415189114227_n.jpg",
-    "span": ""
-  },
-  {
     "id": 68,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/577b0f81-bd47-4df6-9d39-2c42ea24805a.jpg",
     "span": ""
-  },
-  {
-    "id": 69,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/578538264_847463477835403_3207450331649389110_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 70,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/595202172_870534032195014_4742203131385731504_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 71,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/603810961_880635767851507_567401036550761833_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 72,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/603878589_880640391184378_4528427607134592203_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 73,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/605733875_884604197454664_7993136252311887362_n.jpg",
-    "span": "row-span-2"
   },
   {
     "id": 74,
@@ -548,13 +212,6 @@ const galleryItems: GalleryItem[] = [
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/6d1a659c-3881-4971-8d11-7e1d2b6b4c09.jpg",
-    "span": ""
-  },
-  {
-    "id": 76,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/730511613_1025469576701458_1700716384469883023_n.jpg",
     "span": ""
   },
   {
@@ -591,41 +248,6 @@ const galleryItems: GalleryItem[] = [
     "label": "Hair Cutting",
     "image": "/hair-cutting/9c6561c7-d594-40da-be3b-7995fe7a1615.jpg",
     "span": "row-span-2"
-  },
-  {
-    "id": 82,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/ad8ff89e-5ef5-41ff-8dae-51c6164bdcc2.jpg",
-    "span": ""
-  },
-  {
-    "id": 83,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/c1c78ce3-3ba2-40e3-ac0a-584faf1bad26.jpg",
-    "span": ""
-  },
-  {
-    "id": 84,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/cc8827ac-7b86-4897-acc4-407e452024d1.jpg",
-    "span": ""
-  },
-  {
-    "id": 85,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/d394339e-aad6-4a20-b11f-a40afbc4bd36.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 86,
-    "category": "Hair Cutting",
-    "label": "Hair Cutting",
-    "image": "/hair-cutting/fb4b5f2b-a160-44f5-8aa2-fe81fa93e7ba.jpg",
-    "span": ""
   },
   {
     "id": 87,
@@ -668,27 +290,6 @@ const galleryItems: GalleryItem[] = [
     "label": "Kids Hair Cutting",
     "image": "/kids-hair-cutting/475313887_627459296502490_2941580885604260467_n.jpg",
     "span": ""
-  },
-  {
-    "id": 93,
-    "category": "Kids Hair Cutting",
-    "label": "Kids Hair Cutting",
-    "image": "/kids-hair-cutting/475707091_627459169835836_8686066499847114948_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 94,
-    "category": "Kids Hair Cutting",
-    "label": "Kids Hair Cutting",
-    "image": "/kids-hair-cutting/531272860_774000588515026_2861819145595335323_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 95,
-    "category": "Kids Hair Cutting",
-    "label": "Kids Hair Cutting",
-    "image": "/kids-hair-cutting/531340451_774000715181680_2298074148098893948_n.jpg",
-    "span": "row-span-2"
   },
   {
     "id": 96,
@@ -782,38 +383,10 @@ const galleryItems: GalleryItem[] = [
     "span": ""
   },
   {
-    "id": 109,
-    "category": "Treatments",
-    "label": "Treatments",
-    "image": "/treatments/471133046_600665815848505_8462929054811929791_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 110,
-    "category": "Treatments",
-    "label": "Treatments",
-    "image": "/treatments/475307604_627460296502390_5052783223148576630_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 111,
-    "category": "Treatments",
-    "label": "Treatments",
-    "image": "/treatments/476837353_638002112114875_1007318055020181338_n.jpg",
-    "span": ""
-  },
-  {
     "id": 112,
     "category": "Treatments",
     "label": "Treatments",
     "image": "/treatments/476838196_638007998780953_6466597145227788281_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 113,
-    "category": "Treatments",
-    "label": "Treatments",
-    "image": "/treatments/476901031_634491362465950_3554042535547013980_n.jpg",
     "span": ""
   },
   {
@@ -873,45 +446,10 @@ const galleryItems: GalleryItem[] = [
     "span": ""
   },
   {
-    "id": 122,
-    "category": "Treatments",
-    "label": "Treatments",
-    "image": "/treatments/484030246_4103448413266452_7754450473263806579_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 123,
-    "category": "Treatments",
-    "label": "Treatments",
-    "image": "/treatments/484128503_4103448393266454_8245901482176729916_n.jpg",
-    "span": ""
-  },
-  {
     "id": 124,
     "category": "Treatments",
     "label": "Treatments",
     "image": "/treatments/4ecf2a7c-c4d7-49ef-be4f-2a6254c710f5.jpg",
-    "span": ""
-  },
-  {
-    "id": 125,
-    "category": "Treatments",
-    "label": "Treatments",
-    "image": "/treatments/545367347_795061449742273_8339554593266377714_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 126,
-    "category": "Treatments",
-    "label": "Treatments",
-    "image": "/treatments/545412782_795061286408956_1910783699135092858_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 127,
-    "category": "Treatments",
-    "label": "Treatments",
-    "image": "/treatments/546647319_795061363075615_4607847835556083080_n.jpg",
     "span": ""
   },
   {
@@ -1024,97 +562,6 @@ const galleryItems: GalleryItem[] = [
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/46c9f2d2-d1a3-46e9-853c-309be3c402a6.jpg",
-    "span": ""
-  },
-  {
-    "id": 144,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/479642501_638351335413286_4855829057472388283_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 145,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/480201202_638984865349933_4953759720159264804_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 146,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/480305475_640110021904084_4374947188508968769_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 147,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/480307461_640104831904603_1424074695179893162_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 148,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/480486089_640660898515663_5852302426565202783_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 149,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/480501551_640109861904100_7115423061616228443_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 150,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/480595297_640659258515827_3715666516871844747_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 151,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/480671595_4080773692200591_2366528707506024798_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 152,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/480967833_664064159508670_6022568927753475708_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 153,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/486356104_672122988702787_4910102090439966591_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 154,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/494354181_697754756139610_167705728872060694_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 155,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/607988006_889270186988065_812371683899419287_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 156,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/612836413_891204936794590_3689472526506046680_n.jpg",
     "span": ""
   },
   {
@@ -1300,34 +747,6 @@ const galleryItems: GalleryItem[] = [
     "span": "row-span-2"
   },
   {
-    "id": 183,
-    "category": "Bridle Dressing",
-    "label": "Bridle Dressing",
-    "image": "/bridle-dressing/47679852_2262495380695107_4674848945648697344_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 184,
-    "category": "Bridle Dressing",
-    "label": "Bridle Dressing",
-    "image": "/bridle-dressing/50394899_2290561687888476_3946641123262332928_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 185,
-    "category": "Bridle Dressing",
-    "label": "Bridle Dressing",
-    "image": "/bridle-dressing/50460025_2289907531287225_7412557809897701376_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 186,
-    "category": "Bridle Dressing",
-    "label": "Bridle Dressing",
-    "image": "/bridle-dressing/55c142ce-62bf-4ce0-8139-e3bda01e8c50.jpg",
-    "span": "row-span-2"
-  },
-  {
     "id": 187,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
@@ -1382,69 +801,6 @@ const galleryItems: GalleryItem[] = [
     "label": "Eyebrows Shaping",
     "image": "/eyebrows-shaping/07a9c5eb-7e3c-4171-b122-3bcf77d320f5.jpg",
     "span": "row-span-2"
-  },
-  {
-    "id": 195,
-    "category": "Eyebrows Shaping",
-    "label": "Eyebrows Shaping",
-    "image": "/eyebrows-shaping/480750102_660886549826431_2657531532190293439_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 196,
-    "category": "Eyebrows Shaping",
-    "label": "Eyebrows Shaping",
-    "image": "/eyebrows-shaping/482092898_655899030325183_5690271943179424981_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 197,
-    "category": "Eyebrows Shaping",
-    "label": "Eyebrows Shaping",
-    "image": "/eyebrows-shaping/482203711_655899493658470_2518854841849931617_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 198,
-    "category": "Eyebrows Shaping",
-    "label": "Eyebrows Shaping",
-    "image": "/eyebrows-shaping/482251908_655898863658533_5691931144476821713_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 199,
-    "category": "Eyebrows Shaping",
-    "label": "Eyebrows Shaping",
-    "image": "/eyebrows-shaping/482264194_655899350325151_6215447983496778746_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 200,
-    "category": "Eyebrows Shaping",
-    "label": "Eyebrows Shaping",
-    "image": "/eyebrows-shaping/482267374_655900043658415_4527120332425358060_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 201,
-    "category": "Eyebrows Shaping",
-    "label": "Eyebrows Shaping",
-    "image": "/eyebrows-shaping/483367016_655899140325172_7790039729531913122_n.jpg",
-    "span": ""
-  },
-  {
-    "id": 202,
-    "category": "Eyebrows Shaping",
-    "label": "Eyebrows Shaping",
-    "image": "/eyebrows-shaping/483488449_655899846991768_4658056807903314914_n.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 203,
-    "category": "Eyebrows Shaping",
-    "label": "Eyebrows Shaping",
-    "image": "/eyebrows-shaping/485978308_664603532788066_7552684935623013995_n.jpg",
-    "span": ""
   },
   {
     "id": 204,
