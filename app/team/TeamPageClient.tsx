@@ -84,17 +84,17 @@ export default function TeamPageClient() {
                 />
               </svg>
 
-              {/* The Gold Diamond Frame (slightly larger) */}
+              {/* The Gold Frame (slightly larger) */}
               <div
-                className="absolute inset-2 bg-[#B89A7A]/20 transition-all duration-700 ease-in-out [clip-path:polygon(50%_0%,100%_50%,50%_100%,0%_50%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] group-hover:scale-105"
+                className="absolute inset-2 bg-[#B89A7A]/20 rounded-2xl"
               />
 
-              {/* The Image/Diamond Box (Inner) */}
+              {/* The Image Box (Inner) */}
               <div
-                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-all duration-700 ease-in-out overflow-hidden [clip-path:polygon(50%_0%,100%_50%,50%_100%,0%_50%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)]"
+                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg overflow-hidden rounded-2xl"
               >
                 {team[0].image ? (
-                  <Image src={team[0].image} alt={team[0].name} fill className="object-cover transform scale-125 hover:scale-110 transition-transform duration-700" />
+                  <Image src={team[0].image} alt={team[0].name} fill className="object-cover" />
                 ) : (
                   <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[0].initials}</span>
                 )}
@@ -190,17 +190,17 @@ export default function TeamPageClient() {
 
             {/* Diamond Image Container (Right) */}
             <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0 group">
-              {/* The Gold Diamond Frame (slightly larger) */}
+              {/* The Gold Frame (slightly larger) */}
               <div
-                className="absolute inset-2 bg-[#B89A7A]/20 transition-all duration-700 ease-in-out [clip-path:polygon(50%_0%,100%_50%,50%_100%,0%_50%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] group-hover:scale-105"
+                className="absolute inset-2 bg-[#B89A7A]/20 rounded-2xl"
               />
 
-              {/* The Image/Diamond Box (Inner) */}
+              {/* The Image Box (Inner) */}
               <div
-                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg transition-all duration-700 ease-in-out overflow-hidden [clip-path:polygon(50%_0%,100%_50%,50%_100%,0%_50%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)]"
+                className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg overflow-hidden rounded-2xl"
               >
                 {team[1].image ? (
-                  <Image src={team[1].image} alt={team[1].name} fill className="object-cover transform scale-125 hover:scale-110 transition-transform duration-700" />
+                  <Image src={team[1].image} alt={team[1].name} fill className="object-cover" />
                 ) : (
                   <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[1].initials}</span>
                 )}
