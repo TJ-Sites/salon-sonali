@@ -20,6 +20,16 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden transition-colors duration-700"
       style={{ backgroundColor: scrolled ? "#FFFFFF" : "#000000" }}
     >
+      {/* Floral Background */}
+      <div
+        className="absolute inset-0 transition-opacity duration-700 pointer-events-none"
+        style={{
+          backgroundImage: "url('/floral-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: scrolled ? 0.05 : 0.3,
+        }}
+      />
       {/* Background gradient */}
       <div
         className="absolute inset-0 transition-opacity duration-700"
@@ -30,15 +40,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Subtle grid overlay */}
-      <div
-        className="absolute inset-0 opacity-5 transition-opacity duration-700"
-        style={{
-          backgroundImage: `linear-gradient(rgba(247,246,242,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(247,246,242,0.3) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-          opacity: scrolled ? 0.02 : 0.05,
-        }}
-      />
+
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center">

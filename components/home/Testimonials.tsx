@@ -49,7 +49,18 @@ export default function Testimonials() {
   const t = testimonials[current];
 
   return (
-    <section className="bg-[#E7E2D8] section-padding">
+    <section className="relative bg-[#E7E2D8] section-padding overflow-hidden">
+      {/* Lace Background */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/lace-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.12,
+          mixBlendMode: "multiply" as const,
+        }}
+      />
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Header */}
         <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">

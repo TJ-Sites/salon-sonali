@@ -42,9 +42,23 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#000000] text-[#FFFFFF]">
-      {/* Gold top border */}
-      <div className="h-px bg-[#B89A7A]/40" />
+    <footer className="relative bg-[#000000] text-[#FFFFFF] overflow-hidden">
+      {/* Floral Background */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/floral-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.3,
+          mixBlendMode: "screen" as const,
+        }}
+      />
+
+      <div className="relative z-10">
+        {/* Gold top border */}
+        <div className="h-px bg-[#B89A7A]/40" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Brand */}
@@ -129,6 +143,7 @@ export default function Footer() {
             Crafted with care for beauty
           </p>
         </div>
+      </div>
       </div>
     </footer>
   );

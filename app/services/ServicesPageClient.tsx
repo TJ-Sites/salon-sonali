@@ -97,7 +97,17 @@ export default function ServicesPageClient() {
     <>
       {/* Page Hero */}
       <section className="bg-[#000000] pt-36 pb-24 px-6 lg:px-12 text-center relative overflow-hidden">
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 80%, rgba(184,154,122,0.1) 0%, transparent 70%)" }} />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: "url('/download.11.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 0.3,
+          }}
+        />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 80%, rgba(184,154,122,0.6) 0%, transparent 70%)" }} />
         <div className="relative z-10 max-w-3xl mx-auto">
           <SectionReveal>
             <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-5">Our Services</p>
@@ -141,9 +151,8 @@ export default function ServicesPageClient() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`relative font-montserrat text-xs tracking-widest uppercase px-6 py-5 whitespace-nowrap transition-colors duration-300 ${
-                  activeCategory === cat ? "text-[#000000]" : "text-[#6B665F] hover:text-[#000000]"
-                }`}
+                className={`relative font-montserrat text-xs tracking-widest uppercase px-6 py-5 whitespace-nowrap transition-colors duration-300 ${activeCategory === cat ? "text-[#000000]" : "text-[#6B665F] hover:text-[#000000]"
+                  }`}
               >
                 {cat}
                 {activeCategory === cat && (

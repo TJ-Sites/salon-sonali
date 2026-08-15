@@ -10,14 +10,7 @@ export default function CTABanner() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B89A7A]/50 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B89A7A]/50 to-transparent" />
 
-      {/* Background glow */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse at 50% 50%, rgba(184,154,122,0.08) 0%, transparent 70%)",
-        }}
-      />
+
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-28 lg:py-36 text-center">
         <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-6">

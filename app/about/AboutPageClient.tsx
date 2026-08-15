@@ -37,37 +37,22 @@ export default function AboutPageClient() {
         </SectionReveal>
       </section>
 
-      {/* Story — split screen */}
-      <section className="bg-[#FFFFFF] overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
-          {/* Image */}
-          <SectionReveal direction="left" className="relative min-h-[500px] lg:min-h-0">
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(135deg, #000000 0%, #3d2c1e 50%, #B89A7A 100%)" }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="font-playfair text-8xl italic text-[#FFFFFF]/10">26+</p>
-            </div>
-            <div className="absolute bottom-10 left-10">
-              <p className="font-montserrat text-xs tracking-widest uppercase text-[#B89A7A]">Years of Excellence</p>
-              <div className="w-8 h-px bg-[#B89A7A]/40 mx-auto mb-4" />
-            </div>
-          </SectionReveal>
-
-          {/* Text */}
-          <SectionReveal direction="right" delay={0.15} className="flex flex-col justify-center px-10 lg:px-16 py-20">
-            <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-6">How It Began</p>
-            <h2 className="font-playfair text-4xl text-[#000000] mb-8 leading-tight">
+      {/* Story — simple centered */}
+      <section className="bg-[#FFFFFF] section-padding">
+        <div className="max-w-3xl mx-auto px-6 text-center flex flex-col items-center">
+          <SectionReveal direction="up" className="flex flex-col items-center">
+            <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">How It Began</p>
+            <h2 className="font-playfair text-4xl sm:text-5xl text-[#000000] mb-8 leading-tight">
               From a Single Chair to a Full Sanctuary
             </h2>
+            <div className="w-12 h-px bg-[#B89A7A] mx-auto mb-8" />
             <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed mb-5">
               Salon Sonali started in 1998 as a small, two-chair studio with one clear vision: to make every person who walks through the door feel extraordinary. Founder Sonali Mehta had spent years working in acclaimed salons across London and Mumbai, absorbing the finest techniques and the belief that great beauty work is a form of art.
             </p>
             <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed mb-10">
               What began as an intimate space has grown into a full-service sanctuary — but the heart of it has never changed. Every client is a person, not a booking slot. Every appointment is an opportunity to listen, collaborate, and create something genuinely beautiful.
             </p>
-            <Link href="/team" className="btn-outline-dark self-start">Meet the Team</Link>
+            <Link href="/team" className="btn-outline-dark">Meet the Team</Link>
           </SectionReveal>
         </div>
       </section>

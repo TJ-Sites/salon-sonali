@@ -42,20 +42,12 @@ export default function AboutTeaser() {
             transition: "opacity 0.9s ease, transform 0.9s ease",
           }}
         >
-          {/* Placeholder image using CSS gradient */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(135deg, #000000 0%, #2a2420 40%, #B89A7A 100%)",
-            }}
+          <img
+            src="/about_teaser.png"
+            alt="Salon Sonali Interior"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          {/* Decorative text */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <p className="font-playfair text-6xl italic text-[#FFFFFF]/20">
-              Sonali
-            </p>
-          </div>
+
           {/* Gold frame accent */}
           <div className="absolute bottom-8 left-8 w-24 h-px bg-[#B89A7A]" />
           <div className="absolute bottom-8 left-8 h-24 w-px bg-[#B89A7A]" />
@@ -75,8 +67,7 @@ export default function AboutTeaser() {
             Our Story
           </p>
           <h2 className="font-playfair text-4xl lg:text-5xl text-[#000000] leading-tight mb-8">
-            Crafted with Passion,{" "}
-            <em className="italic">Delivered with Care</em>
+            Crafted with Passion, Delivered with Care
           </h2>
           <p className="font-montserrat text-sm text-[#6B665F] leading-relaxed mb-6">
             Salon Sonali was born from a simple belief: every person deserves to
