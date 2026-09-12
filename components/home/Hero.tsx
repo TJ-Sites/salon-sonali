@@ -44,30 +44,38 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center">
-        {/* Eyebrow */}
-        <p
-          className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-8"
-          style={{ opacity: 0, animation: "fadeIn 0.8s ease 0.2s forwards" }}
-        >
-          Luxury Hair &amp; Beauty Studio
-        </p>
-
-        {/* Main heading */}
+        {/* Main Brand Title - Salon Name in Logo Font */}
         <h1
           ref={headingRef}
-          className={`font-playfair font-bold leading-tight mb-8 ${
+          className={`font-montserrat font-semibold uppercase leading-tight mb-4 ${
             scrolled ? "text-[#000000]" : "text-[#FFFFFF]"
           }`}
           style={{
-            fontSize: "clamp(3rem, 8vw, 7rem)",
-            letterSpacing: "-0.02em",
+            fontSize: "clamp(2.2rem, 5.2vw, 4.5rem)",
+            fontWeight: 600,
+            letterSpacing: "0.15em",
             opacity: 0,
-            animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards",
+            animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards",
+            transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)",
+          }}
+        >
+          <span className="text-[1.28em]">S</span>ALON{" "}
+          <span className="text-[1.28em]">S</span>ONALI
+        </h1>
+
+        {/* Minimized Tagline */}
+        <p
+          className={`font-playfair text-xl sm:text-2xl md:text-3xl tracking-wider mb-8 ${
+            scrolled ? "text-[#8C7051]" : "text-[#CBB292]"
+          }`}
+          style={{
+            opacity: 0,
+            animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards",
             transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)",
           }}
         >
           Where Beauty Meets Artistry
-        </h1>
+        </p>
 
         {/* Subheading */}
         <p
