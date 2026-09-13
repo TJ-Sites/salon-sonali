@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 import Link from "next/link";
 
-const categories = ["All", "Hair Services", "Hair Treatments", "Skin Treatments", "Dressings", "Eyebrows Shaping", "Hair Removing", "Other Services"];
+const categories = ["All", "Skin Treatments", "Hair Treatments", "Hair Services", "Dressings", "Eyebrows Shaping", "Hair Removing", "Other Services"];
 
 const services = [
   // HAIR SERVICES
@@ -26,6 +26,10 @@ const services = [
   { category: "Hair Treatments", name: "Oil Treatments", duration: "40 min", price: "Rs. 2,500", description: "Traditional hot oil massage to stimulate blood circulation and deeply nourish hair roots." },
 
   // SKIN TREATMENTS
+  { category: "Skin Treatments", name: "Hydrafacial - For All Skin Types", duration: "60 min", price: "Price on Request", description: "Deeply cleanses, exfoliates, and hydrates the skin using advanced hydradermabrasion technology suitable for all skin types. A perfect foundational treatment to achieve a radiant, healthy glow." },
+  { category: "Skin Treatments", name: "Hydrafacial - For Pimples", duration: "60 min", price: "Price on Request", description: "Deeply cleanses, exfoliates, and hydrates the skin using advanced hydradermabrasion technology suitable for all skin types. Specially formulated to target acne, soothe inflammation, and clear congested pores." },
+  { category: "Skin Treatments", name: "Hydrafacial - Skin Lightening", duration: "75 min", price: "Price on Request", description: "Deeply cleanses, exfoliates, and hydrates the skin using advanced hydradermabrasion technology suitable for all skin types. Infused with brightening serums to reduce pigmentation and enhance your natural, luminous glow." },
+  { category: "Skin Treatments", name: "Hydrafacial - Anti-Aging", duration: "75 min", price: "Price on Request", description: "Deeply cleanses, exfoliates, and hydrates the skin using advanced hydradermabrasion technology suitable for all skin types. Designed with potent peptides to boost collagen, improve elasticity, and smooth fine lines." },
   { category: "Skin Treatments", name: "Pimple/Acne Treatments", duration: "60 min", price: "Rs. 4,500+", description: "Targeted treatment using specialized formulations to soothe inflammation, clear pores, and promote healthy skin regeneration." },
   { category: "Skin Treatments", name: "Anti - Pigmentation Treatments", duration: "75 min", price: "Rs. 6,000+", description: "Advanced therapy focused on reducing hyperpigmentation, dark spots, and evening out skin tone." },
   { category: "Skin Treatments", name: "Skin Lightning Treatments", duration: "90 min", price: "Rs. 7,500+", description: "Radiance-boosting facial treatment using safe, premium herbal and active ingredients to enhance natural glow." },
@@ -243,7 +247,7 @@ export default function ServicesPageClient() {
                             <div className="flex items-center justify-between sm:hidden mb-4">
                               <span className="font-montserrat text-xs text-[#6B665F]">{service.duration}</span>
                             </div>
-                            <Link href="/contact" className="btn-primary text-xs inline-flex">
+                            <Link href="/contact" className="btn-outline-dark text-xs inline-flex">
                               Book This Service
                             </Link>
                           </div>
