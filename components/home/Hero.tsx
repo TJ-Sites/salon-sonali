@@ -66,7 +66,7 @@ export default function Hero() {
             transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)",
           }}
         >
-          Where Beauty Meets Artistry
+          SALON SONALI
         </h1>
 
         {/* Subheading */}
