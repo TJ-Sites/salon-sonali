@@ -20,14 +20,14 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden transition-colors duration-700"
       style={{ backgroundColor: scrolled ? "#FFFFFF" : "#000000" }}
     >
-      {/* Floral Background */}
+      {/* Uploaded Background */}
       <div
         className="absolute inset-0 transition-opacity duration-700 pointer-events-none"
         style={{
-          backgroundImage: "url('/floral-bg.png')",
+          backgroundImage: "url('/hero-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          opacity: scrolled ? 0.05 : 0.3,
+          opacity: scrolled ? 0.2 : 0.6,
         }}
       />
       {/* Background gradient */}
@@ -46,7 +46,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center">
         {/* Eyebrow */}
         <p
-          className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-8"
+          className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] font-bold mb-8"
           style={{ opacity: 0, animation: "fadeIn 0.8s ease 0.2s forwards" }}
         >
           Luxury Hair &amp; Beauty Studio
@@ -55,11 +55,10 @@ export default function Hero() {
         {/* Main heading */}
         <h1
           ref={headingRef}
-          className={`font-playfair font-bold leading-tight mb-8 ${
-            scrolled ? "text-[#000000]" : "text-[#FFFFFF]"
-          }`}
+          className={`font-playfair font-black leading-tight mb-8 whitespace-nowrap ${scrolled ? "text-[#000000]" : "text-[#FFFFFF]"
+            }`}
           style={{
-            fontSize: "clamp(3rem, 8vw, 7rem)",
+            fontSize: "clamp(2.25rem, 10vw, 9rem)",
             letterSpacing: "-0.02em",
             opacity: 0,
             animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards",
@@ -69,12 +68,23 @@ export default function Hero() {
           SALON SONALI
         </h1>
 
+        {/* Location */}
+        <p
+          className={`font-montserrat text-sm tracking-[0.3em] uppercase mb-12 -mt-6 font-medium translate-x-24 sm:translate-x-32 md:translate-x-64 lg:translate-x-80 ${scrolled ? "text-[#3D3A35]" : "text-[#E5E3DF]"
+            }`}
+          style={{
+            opacity: 0,
+            animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards",
+          }}
+        >
+          MINUWANGODA
+        </p>
+
         {/* Subheading */}
         <p
           ref={subRef}
-          className={`font-montserrat text-lg max-w-xl mx-auto leading-relaxed mb-12 ${
-            scrolled ? "text-[#3D3A35]" : "text-[#A39F99]"
-          }`}
+          className={`font-montserrat text-base max-w-xl mx-auto leading-relaxed mb-12 ${scrolled ? "text-[#3D3A35]" : "text-[#FFFFFF]"
+            }`}
           style={{
             opacity: 0,
             animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards",
@@ -88,7 +98,7 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div
           ref={ctaRef}
-          className={`flex flex-col sm:flex-row gap-4 justify-center items-center ${scrolled ? "hero-scrolled" : ""}`}
+          className={`flex flex-col sm:flex-row gap-4 justify-center items-center mt-6 ${scrolled ? "hero-scrolled" : ""}`}
           style={{
             opacity: 0,
             animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards",

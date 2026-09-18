@@ -5,9 +5,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 import Link from "next/link";
 
-const categories = ["All", "Skin Treatments", "Hair Treatments", "Hair Services", "Dressings", "Eyebrows Shaping", "Hair Removing", "Other Services"];
+const categories = ["All", "Services in Demand", "Skin Treatments", "Hair Treatments", "Hair Services", "Dressings", "Eyebrows Shaping", "Hair Removal", "Other Services"];
 
 const services = [
+  // SERVICES IN DEMAND
+  { category: "Services in Demand", name: "Hair Extensions", duration: "120 min+", price: "Price on Request", description: "Premium quality natural hair extensions custom-matched and applied for volume and length." },
+  { category: "Services in Demand", name: "Eyelash Extensions", duration: "90 min", price: "Rs. 8,000+", description: "Premium quality semi-permanent eyelash extensions for added volume, length, and a beautiful natural look." },
+  { category: "Services in Demand", name: "Eyebrow Microblading", duration: "120 min", price: "Price on Request", description: "Semi-permanent tattooing technique using fine strokes to create natural-looking, fuller eyebrows." },
+  { category: "Services in Demand", name: "Lip Blushing", duration: "120 min", price: "Price on Request", description: "A semi-permanent makeup treatment that enhances the natural tint and shape of your lips." },
+  { category: "Services in Demand", name: "BB Glow Facial", duration: "90 min", price: "Rs. 10,000+", description: "An intensive skin treatment that infuses nutrient-rich BB serum into your skin for a radiant, foundation-like finish." },
+
   // HAIR SERVICES
   { category: "Hair Services", name: "Hair Cutting", duration: "45 min", price: "Rs. 3,000+", description: "Precision hair cutting and shaping tailored to your features, completed with a signature style." },
   { category: "Hair Services", name: "Hair Colouring", duration: "120 min", price: "Rs. 8,500+", description: "Custom hair coloring using high-grade, low-ammonia products for rich, long-lasting tones and dimension." },
@@ -26,7 +33,7 @@ const services = [
   { category: "Hair Treatments", name: "Oil Treatments", duration: "40 min", price: "Rs. 2,500", description: "Traditional hot oil massage to stimulate blood circulation and deeply nourish hair roots." },
 
   // SKIN TREATMENTS
-  { category: "Skin Treatments", name: "Hydrafacial - For All Skin Types", duration: "60 min", price: "Price on Request", description: "Deeply cleanses, exfoliates, and hydrates the skin using advanced hydradermabrasion technology suitable for all skin types. A perfect foundational treatment to achieve a radiant, healthy glow." },
+  { category: "Skin Treatments", name: "Hydrafacial (17 in 1 Machine) - For All Skin Types", duration: "60 min", price: "Price on Request", description: "Deeply cleanses, exfoliates, and hydrates the skin using advanced hydradermabrasion technology suitable for all skin types. A perfect foundational treatment to achieve a radiant, healthy glow." },
   { category: "Skin Treatments", name: "Hydrafacial - For Pimples", duration: "60 min", price: "Price on Request", description: "Deeply cleanses, exfoliates, and hydrates the skin using advanced hydradermabrasion technology suitable for all skin types. Specially formulated to target acne, soothe inflammation, and clear congested pores." },
   { category: "Skin Treatments", name: "Hydrafacial - Skin Lightening", duration: "75 min", price: "Price on Request", description: "Deeply cleanses, exfoliates, and hydrates the skin using advanced hydradermabrasion technology suitable for all skin types. Infused with brightening serums to reduce pigmentation and enhance your natural, luminous glow." },
   { category: "Skin Treatments", name: "Hydrafacial - Anti-Aging", duration: "75 min", price: "Price on Request", description: "Deeply cleanses, exfoliates, and hydrates the skin using advanced hydradermabrasion technology suitable for all skin types. Designed with potent peptides to boost collagen, improve elasticity, and smooth fine lines." },
@@ -44,11 +51,12 @@ const services = [
 
   // EYEBROWS SHAPING
   { category: "Eyebrows Shaping", name: "Eyebrows Shaping", duration: "20 min", price: "Rs. 1,000", description: "Precision shaping and threading to enhance your natural brow structure and frame your face." },
+  { category: "Eyebrows Shaping", name: "Eyebrow Microblading", duration: "120 min", price: "Price on Request", description: "Semi-permanent tattooing technique using fine strokes to create natural-looking, fuller eyebrows that perfectly frame your face." },
   { category: "Eyebrows Shaping", name: "Eye Lash Extentions", duration: "90 min", price: "Rs. 8,000+", description: "Premium quality semi-permanent eyelash extensions for added volume, length, and a beautiful natural look." },
 
   // HAIR REMOVING
-  { category: "Hair Removing", name: "Face Waxing", duration: "30 min", price: "Rs. 2,500", description: "Gentle waxing service for face, removing unwanted hair and leaving skin feeling smooth." },
-  { category: "Hair Removing", name: "Body Waxing", duration: "60 min+", price: "Rs. 6,000+", description: "Professional full body or targeted waxing using high-quality wax suitable for sensitive skin." },
+  { category: "Hair Removal", name: "Face Waxing", duration: "30 min", price: "Rs. 2,500", description: "Gentle waxing service for face, removing unwanted hair and leaving skin feeling smooth." },
+  { category: "Hair Removal", name: "Body Waxing", duration: "60 min+", price: "Rs. 6,000+", description: "Professional full body or targeted waxing using high-quality wax suitable for sensitive skin." },
 
   // OTHER SERVICES
   { category: "Other Services", name: "Menicure", duration: "45 min", price: "Rs. 3,500", description: "Classic nail grooming, cuticle care, hand massage, and professional polishing for a clean look." },
@@ -116,7 +124,7 @@ export default function ServicesPageClient() {
           <SectionReveal>
             <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-5">Our Services</p>
             <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#FFFFFF] mb-6" style={{ lineHeight: 1.1 }}>
-              Treatments for Every You
+              Beauty treatments, made for you
             </h1>
             <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />
             <p className="font-montserrat text-[#6B665F] text-base lg:text-lg leading-relaxed">

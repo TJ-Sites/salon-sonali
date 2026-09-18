@@ -41,8 +41,11 @@ export default function ContactPageClient() {
     const e = validate();
     if (Object.keys(e).length) { setErrors(e); return; }
     setLoading(true);
-    // Simulate async submission
-    await new Promise((r) => setTimeout(r, 1200));
+    
+    const messageText = `New Message from Salon Sonali Contact Form\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || 'N/A'}\nMessage: ${form.message}`;
+    const whatsappUrl = `https://wa.me/94774090444?text=${encodeURIComponent(messageText)}`;
+    window.open(whatsappUrl, '_blank');
+
     setLoading(false);
     setSubmitted(true);
     setToast(true);

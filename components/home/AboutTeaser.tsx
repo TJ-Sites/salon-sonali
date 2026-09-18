@@ -84,7 +84,7 @@ export default function AboutTeaser() {
             <Link href="/about" className="btn-outline-dark">
               Our Story
             </Link>
-            <Link href="/team" className="btn-primary">
+            <Link href="/team" className="btn-outline-dark">
               Meet Our Team
             </Link>
           </div>

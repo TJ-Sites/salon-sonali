@@ -12,7 +12,7 @@ const filters = [
   "Dressing",
   "Bridle Dressing",
   "Eyebrows Shaping",
-  "Hair Removing"
+  "Hair Removal"
 ];
 
 interface GalleryItem {
@@ -137,7 +137,7 @@ const galleryItems: GalleryItem[] = [
     "image": "/hair-colouring/fefc98df-be10-478a-91b9-833ec6414070.jpg",
     "span": ""
   },
-  {
+    {
     "id": 25,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
@@ -159,95 +159,151 @@ const galleryItems: GalleryItem[] = [
     "span": ""
   },
   {
+    "id": 28,
+    "category": "Hair Cutting",
+    "label": "Hair Cutting",
+    "image": "/hair-cutting/22525df2-365d-4240-90d3-37eb3816103f.jpg",
+    "span": ""
+  },
+  {
     "id": 29,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
-    "image": "/hair-cutting/33a4ca6a-bde6-4aa7-a184-0ef23bd05d5c.jpg",
+    "image": "/hair-cutting/2eb16917-207e-4a08-9782-e2cc5fd56f1f.jpg",
     "span": "row-span-2"
   },
   {
     "id": 30,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
+    "image": "/hair-cutting/33a4ca6a-bde6-4aa7-a184-0ef23bd05d5c.jpg",
+    "span": ""
+  },
+  {
+    "id": 31,
+    "category": "Hair Cutting",
+    "label": "Hair Cutting",
     "image": "/hair-cutting/42a15923-09f9-4909-8f0e-56ea9f063e9b.jpg",
     "span": ""
   },
   {
-    "id": 57,
+    "id": 32,
+    "category": "Hair Cutting",
+    "label": "Hair Cutting",
+    "image": "/hair-cutting/4ddc50ba-f43f-45f7-8cf8-de3526307f2e.jpg",
+    "span": ""
+  },
+  {
+    "id": 33,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/4e0786bf-5f34-4e59-ac74-ae0c988358e1.jpg",
     "span": "row-span-2"
   },
   {
-    "id": 62,
+    "id": 34,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/524b91e4-f302-44bd-958c-43c034a86f54.jpg",
     "span": ""
   },
   {
-    "id": 63,
+    "id": 35,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/52d455ae-eea1-4ec0-8cdb-261f07b26e84.jpg",
     "span": ""
   },
   {
-    "id": 68,
+    "id": 36,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/577b0f81-bd47-4df6-9d39-2c42ea24805a.jpg",
     "span": ""
   },
   {
-    "id": 74,
+    "id": 37,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/688f4958-31d6-4ef4-826a-fe059bcba7a4.jpg",
-    "span": ""
+    "span": "row-span-2"
   },
   {
-    "id": 75,
+    "id": 38,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/6d1a659c-3881-4971-8d11-7e1d2b6b4c09.jpg",
     "span": ""
   },
   {
-    "id": 77,
+    "id": 39,
+    "category": "Hair Cutting",
+    "label": "Hair Cutting",
+    "image": "/hair-cutting/86210cdb-63cb-4b85-a8fa-f82613b1558d.jpg",
+    "span": ""
+  },
+  {
+    "id": 40,
+    "category": "Hair Cutting",
+    "label": "Hair Cutting",
+    "image": "/hair-cutting/879b9bb5-7500-4a8e-b900-94845521840c.jpg",
+    "span": ""
+  },
+  {
+    "id": 41,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/882bd6fb-7e56-44d3-a93d-d9d0905ba9c3.jpg",
     "span": "row-span-2"
   },
   {
-    "id": 78,
+    "id": 42,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/885eb170-6761-4411-903c-1aef7dc5b608.jpg",
     "span": ""
   },
   {
-    "id": 79,
+    "id": 43,
+    "category": "Hair Cutting",
+    "label": "Hair Cutting",
+    "image": "/hair-cutting/8ffd8dea-1634-4108-82a8-31948d4ebefc.jpg",
+    "span": ""
+  },
+  {
+    "id": 44,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/90639d09-e512-4cb6-9efa-beb7fe365f15.jpg",
     "span": ""
   },
   {
-    "id": 80,
+    "id": 45,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/97085c03-7140-4797-9147-61fb0f207f51.jpg",
-    "span": ""
+    "span": "row-span-2"
   },
   {
-    "id": 81,
+    "id": 46,
     "category": "Hair Cutting",
     "label": "Hair Cutting",
     "image": "/hair-cutting/9c6561c7-d594-40da-be3b-7995fe7a1615.jpg",
-    "span": "row-span-2"
+    "span": ""
+  },
+  {
+    "id": 47,
+    "category": "Hair Cutting",
+    "label": "Hair Cutting",
+    "image": "/hair-cutting/e1e2d0fe-654c-486c-9b10-2694601bd21a.jpg",
+    "span": ""
+  },
+  {
+    "id": 48,
+    "category": "Hair Cutting",
+    "label": "Hair Cutting",
+    "image": "/hair-cutting/f3d231d9-f8f0-47d7-9808-3b14070840fd.jpg",
+    "span": ""
   },
   {
     "id": 87,
@@ -547,252 +603,336 @@ const galleryItems: GalleryItem[] = [
     "id": 141,
     "category": "Dressing",
     "label": "Dressing",
-    "image": "/dressing/3beb0275-2e8c-436d-b31c-cf3ee7e7b411.jpg",
+    "image": "/dressing/39456acf-e8d2-47d7-a693-51c16fc734e0.jpg",
     "span": ""
   },
   {
     "id": 142,
     "category": "Dressing",
     "label": "Dressing",
-    "image": "/dressing/45604068-043d-4bb5-97f9-ac881fd23304.jpg",
+    "image": "/dressing/3beb0275-2e8c-436d-b31c-cf3ee7e7b411.jpg",
     "span": "row-span-2"
   },
   {
     "id": 143,
     "category": "Dressing",
     "label": "Dressing",
+    "image": "/dressing/41bb8efd-eebc-4807-8f41-cbb0db02cb82.jpg",
+    "span": ""
+  },
+  {
+    "id": 144,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/45604068-043d-4bb5-97f9-ac881fd23304.jpg",
+    "span": ""
+  },
+  {
+    "id": 145,
+    "category": "Dressing",
+    "label": "Dressing",
     "image": "/dressing/46c9f2d2-d1a3-46e9-853c-309be3c402a6.jpg",
     "span": ""
   },
   {
-    "id": 157,
+    "id": 146,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/5dfa3625-97b5-47e5-a98e-22226198e3fd.jpg",
+    "span": "row-span-2"
+  },
+  {
+    "id": 147,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/730570669_1025458833369199_7522884641794494757_n.jpg",
     "span": ""
   },
   {
-    "id": 158,
+    "id": 148,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/75652a76-a6e8-4cbe-b80c-c29df27822f8.jpg",
-    "span": "row-span-2"
+    "span": ""
   },
   {
-    "id": 159,
+    "id": 149,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/79d3b9a5-07ee-4ef8-b29e-646d122b54d9.jpg",
     "span": ""
   },
   {
-    "id": 160,
+    "id": 150,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/85d51377-629d-4dde-b0e7-a246a2c80d97.jpg",
-    "span": ""
+    "span": "row-span-2"
   },
   {
-    "id": 161,
+    "id": 151,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/8797fb84-a7f4-4184-9f51-08959ecb6dfc.jpg",
     "span": ""
   },
   {
-    "id": 162,
+    "id": 152,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/880b27f7-4da9-47e7-917a-3cd87408cb3b.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 163,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/9856b483-3dcc-4942-a381-759f0b380391.jpg",
     "span": ""
   },
   {
-    "id": 164,
+    "id": 153,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/9349793c-c05b-4416-b3fe-0729560965c4.jpg",
+    "span": ""
+  },
+  {
+    "id": 154,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/9856b483-3dcc-4942-a381-759f0b380391.jpg",
+    "span": "row-span-2"
+  },
+  {
+    "id": 155,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/a1916995-b3e6-4f91-9c39-c3e154ee28a2.jpg",
     "span": ""
   },
   {
-    "id": 165,
+    "id": 156,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/a80d7264-9707-4ff9-a528-62ab06710bcd.jpg",
     "span": ""
   },
   {
-    "id": 166,
+    "id": 157,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/a9b33a4f-0f4f-4c72-b549-f85324157fcc.jpg",
-    "span": "row-span-2"
-  },
-  {
-    "id": 167,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/ac938daf-9cad-442c-aca5-d82b043fbf0d.jpg",
     "span": ""
   },
   {
-    "id": 168,
+    "id": 158,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/ac938daf-9cad-442c-aca5-d82b043fbf0d.jpg",
+    "span": "row-span-2"
+  },
+  {
+    "id": 159,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/b941c2e2-7dd2-4f72-abd0-4eb3d832aed8.jpg",
+    "span": ""
+  },
+  {
+    "id": 160,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/c70b0975-354a-48c4-a15b-a06edc5a0320.jpg",
+    "span": ""
+  },
+  {
+    "id": 161,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/d77ae247-2719-421b-b005-1f8df5a3c7e9.jpg",
     "span": ""
   },
   {
-    "id": 169,
+    "id": 162,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/db7277ad-f670-41eb-a27d-5b96b28f9771.jpg",
-    "span": ""
-  },
-  {
-    "id": 170,
-    "category": "Dressing",
-    "label": "Dressing",
-    "image": "/dressing/e2aeb5ad-1752-415c-af40-99288fa8e24b.jpg",
     "span": "row-span-2"
   },
   {
-    "id": 171,
+    "id": 163,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/dd4047a4-379b-48e2-aeea-619b627f8351.jpg",
+    "span": ""
+  },
+  {
+    "id": 164,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/e2aeb5ad-1752-415c-af40-99288fa8e24b.jpg",
+    "span": ""
+  },
+  {
+    "id": 165,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/e3eb7572-d71b-4c3a-89b1-68529d03e57e.jpg",
     "span": ""
   },
   {
-    "id": 172,
+    "id": 166,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/e42f5155-4354-4df1-b032-3422de36ff80.jpg",
-    "span": ""
+    "span": "row-span-2"
   },
   {
-    "id": 173,
+    "id": 167,
     "category": "Dressing",
     "label": "Dressing",
     "image": "/dressing/f90f487d-b95e-4943-a071-9a7389a7d1bf.jpg",
     "span": ""
   },
   {
+    "id": 168,
+    "category": "Dressing",
+    "label": "Dressing",
+    "image": "/dressing/fda11251-1a82-4022-9390-19bbbf19813e.jpg",
+    "span": ""
+  },
+  {
     "id": 174,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/0204b241-29ef-4ca6-8524-97771cd82589.jpg",
+    "image": "/bridle-dressing/04096442-4e63-40fa-b8b0-c5b23be0fcdc.jpg",
     "span": "row-span-2"
   },
   {
     "id": 175,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/04096442-4e63-40fa-b8b0-c5b23be0fcdc.jpg",
+    "image": "/bridle-dressing/0b300dbb-7344-45a2-9388-fe2daae81b4e.jpg",
     "span": ""
   },
   {
     "id": 176,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/05402c34-ce06-4184-b0d1-4ce40e05ec5a.jpg",
+    "image": "/bridle-dressing/0dfebc29-85a6-464a-9732-313e18a24371.jpg",
     "span": ""
   },
   {
     "id": 177,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/0b300dbb-7344-45a2-9388-fe2daae81b4e.jpg",
+    "image": "/bridle-dressing/0ec38c98-4496-4304-b4d3-05e5228d70a7.jpg",
     "span": ""
   },
   {
     "id": 178,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/0dfebc29-85a6-464a-9732-313e18a24371.jpg",
+    "image": "/bridle-dressing/2b5e29c9-1485-4606-94a5-c32060791247.jpg",
     "span": "row-span-2"
   },
   {
     "id": 179,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/0ec38c98-4496-4304-b4d3-05e5228d70a7.jpg",
+    "image": "/bridle-dressing/38cd4fff-bbd3-4660-b3f1-470347ab89ad.jpg",
     "span": ""
   },
   {
     "id": 180,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/38cd4fff-bbd3-4660-b3f1-470347ab89ad.jpg",
+    "image": "/bridle-dressing/40a5c57d-4bc1-48fa-86e7-5a34f541ac07.jpg",
     "span": ""
   },
   {
     "id": 181,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/40a5c57d-4bc1-48fa-86e7-5a34f541ac07.jpg",
-    "span": ""
-  },
-  {
-    "id": 182,
-    "category": "Bridle Dressing",
-    "label": "Bridle Dressing",
     "image": "/bridle-dressing/44b29f96-ab32-4c57-8047-bb1fbf10931f.jpg",
     "span": "row-span-2"
   },
   {
-    "id": 187,
+    "id": 182,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
     "image": "/bridle-dressing/65c4f885-749c-4dd1-9248-87cb8a945f26.jpg",
     "span": ""
   },
   {
-    "id": 188,
+    "id": 183,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
     "image": "/bridle-dressing/680502ab-d11b-41fa-a8ef-994fc9b7a1b6.jpg",
     "span": ""
   },
   {
-    "id": 189,
+    "id": 184,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/709931cc-0f01-4b6b-823a-a4a6356a314c.jpg",
+    "image": "/bridle-dressing/6c2905b3-f870-4bca-b9eb-14ab3e61fc9f.jpg",
     "span": ""
   },
   {
-    "id": 190,
+    "id": 185,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/9c18058a-1e22-40a5-86d0-6d748f17b9a0.jpg",
+    "image": "/bridle-dressing/7890cd61-e005-4480-99c4-e030c4a18b97.jpg",
     "span": "row-span-2"
   },
   {
-    "id": 191,
+    "id": 186,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
-    "image": "/bridle-dressing/9cfbe7b8-ec7e-4768-a3fb-600590464af7.jpg",
+    "image": "/bridle-dressing/7bc1d485-c7cd-48e9-ad8a-9897fcbc1895.jpg",
     "span": ""
   },
   {
-    "id": 192,
+    "id": 187,
+    "category": "Bridle Dressing",
+    "label": "Bridle Dressing",
+    "image": "/bridle-dressing/9c18058a-1e22-40a5-86d0-6d748f17b9a0.jpg",
+    "span": ""
+  },
+  {
+    "id": 188,
+    "category": "Bridle Dressing",
+    "label": "Bridle Dressing",
+    "image": "/bridle-dressing/9cfbe7b8-ec7e-4768-a3fb-600590464af7.jpg",
+    "span": "row-span-2"
+  },
+  {
+    "id": 189,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
     "image": "/bridle-dressing/a7543238-7fa0-4a80-ad79-827e9c4a979a.jpg",
     "span": ""
   },
   {
-    "id": 193,
+    "id": 190,
     "category": "Bridle Dressing",
     "label": "Bridle Dressing",
     "image": "/bridle-dressing/cbeafd7d-67d8-4482-b8d4-c697958b916f.jpg",
+    "span": ""
+  },
+  {
+    "id": 191,
+    "category": "Bridle Dressing",
+    "label": "Bridle Dressing",
+    "image": "/bridle-dressing/d1265412-3404-4732-9ce7-87d708f93458.jpg",
+    "span": "row-span-2"
+  },
+  {
+    "id": 192,
+    "category": "Bridle Dressing",
+    "label": "Bridle Dressing",
+    "image": "/bridle-dressing/f462d06e-154e-4fcd-a2b7-edc2f1e17e71.jpg",
+    "span": ""
+  },
+  {
+    "id": 193,
+    "category": "Bridle Dressing",
+    "label": "Bridle Dressing",
+    "image": "/bridle-dressing/f77672ff-baf7-4606-bd2c-a04f9ce8a54a.jpg",
     "span": ""
   },
   {
@@ -818,36 +958,36 @@ const galleryItems: GalleryItem[] = [
   },
   {
     "id": 206,
-    "category": "Hair Removing",
-    "label": "Hair Removing",
+    "category": "Hair Removal",
+    "label": "Hair Removal",
     "image": "/hair-removing/06da87b8-60fe-4e0b-be1a-dfc34ec3c7fd.jpg",
     "span": "row-span-2"
   },
   {
     "id": 207,
-    "category": "Hair Removing",
-    "label": "Hair Removing",
+    "category": "Hair Removal",
+    "label": "Hair Removal",
     "image": "/hair-removing/6e6611ef-f31c-4166-a5ab-3b50f397cf76.jpg",
     "span": ""
   },
   {
     "id": 208,
-    "category": "Hair Removing",
-    "label": "Hair Removing",
+    "category": "Hair Removal",
+    "label": "Hair Removal",
     "image": "/hair-removing/962ca7fd-25f8-4e54-8328-566b9b286ab7.jpg",
     "span": ""
   },
   {
     "id": 209,
-    "category": "Hair Removing",
-    "label": "Hair Removing",
+    "category": "Hair Removal",
+    "label": "Hair Removal",
     "image": "/hair-removing/a125084f-1961-4d22-a6c2-33c09598612f.jpg",
     "span": ""
   },
   {
     "id": 210,
-    "category": "Hair Removing",
-    "label": "Hair Removing",
+    "category": "Hair Removal",
+    "label": "Hair Removal",
     "image": "/hair-removing/f8368447-aae5-47ae-a9b1-578d33941ad3.jpg",
     "span": "row-span-2"
   }
