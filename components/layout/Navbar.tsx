@@ -27,35 +27,22 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50"
+        className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]"
         style={{
-          backgroundColor: scrolled ? "rgba(255, 255, 255, 0.95)" : "transparent",
-          backdropFilter: scrolled ? "blur(4px)" : "none",
-          boxShadow: scrolled ? "0 1px 2px 0 rgba(0, 0, 0, 0.05)" : "none",
-          borderBottom: scrolled ? "1px solid #E7E2D8" : "1px solid transparent",
-          transition: "background-color 1.2s cubic-bezier(0.25, 1, 0.3, 1), backdrop-filter 1.2s cubic-bezier(0.25, 1, 0.3, 1), box-shadow 1.2s cubic-bezier(0.25, 1, 0.3, 1), border-color 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          boxShadow: "0 2px 16px 0 rgba(0,0,0,0.4)",
         }}
       >
-        <div
-          className={`max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between ${
-            scrolled ? "h-16 lg:h-20" : "h-24 lg:h-32"
-          }`}
-          style={{
-            transition: "height 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
-          }}
-        >
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <img
               src="/logo.jpg"
               alt="Salon Sonali Logo"
-              className={`w-auto object-contain ${
-                scrolled ? "h-12 lg:h-16" : "h-20 lg:h-28"
-              }`}
+              className="h-10 lg:h-14 w-auto object-contain"
               style={{
-                filter: scrolled ? "invert(1)" : "invert(0)",
-                mixBlendMode: scrolled ? "multiply" : "screen",
-                transition: "height 1.2s cubic-bezier(0.25, 1, 0.3, 1), filter 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
+                filter: "invert(0)",
+                mixBlendMode: "screen",
               }}
             />
           </Link>
@@ -69,13 +56,10 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`font-montserrat text-sm font-medium tracking-wider uppercase ${
-                      isActive 
-                        ? "text-[#B89A7A] underline decoration-[#B89A7A] underline-offset-4" 
-                        : (scrolled ? "text-[#000000] gold-underline" : "text-[#FFFFFF] gold-underline")
+                      isActive
+                        ? "text-[#B89A7A] underline decoration-[#B89A7A] underline-offset-4"
+                        : "text-[#FFFFFF] gold-underline"
                     }`}
-                    style={{
-                      transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
-                    }}
                   >
                     {link.label}
                   </Link>
@@ -84,7 +68,6 @@ export default function Navbar() {
             })}
           </ul>
 
-
           {/* Mobile hamburger */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-2 group"
@@ -92,19 +75,13 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-[#000000] group-hover:bg-[#B89A7A]" : "bg-[#FFFFFF] group-hover:bg-[#B89A7A]"
-              } ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+              className={`block w-6 h-0.5 bg-[#FFFFFF] group-hover:bg-[#B89A7A] transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-[#000000] group-hover:bg-[#B89A7A]" : "bg-[#FFFFFF] group-hover:bg-[#B89A7A]"
-              } ${menuOpen ? "opacity-0" : ""}`}
+              className={`block w-6 h-0.5 bg-[#FFFFFF] group-hover:bg-[#B89A7A] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-[#000000] group-hover:bg-[#B89A7A]" : "bg-[#FFFFFF] group-hover:bg-[#B89A7A]"
-              } ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              className={`block w-6 h-0.5 bg-[#FFFFFF] group-hover:bg-[#B89A7A] transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
             />
           </button>
         </div>
