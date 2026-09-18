@@ -32,6 +32,7 @@ export default function ContactPageClient() {
     const e: Partial<FormState> = {};
     if (!form.name.trim()) e.name = "Name is required";
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "A valid email is required";
+    if (form.phone.trim() && !/^\+?[0-9\s\-()]{7,15}$/.test(form.phone)) e.phone = "Please enter a valid phone number";
     if (!form.message.trim()) e.message = "Please enter a message";
     return e;
   };
@@ -113,6 +114,11 @@ export default function ContactPageClient() {
                     type="email"
                     value={form.email}
                     onChange={(e) => handleChange("email", e.target.value)}
+                    onBlur={(e) => {
+                      if (e.target.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value)) {
+                        setErrors((err) => ({ ...err, email: "A valid email is required" }));
+                      }
+                    }}
                     className={inputClass("email")}
                     id="contact-email"
                   />
@@ -127,9 +133,15 @@ export default function ContactPageClient() {
                     type="tel"
                     value={form.phone}
                     onChange={(e) => handleChange("phone", e.target.value)}
+                    onBlur={(e) => {
+                      if (e.target.value && !/^\+?[0-9\s\-()]{7,15}$/.test(e.target.value)) {
+                        setErrors((err) => ({ ...err, phone: "Please enter a valid phone number" }));
+                      }
+                    }}
                     className={inputClass("phone")}
                     id="contact-phone"
                   />
+                  {errors.phone && <p className="font-montserrat text-xs text-red-400 mt-2">{errors.phone}</p>}
                 </div>
 
                 <div>
