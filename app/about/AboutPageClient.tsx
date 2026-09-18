@@ -23,8 +23,11 @@ export default function AboutPageClient() {
   return (
     <>
       {/* Hero statement */}
-      <section className="bg-[#000000] pt-36 pb-24 px-6 text-center relative overflow-hidden">
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(184,154,122,0.12) 0%, transparent 60%)" }} />
+      <section
+        className="pt-36 pb-24 px-6 text-center relative overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/floral-bg.png)' }}
+      >
+        <div className="absolute inset-0 bg-black/70" />
         <SectionReveal className="relative z-10 max-w-3xl mx-auto">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-6">Our Story</p>
           <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#FFFFFF] mb-8 leading-tight">
