@@ -24,35 +24,32 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50"
+        className="fixed top-0 left-0 right-0 z-50 bg-[#000000] border-b border-[#222222]"
         style={{
-          backgroundColor: scrolled ? "rgba(255, 255, 255, 0.95)" : "transparent",
-          backdropFilter: scrolled ? "blur(4px)" : "none",
-          boxShadow: scrolled ? "0 1px 2px 0 rgba(0, 0, 0, 0.05)" : "none",
-          borderBottom: scrolled ? "1px solid #E7E2D8" : "1px solid transparent",
-          transition: "background-color 1.2s cubic-bezier(0.25, 1, 0.3, 1), backdrop-filter 1.2s cubic-bezier(0.25, 1, 0.3, 1), box-shadow 1.2s cubic-bezier(0.25, 1, 0.3, 1), border-color 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
+          backgroundColor: "#000000",
+          boxShadow: scrolled ? "0 4px 25px rgba(0, 0, 0, 0.8)" : "0 2px 10px rgba(0, 0, 0, 0.5)",
+          transition: "box-shadow 0.3s ease",
         }}
       >
+        {/* Subtle luxury hair wave accent */}
         <div
-          className={`max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between ${
-            scrolled ? "h-16 lg:h-20" : "h-24 lg:h-32"
-          }`}
+          className="absolute inset-0 pointer-events-none opacity-20 overflow-hidden"
           style={{
-            transition: "height 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,40 C150,90 350,0 500,45 C650,90 850,10 1000,50 C1100,75 1170,30 1200,40' fill='none' stroke='rgba(255,255,255,0.15)' stroke-width='1.5'/%3E%3Cpath d='M0,25 C200,80 400,-5 600,40 C800,85 1000,15 1200,35' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='1'/%3E%3Cpath d='M0,55 C180,10 380,70 580,30 C780,-10 980,60 1200,20' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1.2'/%3E%3Cpath d='M0,15 C250,60 450,20 650,55 C850,90 1050,30 1200,45' fill='none' stroke='rgba(184,154,122,0.12)' stroke-width='1'/%3E%3C/svg%3E")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
-        >
+        />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-[72px] sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center group py-1">
             <img
               src="/logo.jpg"
               alt="Salon Sonali Logo"
-              className={`w-auto object-contain ${
-                scrolled ? "h-12 lg:h-16" : "h-20 lg:h-28"
-              }`}
+              className="h-14 sm:h-16 lg:h-18 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               style={{
-                filter: scrolled ? "invert(1)" : "invert(0)",
-                mixBlendMode: scrolled ? "multiply" : "screen",
-                transition: "height 1.2s cubic-bezier(0.25, 1, 0.3, 1), filter 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
+                mixBlendMode: "screen",
               }}
             />
           </Link>
@@ -63,12 +60,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`font-montserrat text-sm font-medium tracking-wider uppercase gold-underline ${
-                    scrolled ? "text-[#000000]" : "text-[#FFFFFF]"
-                  }`}
-                  style={{
-                    transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
-                  }}
+                  className="font-montserrat text-sm font-medium tracking-wider uppercase gold-underline text-[#FFFFFF] hover:text-[#B89A7A] transition-colors duration-300"
                 >
                   {link.label}
                 </Link>
@@ -76,27 +68,26 @@ export default function Navbar() {
             ))}
           </ul>
 
-
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden flex flex-col gap-1.5 p-2 group"
+            className="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 p-2 group focus:outline-none"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-[#000000] group-hover:bg-[#B89A7A]" : "bg-[#FFFFFF] group-hover:bg-[#B89A7A]"
-              } ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+              className={`block w-6 h-[2px] bg-[#FFFFFF] group-hover:bg-[#B89A7A] transition-all duration-300 ${
+                menuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
             />
             <span
-              className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-[#000000] group-hover:bg-[#B89A7A]" : "bg-[#FFFFFF] group-hover:bg-[#B89A7A]"
-              } ${menuOpen ? "opacity-0" : ""}`}
+              className={`block w-6 h-[2px] bg-[#FFFFFF] group-hover:bg-[#B89A7A] transition-all duration-300 ${
+                menuOpen ? "opacity-0" : ""
+              }`}
             />
             <span
-              className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-[#000000] group-hover:bg-[#B89A7A]" : "bg-[#FFFFFF] group-hover:bg-[#B89A7A]"
-              } ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              className={`block w-6 h-[2px] bg-[#FFFFFF] group-hover:bg-[#B89A7A] transition-all duration-300 ${
+                menuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
             />
           </button>
         </div>

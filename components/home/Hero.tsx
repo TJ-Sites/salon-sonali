@@ -43,10 +43,10 @@ export default function Hero() {
 
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-2 sm:px-8 lg:px-12 text-center flex flex-col items-center justify-center">
         {/* Eyebrow */}
         <p
-          className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] font-bold mb-8"
+          className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] font-bold mb-1 -mt-16 sm:-mt-16"
           style={{ opacity: 0, animation: "fadeIn 0.8s ease 0.2s forwards" }}
         >
           Luxury Hair &amp; Beauty Studio
@@ -55,10 +55,10 @@ export default function Hero() {
         {/* Main heading */}
         <h1
           ref={headingRef}
-          className={`font-playfair font-black leading-tight mb-8 whitespace-nowrap ${scrolled ? "text-[#000000]" : "text-[#FFFFFF]"
+          className={`font-playfair font-black leading-tight mb-8 whitespace-nowrap text-center ${scrolled ? "text-[#000000]" : "text-[#FFFFFF]"
             }`}
           style={{
-            fontSize: "clamp(2.25rem, 10vw, 9rem)",
+            fontSize: "clamp(2.85rem, 12vw, 7.5rem)",
             letterSpacing: "-0.02em",
             opacity: 0,
             animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards",
@@ -70,7 +70,7 @@ export default function Hero() {
 
         {/* Location */}
         <p
-          className={`font-montserrat text-sm tracking-[0.3em] uppercase mb-12 -mt-6 font-medium translate-x-24 sm:translate-x-32 md:translate-x-64 lg:translate-x-80 ${scrolled ? "text-[#3D3A35]" : "text-[#E5E3DF]"
+          className={`font-montserrat text-[10px] sm:text-xs tracking-[0.35em] sm:tracking-[0.45em] uppercase mb-0 -mt-6 font-medium translate-x-8 sm:translate-x-20 md:translate-x-36 lg:translate-x-48 ${scrolled ? "text-[#3D3A35]" : "text-[#E5E3DF]"
             }`}
           style={{
             opacity: 0,
@@ -80,36 +80,37 @@ export default function Hero() {
           MINUWANGODA
         </p>
 
-        {/* Subheading */}
-        <p
-          ref={subRef}
-          className={`font-montserrat text-base max-w-xl mx-auto leading-relaxed mb-12 ${scrolled ? "text-[#3D3A35]" : "text-[#FFFFFF]"
-            }`}
-          style={{
-            opacity: 0,
-            animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards",
-            transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)",
-          }}
-        >
-          Experience transformative hair, skin, dressings, and beauty treatments
-          crafted for the modern woman.
-        </p>
+        {/* Bottom group — pushed down */}
+        <div className="mt-28 sm:mt-32 flex flex-col items-center sm:items-start w-full">
+          {/* Subheading */}
+          <p
+            ref={subRef}
+            className={`font-montserrat text-base max-w-xl leading-relaxed mb-12 text-center sm:text-left ${scrolled ? "text-[#3D3A35]" : "text-[#FFFFFF]"
+              }`}
+            style={{
+              opacity: 0,
+              animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards",
+              transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)",
+            }}
+          >
+          </p>
 
-        {/* CTA Buttons */}
-        <div
-          ref={ctaRef}
-          className={`flex flex-col sm:flex-row gap-4 justify-center items-center mt-6 ${scrolled ? "hero-scrolled" : ""}`}
-          style={{
-            opacity: 0,
-            animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards",
-          }}
-        >
-          <Link href="/contact" className="btn-hero-solid">
-            Book Appointment
-          </Link>
-          <Link href="/services" className="btn-hero-outline">
-            Our Services
-          </Link>
+          {/* CTA Buttons */}
+          <div
+            ref={ctaRef}
+            className={`flex flex-col sm:flex-row gap-4 justify-center sm:justify-start items-center ${scrolled ? "hero-scrolled" : ""}`}
+            style={{
+              opacity: 0,
+              animation: "fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards",
+            }}
+          >
+            <Link href="/contact" className="btn-hero-solid">
+              Book Appointment
+            </Link>
+            <Link href="/services" className="btn-hero-outline">
+              Our Services
+            </Link>
+          </div>
         </div>
       </div>
 
