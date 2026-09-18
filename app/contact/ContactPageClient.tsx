@@ -138,7 +138,7 @@ export default function ContactPageClient() {
                   {errors.message && <p className="font-montserrat text-xs text-red-400 mt-2">{errors.message}</p>}
                 </div>
 
-                <button type="submit" className="btn-primary" disabled={loading} id="contact-submit">
+                <button type="submit" className="btn-outline-dark" disabled={loading} id="contact-submit">
                   {loading ? (
                     <span className="flex items-center gap-3">
                       <span className="w-4 h-4 border-2 border-[#FFFFFF]/30 border-t-[#FFFFFF] rounded-full animate-spin" />
