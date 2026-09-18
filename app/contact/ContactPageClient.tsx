@@ -189,9 +189,15 @@ export default function ContactPageClient() {
                 <span className="w-1 h-1 rounded-full bg-[#B89A7A] mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-[#6B665F] mb-1">Phone</p>
-                  <a href="tel:+94774090444" className="font-montserrat text-sm text-[#000000] hover:text-[#B89A7A] transition-colors">
-                    077 409 0444
-                  </a>
+                  <div className="flex items-center gap-2">
+                    <a href="tel:+94774090444" className="font-montserrat text-sm text-[#000000] hover:text-[#B89A7A] transition-colors">
+                      077 409 0444
+                    </a>
+                    <span className="text-[#6B665F]">/</span>
+                    <a href="tel:+94770811434" className="font-montserrat text-sm text-[#000000] hover:text-[#B89A7A] transition-colors">
+                      077 081 1434
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="flex gap-5 items-start">
