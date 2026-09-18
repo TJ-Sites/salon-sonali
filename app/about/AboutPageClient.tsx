@@ -31,7 +31,7 @@ export default function AboutPageClient() {
         <SectionReveal className="relative z-10 max-w-3xl mx-auto">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-6">Our Story</p>
           <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl text-[#FFFFFF] mb-8 leading-tight">
-            Beauty is not a luxury —<br />it is a language.
+            Speak volumes without saying a word.
           </h1>
           <div className="w-16 h-px bg-[#B89A7A] mx-auto mb-8" />
           <p className="font-montserrat text-[#6B665F] text-base lg:text-lg leading-relaxed">
