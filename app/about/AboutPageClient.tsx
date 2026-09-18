@@ -131,7 +131,7 @@ export default function AboutPageClient() {
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(184,154,122,0.08) 0%, transparent 70%)" }} />
         <SectionReveal className="relative z-10">
           <p className="font-montserrat text-xs tracking-[0.4em] uppercase text-[#B89A7A] mb-4">Join Our Story</p>
-          <h2 className="font-playfair text-4xl lg:text-5xl text-[#FFFFFF] mb-8">Become Part of the Sonali Family</h2>
+          <h2 className="font-playfair text-4xl lg:text-5xl text-[#FFFFFF] mb-8">Become Part of the Salon Sonali Family</h2>
           <Link href="/contact" className="btn-primary">Get in Touch</Link>
         </SectionReveal>
       </section>
