@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
+  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/team", label: "Our Team" },
   { href: "/gallery", label: "Gallery" },
@@ -14,6 +16,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -59,21 +62,26 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <ul className="hidden lg:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`font-montserrat text-sm font-medium tracking-wider uppercase gold-underline ${
-                    scrolled ? "text-[#000000]" : "text-[#FFFFFF]"
-                  }`}
-                  style={{
-                    transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
-                  }}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`font-montserrat text-sm font-medium tracking-wider uppercase ${
+                      isActive 
+                        ? "text-[#B89A7A] underline decoration-[#B89A7A] underline-offset-4" 
+                        : (scrolled ? "text-[#000000] gold-underline" : "text-[#FFFFFF] gold-underline")
+                    }`}
+                    style={{
+                      transition: "color 1.2s cubic-bezier(0.25, 1, 0.3, 1)"
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
 
@@ -108,22 +116,27 @@ export default function Navbar() {
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        {navLinks.map((link, i) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            onClick={() => setMenuOpen(false)}
-            className="font-playfair text-4xl text-[#FFFFFF] hover:text-[#B89A7A] transition-colors duration-300"
-            style={{
-              transitionDelay: menuOpen ? `${i * 60}ms` : "0ms",
-              transform: menuOpen ? "translateY(0)" : "translateY(20px)",
-              opacity: menuOpen ? 1 : 0,
-              transition: `transform 0.4s ease ${i * 60}ms, opacity 0.4s ease ${i * 60}ms, color 0.3s ease`,
-            }}
-          >
-            {link.label}
-          </Link>
-        ))}
+        {navLinks.map((link, i) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className={`font-playfair text-4xl transition-colors duration-300 ${
+                isActive ? "text-[#B89A7A]" : "text-[#FFFFFF] hover:text-[#B89A7A]"
+              }`}
+              style={{
+                transitionDelay: menuOpen ? `${i * 60}ms` : "0ms",
+                transform: menuOpen ? "translateY(0)" : "translateY(20px)",
+                opacity: menuOpen ? 1 : 0,
+                transition: `transform 0.4s ease ${i * 60}ms, opacity 0.4s ease ${i * 60}ms, color 0.3s ease`,
+              }}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
 
       </div>
     </>
