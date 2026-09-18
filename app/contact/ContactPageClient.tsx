@@ -32,6 +32,7 @@ export default function ContactPageClient() {
     const e: Partial<FormState> = {};
     if (!form.name.trim()) e.name = "Name is required";
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "A valid email is required";
+    if (form.phone.trim() && !/^\+?[0-9\s\-()]{7,15}$/.test(form.phone)) e.phone = "Please enter a valid phone number";
     if (!form.message.trim()) e.message = "Please enter a message";
     return e;
   };
@@ -87,14 +88,16 @@ export default function ContactPageClient() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Contact Form */}
           <SectionReveal direction="left">
-            <h2 className="font-playfair text-3xl text-[#000000] mb-10">Send Us a Message</h2>
+            <h2 className="font-playfair text-3xl text-[#000000] mb-10">Contact us</h2>
 
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-8" noValidate>
                 <div>
+                  <label htmlFor="contact-name" className="block font-montserrat text-xs tracking-wider text-[#6B665F] mb-1">
+                    Your Name <span className="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
-                    placeholder="Your Name *"
                     value={form.name}
                     onChange={(e) => handleChange("name", e.target.value)}
                     className={inputClass("name")}
@@ -104,11 +107,18 @@ export default function ContactPageClient() {
                 </div>
 
                 <div>
+                  <label htmlFor="contact-email" className="block font-montserrat text-xs tracking-wider text-[#6B665F] mb-1">
+                    Email Address <span className="text-red-500">*</span>
+                  </label>
                   <input
                     type="email"
-                    placeholder="Email Address *"
                     value={form.email}
                     onChange={(e) => handleChange("email", e.target.value)}
+                    onBlur={(e) => {
+                      if (e.target.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value)) {
+                        setErrors((err) => ({ ...err, email: "A valid email is required" }));
+                      }
+                    }}
                     className={inputClass("email")}
                     id="contact-email"
                   />
@@ -116,29 +126,39 @@ export default function ContactPageClient() {
                 </div>
 
                 <div>
+                  <label htmlFor="contact-phone" className="block font-montserrat text-xs tracking-wider text-[#6B665F] mb-1">
+                    Phone Number (optional)
+                  </label>
                   <input
                     type="tel"
-                    placeholder="Phone Number (optional)"
                     value={form.phone}
                     onChange={(e) => handleChange("phone", e.target.value)}
+                    onBlur={(e) => {
+                      if (e.target.value && !/^\+?[0-9\s\-()]{7,15}$/.test(e.target.value)) {
+                        setErrors((err) => ({ ...err, phone: "Please enter a valid phone number" }));
+                      }
+                    }}
                     className={inputClass("phone")}
                     id="contact-phone"
                   />
+                  {errors.phone && <p className="font-montserrat text-xs text-red-400 mt-2">{errors.phone}</p>}
                 </div>
 
                 <div>
+                  <label htmlFor="contact-message" className="block font-montserrat text-xs tracking-wider text-[#6B665F] mb-1">
+                    Your Message <span className="text-red-500">*</span>
+                  </label>
                   <textarea
-                    placeholder="Your Message *"
                     rows={5}
                     value={form.message}
                     onChange={(e) => handleChange("message", e.target.value)}
-                    className={`${inputClass("message")} resize-none`}
+                    className={`${inputClass("message")} resize-none mt-1`}
                     id="contact-message"
                   />
                   {errors.message && <p className="font-montserrat text-xs text-red-400 mt-2">{errors.message}</p>}
                 </div>
 
-                <button type="submit" className="btn-primary" disabled={loading} id="contact-submit">
+                <button type="submit" className="btn-outline-dark" disabled={loading} id="contact-submit">
                   {loading ? (
                     <span className="flex items-center gap-3">
                       <span className="w-4 h-4 border-2 border-[#FFFFFF]/30 border-t-[#FFFFFF] rounded-full animate-spin" />

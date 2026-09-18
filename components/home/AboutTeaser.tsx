@@ -43,8 +43,8 @@ export default function AboutTeaser() {
           }}
         >
           <img
-            src="/about_teaser.png"
-            alt="Salon Sonali Interior"
+            src="/our-story/our-story.jpeg"
+            alt="Salon Sonali Our Story"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
 

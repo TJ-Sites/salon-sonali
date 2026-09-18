@@ -5,10 +5,20 @@ import SectionReveal from "@/components/ui/SectionReveal";
 import Link from "next/link";
 import Image from "next/image";
 
-const team = [
+interface TeamMember {
+  name: string;
+  image: string;
+  title: string;
+  speciality: string;
+  bio: string;
+  initials: string;
+  price: string;
+}
+
+const team: TeamMember[] = [
   {
     name: "Sonali Hettiarachchi",
-    image: "/team/sonali.jpg",
+    image: "/chairwomen/chairwoman.jpeg",
     title: "Chairwoman",
     speciality: "Chairwoman",
     bio: "With a clear vision for luxury and artistic expression, Sonali Hettiarachchi leads Salon Sonali as its Chairwoman. Her leadership ensures that the salon remains a sanctuary of elegance, craftsmanship, and state-of-the-art beauty practices.",
@@ -63,6 +73,7 @@ export default function TeamPageClient() {
             <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] flex-shrink-0 mx-auto md:mx-0 group">
               {/* Gold brush stroke SVG at top-left */}
               <svg
+                aria-hidden="true"
                 viewBox="0 0 100 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +108,7 @@ export default function TeamPageClient() {
                 className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg overflow-hidden rounded-2xl"
               >
                 {team[0].image ? (
-                  <Image src={team[0].image} alt={team[0].name} fill className="object-cover" />
+                  <Image src={team[0].image} alt={team[0].name} fill sizes="(max-width: 640px) 280px, 360px" className="object-cover" />
                 ) : (
                   <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[0].initials}</span>
                 )}
@@ -106,7 +117,7 @@ export default function TeamPageClient() {
 
             {/* Content Container (Right) */}
             <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start">
-              <h2 className="font-playfair text-3xl sm:text-4xl text-[#B89A7A] mb-4">
+              <h2 className="font-playfair text-3xl sm:text-4xl text-[#9A7B5C] mb-4">
                 {team[0].speciality}
               </h2>
               <p className="font-montserrat text-[#6B665F] text-sm sm:text-base leading-relaxed mb-6 max-w-xl text-center md:text-left font-light">
@@ -126,6 +137,7 @@ export default function TeamPageClient() {
 
                 {/* Wavy Underline */}
                 <svg
+                  aria-hidden="true"
                   width="110"
                   height="8"
                   viewBox="0 0 110 8"
@@ -154,7 +166,7 @@ export default function TeamPageClient() {
           >
             {/* Content Container (Left) */}
             <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start">
-              <h2 className="font-playfair text-3xl sm:text-4xl text-[#B89A7A] mb-4">
+              <h2 className="font-playfair text-3xl sm:text-4xl text-[#9A7B5C] mb-4">
                 {team[1].speciality}
               </h2>
               <p className="font-montserrat text-[#6B665F] text-sm sm:text-base leading-relaxed mb-6 max-w-xl text-center md:text-left font-light">
@@ -174,6 +186,7 @@ export default function TeamPageClient() {
 
                 {/* Wavy Underline */}
                 <svg
+                  aria-hidden="true"
                   width="110"
                   height="8"
                   viewBox="0 0 110 8"
@@ -203,7 +216,7 @@ export default function TeamPageClient() {
                 className="absolute inset-4 bg-gradient-to-br from-[#E7E2D8] to-[#B89A7A]/40 flex items-center justify-center shadow-lg overflow-hidden rounded-2xl"
               >
                 {team[1].image ? (
-                  <Image src={team[1].image} alt={team[1].name} fill className="object-cover" />
+                  <Image src={team[1].image} alt={team[1].name} fill sizes="(max-width: 640px) 280px, 360px" className="object-cover" />
                 ) : (
                   <span className="font-playfair text-6xl text-[#6B665F]/20 italic select-none">{team[1].initials}</span>
                 )}
