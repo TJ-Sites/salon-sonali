@@ -120,6 +120,10 @@ export default function Footer() {
               <a href="tel:+94774090444" className="hover:text-[#FFFFFF] transition-colors duration-300">
                 077 409 0444
               </a>
+              <span> / </span>
+              <a href="tel:+94770811434" className="hover:text-[#FFFFFF] transition-colors duration-300">
+                077 081 1434
+              </a>
             </p>
             <p>
               <a href="mailto:info@salonsonali.com" className="hover:text-[#FFFFFF] transition-colors duration-300">
@@ -140,7 +144,7 @@ export default function Footer() {
             © {year} Salon Sonali. All rights reserved.
           </p>
           <p className="font-montserrat text-xs text-[#6B665F]">
-            Crafted with care for beauty
+            Tharuki Jayasuriya
           </p>
         </div>
       </div>
