@@ -8,7 +8,7 @@ import Image from "next/image";
 const team = [
   {
     name: "Sonali Hettiarachchi",
-    image: "/team/sonali.jpg",
+    image: "/chairwomen/chairwoman.jpeg",
     title: "Chairwoman",
     speciality: "Chairwoman",
     bio: "With a clear vision for luxury and artistic expression, Sonali Hettiarachchi leads Salon Sonali as its Chairwoman. Her leadership ensures that the salon remains a sanctuary of elegance, craftsmanship, and state-of-the-art beauty practices.",
