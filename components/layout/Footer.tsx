@@ -140,14 +140,16 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-[#6B665F]/20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-montserrat text-xs text-[#6B665F]">
-            © {year} Salon Sonali. All rights reserved.
-          </p>
-          <p className="font-montserrat text-xs text-[#6B665F]">
-            Tharuki Jayasuriya
-          </p>
-        </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-center">
+            <a
+              href="https://www.itwadura.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-montserrat text-xs text-[#6B665F] hover:text-[#B89A7A] transition-colors duration-300"
+            >
+              Powered by : IT Wadura
+            </a>
+          </div>
       </div>
       </div>
     </footer>
