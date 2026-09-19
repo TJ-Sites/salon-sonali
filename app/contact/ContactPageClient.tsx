@@ -127,7 +127,7 @@ export default function ContactPageClient() {
 
                 <div>
                   <label htmlFor="contact-phone" className="block font-montserrat text-xs tracking-wider text-[#6B665F] mb-1">
-                    Phone Number (optional)
+                    Phone Number
                   </label>
                   <input
                     type="tel"
